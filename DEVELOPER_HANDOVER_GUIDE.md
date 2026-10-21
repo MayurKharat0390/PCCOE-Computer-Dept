@@ -132,8 +132,8 @@ SECTION 5: BROAD INSTITUTIONAL SHOWCASE SLIDER
 File: index.html (Lines 423–468) | CSS: style.css (.broad-hero-section)
 ========================================================================================
 ```
-* **Container**: `<section class="container broad-hero-section">`
-  * `.broad-slider-container` $\to$ Full container-width banner frame with shadow
+* **Container**: `<section class="broad-hero-section">`
+  * `.broad-slider-container` $\to$ Edge-to-edge full viewport-width banner frame with subtle top/bottom borders
 * **Slider Stage**: `.hero-slider` $\to$ Proportional container (`aspect-ratio: 16 / 5` matching 1600x500 banner artwork)
   * `.slide-item` $\to$ Slide layer with crossfade transition (`opacity: 0; transition: opacity 0.7s;`)
   * `.slide-item.active` $\to$ Active visible slide (`opacity: 1;`)
