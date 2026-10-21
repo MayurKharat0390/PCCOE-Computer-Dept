@@ -14,6 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initSearchModal();
   initAccessibility();
   initImageFallbacks();
+  initPageTransitions();
 });
 
 /* ==========================================================================
@@ -431,5 +432,52 @@ function initImageFallbacks() {
       const altText = this.alt || 'PCCOE Computer Dept';
       this.src = `data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="400" height="300" viewBox="0 0 400 300"><rect fill="%23092540" width="100%" height="100%"/><text fill="%23ffffff" x="50%" y="45%" font-family="sans-serif" font-weight="bold" font-size="18" text-anchor="middle">PCCOE Computer Engg</text><text fill="%230098db" x="50%" y="60%" font-family="sans-serif" font-size="13" text-anchor="middle">${encodeURIComponent(altText)}</text></svg>`;
     });
+  });
+}
+
+/* ==========================================================================
+   10. SEAMLESS PAGE TRANSITIONS
+   ========================================================================== */
+function initPageTransitions() {
+  const content = document.querySelector('main') || document.querySelector('.page-content-wrapper') || document.querySelector('.homepage-content-wrapper');
+
+  // Intercept internal page link clicks for silky smooth transition
+  document.addEventListener('click', (e) => {
+    const link = e.target.closest('a');
+    if (!link) return;
+
+    const href = link.getAttribute('href');
+    const target = link.getAttribute('target');
+
+    // Skip if hash link on same page, tel, mailto, javascript, external, or target blank
+    if (!href || href.startsWith('#') || href.startsWith('mailto:') || href.startsWith('tel:') || href.startsWith('javascript:') || target === '_blank') {
+      return;
+    }
+
+    // Only handle internal relative links (e.g. 'index.html', 'about.html', 'hod-desk.html', './')
+    const isInternal = !href.startsWith('http://') && !href.startsWith('https://') && !href.startsWith('//');
+    if (!isInternal) return;
+
+    // Avoid transitions on same-page clicks with hashes
+    const currentPath = window.location.pathname.split('/').pop() || 'index.html';
+    const targetPath = href.split('#')[0].split('?')[0].split('/').pop() || 'index.html';
+    if (currentPath === targetPath && href.includes('#')) {
+      return; // Handled by hash scroll
+    }
+
+    // Native view transition
+    if (document.startViewTransition) {
+      // Modern Chromium supports navigation: auto view-transitions natively
+      return;
+    }
+
+    // Fallback animation
+    e.preventDefault();
+    if (content) {
+      content.classList.add('page-transitioning');
+    }
+    setTimeout(() => {
+      window.location.href = href;
+    }, 180);
   });
 }

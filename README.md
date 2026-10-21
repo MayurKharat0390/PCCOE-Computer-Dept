@@ -28,16 +28,22 @@ This project revitalizes and modernizes the Computer Engineering Department webs
 
 ```
 PCCOE-Computer-Dept/
-├── index.html                   # Main portal homepage
+├── index.html                           # Main portal homepage
+├── base.html                            # Master canonical layout template (Header & Footer)
+├── about.html                           # About Department & PEOs/POs/PSOs with collapsible accordions
+├── hod-desk.html                        # HOD Desk & Dr. Sonali D. Patil address
+├── bos.html                             # Board of Studies (BOS) with search & 11 MoM PDF cards
+├── dab.html                             # Department Advisory Board (DAB) with dynamic search
 ├── assets/
 │   ├── css/
-│   │   └── style.css            # Modular design system & styles
+│   │   └── style.css                    # Modular design system, transitions & responsive tokens
 │   ├── js/
-│   │   └── main.js              # Interactive components & handlers
-│   └── images/                  # Badges, faculty photos, slides, logos
-├── DEVELOPER_HANDOVER_GUIDE.md  # Detailed architecture & maintainer guide
-├── README.md                    # Project documentation
-└── .gitignore                   # Ignored files
+│   │   └── main.js                      # Slider, transitions, search filters, and handlers
+│   └── images/                          # Badges, faculty photos, slides, logos
+├── SITE_ELEMENTS_PAGEWISE_DIRECTORY.md  # Comprehensive page-wise elements & classes directory
+├── DEVELOPER_HANDOVER_GUIDE.md          # Architectural handover guide
+├── README.md                            # Project documentation
+└── .gitignore                           # Git ignore rules
 ```
 
 ---
