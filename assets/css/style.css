@@ -1609,14 +1609,14 @@ button {
 }
 
 /* ==========================================================================
-   MASTER FOOTER (Authentic Compact PCCOE Identity)
+   MASTER FOOTER (Harmonized Academic PCCOE Identity)
    ========================================================================== */
 .site-master-footer {
-  background: #1eafe7; /* Signature PCCOE Cerulean Cyan Blue matching logo and original site */
+  background: linear-gradient(180deg, var(--pccoe-navy-darkest) 0%, #03213a 100%);
   color: #ffffff;
   position: relative;
   overflow: hidden;
-  border-top: 3px solid #f97316;
+  border-top: 3px solid var(--pccoe-gold-primary);
 }
 
 .footer-main-body {
@@ -1638,6 +1638,9 @@ button {
 .footer-counter-img {
   height: 22px;
   display: block;
+  border-radius: 3px;
+  border: 1px solid rgba(251, 191, 36, 0.35);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
 }
 
 /* Contact List */
@@ -1653,23 +1656,23 @@ button {
   align-items: flex-start;
   gap: 8px;
   font-size: 0.8125rem;
-  color: #ffffff;
+  color: rgba(255, 255, 255, 0.9);
   line-height: 1.35;
 }
 
 .footer-contact-item i {
-  color: #ffffff;
+  color: var(--pccoe-gold-bright);
   font-size: 0.85rem;
   margin-top: 3px;
   flex-shrink: 0;
 }
 
 .footer-contact-item a {
-  color: #ffffff;
+  color: rgba(255, 255, 255, 0.9);
 }
 
 .footer-contact-item a:hover {
-  color: #fef08a;
+  color: var(--pccoe-gold-bright);
   text-decoration: underline;
 }
 
@@ -1682,20 +1685,22 @@ button {
 }
 
 .footer-nav-menu li a {
-  color: #ffffff;
+  color: rgba(255, 255, 255, 0.88);
   font-size: 0.835rem;
   font-weight: 500;
   transition: all var(--transition-fast);
 }
 
 .footer-nav-menu li a:hover {
-  color: #fef08a;
+  color: var(--pccoe-gold-bright);
   padding-left: 3px;
 }
 
 .footer-menu-heading {
   font-weight: 700 !important;
   font-size: 0.85rem !important;
+  color: var(--pccoe-gold-bright) !important;
+  letter-spacing: 0.02em;
   pointer-events: none;
 }
 
@@ -1707,20 +1712,21 @@ button {
   font-size: 0.85rem;
   font-weight: 800;
   letter-spacing: 0.05em;
-  color: #ffffff;
+  color: var(--pccoe-gold-bright);
   text-transform: uppercase;
   margin-bottom: 8px;
 }
 
 .footer-location-title i {
-  color: #ffffff;
+  color: var(--pccoe-gold-bright);
   font-size: 0.9rem;
 }
 
 .footer-map-container {
   border-radius: 4px;
   overflow: hidden;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.35);
   height: 90px;
   max-width: 210px;
 }
@@ -1733,10 +1739,11 @@ button {
 
 /* Slim Dark Bottom Strip */
 .footer-bottom-strip {
-  background: #092138;
+  background: #021220;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
   padding: 9px 0;
   font-size: 0.775rem;
-  color: rgba(255, 255, 255, 0.9);
+  color: rgba(255, 255, 255, 0.85);
 }
 
 .footer-bottom-inner {
@@ -1748,11 +1755,11 @@ button {
 }
 
 .footer-bottom-inner span {
-  color: rgba(255, 255, 255, 0.9);
+  color: rgba(255, 255, 255, 0.85);
 }
 
 .footer-bottom-inner strong {
-  color: #ffffff;
+  color: var(--pccoe-gold-bright);
 }
 
 .footer-bottom-inner a {
@@ -1762,12 +1769,12 @@ button {
 }
 
 .footer-bottom-inner a:hover {
-  color: #fef08a;
+  color: var(--pccoe-gold-bright);
   text-decoration: underline;
 }
 
 .team-badge-link {
-  color: #ffffff !important;
+  color: var(--pccoe-gold-bright) !important;
   font-weight: 700;
 }
 
