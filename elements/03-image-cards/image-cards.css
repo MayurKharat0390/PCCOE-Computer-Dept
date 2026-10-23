@@ -1,0 +1,603 @@
+/* ==========================================================================
+   PCCOE Computer Engineering - Element 03: Image Card Elements
+   Modular Card Component Styles
+   ========================================================================== */
+
+:root {
+  --pccoe-navy-darkest: #073860;
+  --pccoe-navy: #035a91;
+  --pccoe-navy-royal: #0277bd;
+  --pccoe-navy-mid: #0284c7;
+  --pccoe-navy-subtle: #e0f2fe;
+  --pccoe-navy-wash: #f0f8ff;
+  
+  --pccoe-gold-primary: #f59e0b;
+  --pccoe-gold-bright: #fbbf24;
+  --pccoe-gold-warm: #ea580c;
+  --pccoe-gold-dark: #b45309;
+  --pccoe-gold-soft: #fef3c7;
+  --pccoe-gold-gradient: linear-gradient(135deg, #f59e0b 0%, #fbbf24 55%, #fde047 100%);
+  
+  --bg-surface: #ffffff;
+  --text-main: #0f172a;
+  --text-secondary: #334155;
+  --text-muted: #64748b;
+  --border-light: #e2e8f0;
+  
+  --shadow-xs: 0 1px 2px rgba(3, 90, 145, 0.05);
+  --shadow-sm: 0 2px 6px -1px rgba(3, 90, 145, 0.08);
+  --shadow-md: 0 8px 20px -3px rgba(3, 90, 145, 0.11);
+  --shadow-lg: 0 20px 32px -4px rgba(3, 90, 145, 0.14);
+  
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-full: 9999px;
+  
+  --transition-fast: 0.15s ease;
+  --transition-normal: 0.25s ease;
+  
+  --font-sans: 'Plus Jakarta Sans', 'Inter', sans-serif;
+  --font-display: 'Outfit', 'Plus Jakarta Sans', sans-serif;
+}
+
+/* Scoped Container for Cards */
+.cards-showcase-container {
+  max-width: 1380px;
+  margin: 0 auto;
+  padding: 0 20px;
+  font-family: var(--font-sans);
+}
+
+.cards-section-title {
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: var(--pccoe-navy);
+  margin-top: 36px;
+  margin-bottom: 18px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border-bottom: 2px solid var(--pccoe-navy-subtle);
+  padding-bottom: 8px;
+}
+
+.cards-section-title i {
+  color: var(--pccoe-gold-primary);
+}
+
+/* --------------------------------------------------------------------------
+   CARD VARIANT 1: SPOTLIGHT / GLANCE IMAGE CARDS (3-Column)
+   -------------------------------------------------------------------------- */
+.glance-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 1.5rem;
+}
+
+.glance-card {
+  background: var(--bg-surface);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-light);
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  transition: all var(--transition-normal);
+  position: relative;
+}
+
+.glance-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--pccoe-navy-mid);
+}
+
+.glance-media-box {
+  width: 100%;
+  height: 210px;
+  overflow: hidden;
+  background: #f1f5f9;
+  position: relative;
+}
+
+.glance-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  display: block;
+}
+
+.glance-card:hover .glance-img {
+  transform: scale(1.06);
+}
+
+.glance-badge-tag {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  background: rgba(7, 56, 96, 0.92);
+  border: 1px solid var(--pccoe-gold-primary);
+  backdrop-filter: blur(4px);
+  color: var(--pccoe-gold-bright);
+  font-size: 0.7rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 4px 10px;
+  border-radius: var(--radius-sm);
+  z-index: 2;
+}
+
+.glance-content {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.glance-title {
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  color: var(--pccoe-navy);
+  letter-spacing: 0.03em;
+  margin-bottom: 8px;
+}
+
+.glance-text {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin-bottom: 16px;
+  flex: 1;
+}
+
+.glance-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  background: linear-gradient(135deg, var(--pccoe-navy) 0%, var(--pccoe-navy-mid) 100%);
+  color: #ffffff !important;
+  font-size: 0.775rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  padding: 9px 20px;
+  border-radius: var(--radius-sm);
+  border: 1px solid rgba(37, 99, 235, 0.35);
+  text-decoration: none;
+  align-self: flex-start;
+  transition: all var(--transition-fast);
+  box-shadow: 0 2px 6px rgba(15, 43, 89, 0.15);
+}
+
+.glance-btn:hover {
+  background: var(--pccoe-gold-gradient);
+  color: var(--pccoe-navy-darkest) !important;
+  border-color: var(--pccoe-gold-primary);
+  box-shadow: 0 4px 12px rgba(245, 158, 11, 0.35);
+  transform: translateY(-1px);
+}
+
+/* --------------------------------------------------------------------------
+   CARD VARIANT 2: ACADEMIC PROGRAM CARD
+   -------------------------------------------------------------------------- */
+.programs-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 1.5rem;
+}
+
+.program-card {
+  background: var(--bg-surface);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-light);
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: var(--shadow-sm);
+  position: relative;
+  overflow: hidden;
+  transition: all var(--transition-normal);
+}
+
+.program-card::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--pccoe-navy-mid), var(--pccoe-gold-primary));
+}
+
+.program-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--pccoe-navy-mid);
+}
+
+.program-badge {
+  display: inline-flex;
+  align-self: flex-start;
+  font-size: 0.725rem;
+  font-weight: 800;
+  color: var(--pccoe-navy-mid);
+  background: var(--pccoe-navy-subtle);
+  border: 1px solid rgba(37, 99, 235, 0.25);
+  padding: 4px 12px;
+  border-radius: var(--radius-full);
+  margin-bottom: 12px;
+}
+
+.program-title {
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: var(--pccoe-navy);
+  margin-bottom: 8px;
+}
+
+.program-meta {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  margin-bottom: 14px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--border-light);
+}
+
+.program-meta span {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.program-meta i {
+  color: var(--pccoe-gold-dark);
+}
+
+.program-features {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 20px;
+  flex: 1;
+}
+
+.program-features li {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  font-size: 0.825rem;
+  color: var(--text-secondary);
+  line-height: 1.4;
+}
+
+.program-features li i {
+  color: var(--pccoe-navy-mid);
+  font-size: 0.75rem;
+  margin-top: 3px;
+}
+
+.program-footer-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--pccoe-navy-mid);
+  text-decoration: none;
+  transition: all var(--transition-fast);
+}
+
+.program-footer-link:hover {
+  color: var(--pccoe-gold-dark);
+  transform: translateX(4px);
+}
+
+/* --------------------------------------------------------------------------
+   CARD VARIANT 3: FACULTY / LEADERSHIP PROFILE CARD
+   -------------------------------------------------------------------------- */
+.faculty-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.faculty-card {
+  background: var(--bg-surface);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-light);
+  box-shadow: var(--shadow-sm);
+  padding: 24px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: all var(--transition-normal);
+  position: relative;
+  overflow: hidden;
+}
+
+.faculty-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--pccoe-navy-mid);
+}
+
+.faculty-avatar-wrap {
+  width: 105px;
+  height: 105px;
+  border-radius: var(--radius-full);
+  padding: 3px;
+  background: var(--pccoe-gold-gradient);
+  margin-bottom: 14px;
+  box-shadow: 0 4px 14px rgba(245, 158, 11, 0.25);
+  position: relative;
+}
+
+.faculty-avatar-img {
+  width: 100%;
+  height: 100%;
+  border-radius: var(--radius-full);
+  object-fit: cover;
+  background: #ffffff;
+}
+
+.faculty-name {
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: var(--pccoe-navy);
+  margin-bottom: 2px;
+}
+
+.faculty-designation {
+  font-size: 0.775rem;
+  font-weight: 700;
+  color: var(--pccoe-gold-dark);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin-bottom: 8px;
+}
+
+.faculty-degree {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  margin-bottom: 12px;
+}
+
+.faculty-tags {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 6px;
+  margin-bottom: 16px;
+}
+
+.faculty-tag {
+  background: var(--pccoe-navy-subtle);
+  color: var(--pccoe-navy);
+  font-size: 0.7rem;
+  font-weight: 700;
+  padding: 2px 8px;
+  border-radius: var(--radius-sm);
+}
+
+.faculty-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: auto;
+}
+
+.faculty-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 6px 14px;
+  border-radius: var(--radius-sm);
+  text-decoration: none;
+  transition: all var(--transition-fast);
+}
+
+.faculty-btn.primary {
+  background: var(--pccoe-navy);
+  color: #ffffff;
+}
+
+.faculty-btn.primary:hover {
+  background: var(--pccoe-navy-royal);
+}
+
+.faculty-btn.outline {
+  border: 1px solid var(--border-light);
+  color: var(--pccoe-navy);
+}
+
+.faculty-btn.outline:hover {
+  background: var(--pccoe-gold-soft);
+  color: var(--pccoe-gold-dark);
+}
+
+/* --------------------------------------------------------------------------
+   CARD VARIANT 4: INFRASTRUCTURE & HIGH-TECH LAB CARD
+   -------------------------------------------------------------------------- */
+.lab-card {
+  background: var(--bg-surface);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-light);
+  box-shadow: var(--shadow-sm);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: all var(--transition-normal);
+}
+
+.lab-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--pccoe-navy-mid);
+}
+
+.lab-media {
+  height: 190px;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.lab-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.lab-card:hover .lab-img {
+  transform: scale(1.05);
+}
+
+.lab-badge {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: rgba(15, 23, 42, 0.85);
+  border: 1px solid var(--pccoe-gold-primary);
+  color: var(--pccoe-gold-bright);
+  font-size: 0.72rem;
+  font-weight: 800;
+  padding: 3px 9px;
+  border-radius: var(--radius-sm);
+  backdrop-filter: blur(4px);
+}
+
+.lab-body {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.lab-title {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: var(--pccoe-navy);
+  margin-bottom: 6px;
+}
+
+.lab-specs {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 0.825rem;
+  color: var(--text-secondary);
+  margin-bottom: 14px;
+}
+
+.lab-spec-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.lab-spec-item i {
+  color: var(--pccoe-navy-mid);
+  font-size: 0.8rem;
+  width: 16px;
+}
+
+/* --------------------------------------------------------------------------
+   CARD VARIANT 5: NOTICE & NEWS CARD (With Date Badge)
+   -------------------------------------------------------------------------- */
+.notice-card {
+  background: var(--bg-surface);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-light);
+  border-left: 4px solid var(--pccoe-navy-mid);
+  padding: 18px;
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  transition: all var(--transition-fast);
+}
+
+.notice-card:hover {
+  transform: translateX(4px);
+  border-left-color: var(--pccoe-gold-primary);
+  box-shadow: var(--shadow-md);
+}
+
+.notice-date-box {
+  width: 58px;
+  height: 58px;
+  background: var(--pccoe-navy-wash);
+  border: 1px solid var(--pccoe-navy-subtle);
+  border-radius: var(--radius-sm);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  text-align: center;
+}
+
+.notice-day {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: var(--pccoe-navy);
+  line-height: 1;
+}
+
+.notice-month {
+  font-size: 0.65rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  color: var(--pccoe-gold-dark);
+  letter-spacing: 0.05em;
+}
+
+.notice-content {
+  flex: 1;
+}
+
+.notice-category-tag {
+  font-size: 0.68rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  color: var(--pccoe-navy-mid);
+  background: var(--pccoe-navy-subtle);
+  padding: 2px 7px;
+  border-radius: 3px;
+  display: inline-block;
+  margin-bottom: 6px;
+}
+
+.notice-title {
+  font-size: 0.925rem;
+  font-weight: 700;
+  color: var(--pccoe-navy);
+  line-height: 1.35;
+  margin-bottom: 4px;
+}
+
+.notice-desc {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  line-height: 1.45;
+}

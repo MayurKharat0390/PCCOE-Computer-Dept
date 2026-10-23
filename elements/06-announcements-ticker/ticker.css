@@ -1,0 +1,145 @@
+/* ==========================================================================
+   PCCOE Computer Engineering - Element 06: Announcements & Spotlight Ticker
+   Modular CSS for Continuous News Strip
+   ========================================================================== */
+
+:root {
+  --pccoe-navy-darkest: #073860;
+  --pccoe-navy: #035a91;
+  --pccoe-navy-mid: #0284c7;
+  --pccoe-navy-subtle: #e0f2fe;
+  --pccoe-navy-wash: #f0f8ff;
+  
+  --pccoe-gold-primary: #f59e0b;
+  --pccoe-gold-bright: #fbbf24;
+  --pccoe-gold-dark: #b45309;
+  --pccoe-gold-soft: #fef3c7;
+  
+  --bg-surface: #ffffff;
+  --text-main: #0f172a;
+  --border-light: #e2e8f0;
+  --shadow-xs: 0 1px 2px rgba(3, 90, 145, 0.05);
+  
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-full: 9999px;
+  
+  --font-sans: 'Plus Jakarta Sans', 'Inter', sans-serif;
+  --font-display: 'Outfit', 'Plus Jakarta Sans', sans-serif;
+}
+
+.ticker-component-wrap {
+  font-family: var(--font-sans);
+  max-width: 1380px;
+  margin: 15px auto;
+  padding: 0 20px;
+}
+
+.spotlight-wrapper {
+  display: flex;
+  align-items: center;
+  background: var(--bg-surface);
+  border: 1px solid var(--border-light);
+  border-left: 4px solid var(--pccoe-gold-primary);
+  border-radius: var(--radius-md);
+  padding: 8px 16px;
+  box-shadow: var(--shadow-xs);
+  overflow: hidden;
+}
+
+.spotlight-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 0.8rem;
+  font-weight: 800;
+  color: var(--pccoe-navy);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  padding-right: 16px;
+  border-right: 2px solid var(--border-light);
+  white-space: nowrap;
+}
+
+.spotlight-badge i {
+  color: var(--pccoe-gold-primary);
+  font-size: 0.85rem;
+}
+
+.spotlight-ticker-viewport {
+  flex: 1;
+  overflow: hidden;
+  position: relative;
+  margin-left: 14px;
+  white-space: nowrap;
+}
+
+.spotlight-marquee {
+  display: inline-flex;
+  align-items: center;
+  gap: 36px;
+  animation: ticker-slide 32s linear infinite;
+  will-change: transform;
+}
+
+.spotlight-marquee:hover {
+  animation-play-state: paused;
+}
+
+@keyframes ticker-slide {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.ticker-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.825rem;
+  color: var(--text-main);
+  font-weight: 500;
+}
+
+.ticker-tag {
+  background: var(--pccoe-navy-subtle);
+  color: var(--pccoe-navy-mid);
+  border: 1px solid rgba(37, 99, 235, 0.2);
+  font-size: 0.7rem;
+  font-weight: 800;
+  padding: 2px 7px;
+  border-radius: 4px;
+}
+
+.ticker-tag.urgent {
+  background: var(--pccoe-gold-soft);
+  color: var(--pccoe-gold-dark);
+  border-color: rgba(245, 158, 11, 0.3);
+}
+
+.ticker-item a {
+  color: var(--pccoe-navy);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.ticker-item a:hover {
+  color: var(--pccoe-navy-mid);
+  text-decoration: underline;
+}
+
+@media (max-width: 640px) {
+  .spotlight-wrapper {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+  .spotlight-badge {
+    border-right: none;
+    border-bottom: 2px solid var(--border-light);
+    padding-bottom: 4px;
+    width: 100%;
+  }
+  .spotlight-ticker-viewport {
+    margin-left: 0;
+  }
+}

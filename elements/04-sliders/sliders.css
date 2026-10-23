@@ -1,0 +1,483 @@
+/* ==========================================================================
+   PCCOE Computer Engineering - Element 04: Sliders Suite
+   Modular CSS for Hero Slider, Recruiter Marquee, and Testimonials
+   ========================================================================== */
+
+:root {
+  --pccoe-navy-darkest: #073860;
+  --pccoe-navy: #035a91;
+  --pccoe-navy-royal: #0277bd;
+  --pccoe-navy-mid: #0284c7;
+  --pccoe-navy-subtle: #e0f2fe;
+  --pccoe-navy-wash: #f0f8ff;
+  
+  --pccoe-gold-primary: #f59e0b;
+  --pccoe-gold-bright: #fbbf24;
+  --pccoe-gold-warm: #ea580c;
+  --pccoe-gold-dark: #b45309;
+  --pccoe-gold-soft: #fef3c7;
+  --pccoe-gold-gradient: linear-gradient(135deg, #f59e0b 0%, #fbbf24 55%, #fde047 100%);
+  
+  --bg-surface: #ffffff;
+  --text-main: #0f172a;
+  --text-secondary: #334155;
+  --text-muted: #64748b;
+  --border-light: #e2e8f0;
+  --border-medium: #cbd5e1;
+  
+  --shadow-sm: 0 2px 6px -1px rgba(3, 90, 145, 0.08);
+  --shadow-md: 0 8px 20px -3px rgba(3, 90, 145, 0.11);
+  --shadow-lg: 0 20px 32px -4px rgba(3, 90, 145, 0.14);
+  
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --radius-full: 9999px;
+  
+  --transition-fast: 0.15s ease;
+  --transition-normal: 0.25s ease;
+  
+  --font-sans: 'Plus Jakarta Sans', 'Inter', sans-serif;
+  --font-display: 'Outfit', 'Plus Jakarta Sans', sans-serif;
+}
+
+.sliders-showcase-wrap {
+  font-family: var(--font-sans);
+  width: 100%;
+}
+
+.sliders-container {
+  max-width: 1380px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.slider-section-heading {
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: var(--pccoe-navy);
+  margin-top: 40px;
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.slider-section-heading i {
+  color: var(--pccoe-gold-primary);
+}
+
+/* --------------------------------------------------------------------------
+   1. BROAD INSTITUTIONAL HERO SLIDER (Edge-to-Edge Full Width)
+   -------------------------------------------------------------------------- */
+.broad-hero-section {
+  width: 100%;
+  margin-bottom: 25px;
+  padding: 0;
+}
+
+.broad-slider-container {
+  width: 100%;
+  background: var(--pccoe-navy-darkest);
+  border-top: 1px solid var(--border-light);
+  border-bottom: 1px solid var(--border-light);
+  box-shadow: var(--shadow-sm);
+  overflow: hidden;
+  position: relative;
+}
+
+.hero-slider {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 5;
+  min-height: 280px;
+  overflow: hidden;
+  background: #030d1a;
+}
+
+.slide-item {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.7s ease-in-out, transform 0.7s ease-in-out;
+  transform: scale(1.02);
+}
+
+.slide-item.active {
+  opacity: 1;
+  visibility: visible;
+  transform: scale(1);
+}
+
+.broad-slide-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+/* Slide Overlay Caption */
+.slide-caption-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(180deg, transparent 0%, rgba(3, 33, 58, 0.85) 60%, rgba(3, 33, 58, 0.98) 100%);
+  padding: 40px 40px 24px;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.slide-caption-tag {
+  background: var(--pccoe-gold-gradient);
+  color: var(--pccoe-navy-darkest);
+  font-weight: 800;
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 3px 10px;
+  border-radius: var(--radius-sm);
+  align-self: flex-start;
+}
+
+.slide-caption-title {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: #ffffff;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.5);
+}
+
+.slide-caption-desc {
+  font-size: 0.9rem;
+  color: #e2e8f0;
+  max-width: 750px;
+}
+
+/* Slider Navigation Arrows */
+.slider-arrow-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: rgba(4, 15, 29, 0.7);
+  border: 1px solid rgba(212, 175, 55, 0.4);
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  z-index: 20;
+  transition: all var(--transition-fast);
+  cursor: pointer;
+}
+
+.slider-arrow-btn:hover {
+  background: var(--pccoe-gold-primary);
+  color: var(--pccoe-navy-darkest);
+  border-color: var(--pccoe-gold-primary);
+  transform: translateY(-50%) scale(1.08);
+}
+
+.slider-arrow-btn.prev {
+  left: 20px;
+}
+
+.slider-arrow-btn.next {
+  right: 20px;
+}
+
+/* Slider Dot Indicators */
+.broad-slider-dots {
+  position: absolute;
+  bottom: 14px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  z-index: 20;
+  background: rgba(4, 15, 29, 0.65);
+  padding: 5px 14px;
+  border-radius: var(--radius-full);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(6px);
+}
+
+.indicator-dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.4);
+  border: none;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.indicator-dot.active {
+  width: 24px;
+  border-radius: 8px;
+  background: var(--pccoe-gold-primary);
+}
+
+/* --------------------------------------------------------------------------
+   2. CORPORATE RECRUITERS INFINITE LOGO MARQUEE SLIDER
+   -------------------------------------------------------------------------- */
+.marquee-slider-section {
+  background: #ffffff;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-light);
+  padding: 24px;
+  box-shadow: var(--shadow-sm);
+  margin-bottom: 30px;
+}
+
+.marquee-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  border-bottom: 1px solid var(--border-light);
+  padding-bottom: 10px;
+}
+
+.marquee-title {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: var(--pccoe-navy);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.marquee-stat-pill {
+  font-size: 0.75rem;
+  font-weight: 800;
+  color: var(--pccoe-gold-dark);
+  background: var(--pccoe-gold-soft);
+  padding: 4px 10px;
+  border-radius: var(--radius-full);
+}
+
+.marquee-track-container {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  mask-image: linear-gradient(to right, transparent, black 8%, black 92%, transparent);
+  -webkit-mask-image: linear-gradient(to right, transparent, black 8%, black 92%, transparent);
+}
+
+.marquee-track {
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+  width: max-content;
+  animation: marquee-scroll 24s linear infinite;
+}
+
+.marquee-track:hover {
+  animation-play-state: paused;
+}
+
+@keyframes marquee-scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.recruiter-logo-box {
+  background: var(--pccoe-navy-wash);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-sm);
+  padding: 14px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 150px;
+  height: 65px;
+  transition: all var(--transition-fast);
+}
+
+.recruiter-logo-box:hover {
+  background: #ffffff;
+  border-color: var(--pccoe-navy-mid);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-sm);
+}
+
+.recruiter-name-text {
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: var(--pccoe-navy-darkest);
+  letter-spacing: 0.02em;
+}
+
+/* --------------------------------------------------------------------------
+   3. TESTIMONIALS & PLACEMENT VOICES CAROUSEL
+   -------------------------------------------------------------------------- */
+.testimonials-section {
+  background: #ffffff;
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-md);
+  padding: 28px;
+  box-shadow: var(--shadow-sm);
+  margin-bottom: 30px;
+}
+
+.testimonials-wrapper {
+  position: relative;
+}
+
+.testimonial-track-container {
+  overflow: hidden;
+  position: relative;
+}
+
+.testimonial-track {
+  display: flex;
+  transition: transform 0.5s ease;
+  gap: 1.25rem;
+}
+
+.testimonial-slide-page {
+  min-width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+}
+
+.testimonial-modern-card {
+  background: var(--pccoe-navy-wash);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-md);
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  box-shadow: var(--shadow-xs);
+  transition: all var(--transition-normal);
+}
+
+.testimonial-modern-card:hover {
+  background: #ffffff;
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--pccoe-navy-mid);
+}
+
+.testi-avatar-frame {
+  width: 76px;
+  height: 76px;
+  border-radius: var(--radius-full);
+  margin: 0 auto 12px;
+  padding: 2px;
+  background: var(--pccoe-gold-gradient);
+}
+
+.testi-avatar-img {
+  width: 100%;
+  height: 100%;
+  border-radius: var(--radius-full);
+  object-fit: cover;
+  background: #ffffff;
+}
+
+.testi-name {
+  font-family: var(--font-display);
+  font-size: 0.95rem;
+  font-weight: 800;
+  color: var(--pccoe-navy);
+  margin-bottom: 2px;
+}
+
+.testi-role {
+  font-size: 0.75rem;
+  color: var(--pccoe-navy-mid);
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.testi-quote {
+  font-size: 0.825rem;
+  font-style: italic;
+  color: var(--text-secondary);
+  line-height: 1.55;
+  flex: 1;
+}
+
+.testi-stars {
+  margin-top: 14px;
+  color: var(--pccoe-gold-primary);
+  font-size: 0.85rem;
+  letter-spacing: 2px;
+}
+
+.testi-controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 14px;
+  margin-top: 24px;
+}
+
+.testi-nav-btn {
+  width: 36px;
+  height: 36px;
+  border-radius: var(--radius-full);
+  background: #ffffff;
+  border: 1px solid var(--border-light);
+  color: var(--pccoe-navy);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--shadow-xs);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.testi-nav-btn:hover {
+  background: var(--pccoe-navy);
+  color: var(--pccoe-gold-bright);
+  border-color: var(--pccoe-navy);
+}
+
+.testi-bullet {
+  width: 8px;
+  height: 8px;
+  border-radius: var(--radius-full);
+  background: var(--border-medium);
+  border: none;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.testi-bullet.active {
+  background: var(--pccoe-gold-primary);
+  width: 24px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+  .hero-slider {
+    aspect-ratio: 16 / 7;
+  }
+  .testimonial-slide-page {
+    grid-template-columns: 1fr;
+  }
+  .slide-caption-title {
+    font-size: 1.15rem;
+  }
+  .slide-caption-overlay {
+    padding: 20px;
+  }
+}

@@ -1,0 +1,267 @@
+/* ==========================================================================
+   PCCOE Computer Engineering - Element 02: Master Footer
+   Standalone Modular CSS
+   ========================================================================== */
+
+:root {
+  --pccoe-navy-darkest: #073860;
+  --pccoe-navy: #035a91;
+  --pccoe-navy-royal: #0277bd;
+  --pccoe-navy-mid: #0284c7;
+  --pccoe-gold-primary: #f59e0b;
+  --pccoe-gold-bright: #fbbf24;
+  --pccoe-gold-warm: #ea580c;
+  --pccoe-gold-dark: #b45309;
+  --transition-fast: 0.15s ease;
+  --transition-normal: 0.25s ease;
+  --font-sans: 'Plus Jakarta Sans', 'Inter', sans-serif;
+  --font-display: 'Outfit', 'Plus Jakarta Sans', sans-serif;
+}
+
+/* Scoped Reset */
+.elem-footer-wrap *,
+.elem-footer-wrap *::before,
+.elem-footer-wrap *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.elem-footer-wrap {
+  font-family: var(--font-sans);
+  width: 100%;
+}
+
+.elem-footer-container {
+  width: 100%;
+  max-width: 1380px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+/* --------------------------------------------------------------------------
+   MASTER FOOTER (Harmonized Academic PCCOE Identity)
+   -------------------------------------------------------------------------- */
+.site-master-footer {
+  background: linear-gradient(180deg, var(--pccoe-navy-darkest) 0%, #03213a 100%);
+  color: #ffffff;
+  position: relative;
+  overflow: hidden;
+  border-top: 3px solid var(--pccoe-gold-primary);
+}
+
+.footer-main-body {
+  padding: 24px 0 18px;
+}
+
+.footer-columns-grid {
+  display: grid;
+  grid-template-columns: 1.4fr 0.9fr 1.3fr 1.1fr;
+  gap: 1.75rem;
+  align-items: start;
+}
+
+/* Column 1: Contact & Visitor Counter */
+.footer-col-contact {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.footer-counter-wrap {
+  display: inline-flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.footer-counter-label {
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--pccoe-gold-bright);
+  font-weight: 700;
+}
+
+.footer-counter-img {
+  height: 22px;
+  display: block;
+  border-radius: 3px;
+  border: 1px solid rgba(251, 191, 36, 0.35);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+.footer-contact-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.footer-contact-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 9px;
+  font-size: 0.8125rem;
+  color: rgba(255, 255, 255, 0.9);
+  line-height: 1.4;
+}
+
+.footer-contact-item i {
+  color: var(--pccoe-gold-bright);
+  font-size: 0.85rem;
+  margin-top: 3px;
+  flex-shrink: 0;
+}
+
+.footer-contact-item a {
+  color: rgba(255, 255, 255, 0.9);
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+.footer-contact-item a:hover {
+  color: var(--pccoe-gold-bright);
+  text-decoration: underline;
+}
+
+/* Navigation Menus */
+.footer-nav-menu {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.footer-nav-menu li a {
+  color: rgba(255, 255, 255, 0.88);
+  font-size: 0.835rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all var(--transition-fast);
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.footer-nav-menu li a:hover {
+  color: var(--pccoe-gold-bright);
+  padding-left: 4px;
+}
+
+.footer-nav-menu li a i {
+  font-size: 0.7rem;
+  color: var(--pccoe-gold-primary);
+  opacity: 0.8;
+}
+
+.footer-menu-heading {
+  font-family: var(--font-display);
+  font-weight: 800 !important;
+  font-size: 0.875rem !important;
+  color: var(--pccoe-gold-bright) !important;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  margin-bottom: 6px;
+  padding-bottom: 4px;
+  border-bottom: 1px solid rgba(251, 191, 36, 0.25);
+  pointer-events: none;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Location Map Box */
+.footer-location-title {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.85rem;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  color: var(--pccoe-gold-bright);
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.footer-location-title i {
+  color: var(--pccoe-gold-bright);
+  font-size: 0.9rem;
+}
+
+.footer-map-container {
+  border-radius: 6px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.35);
+  height: 105px;
+  width: 100%;
+}
+
+.footer-map-container iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+/* Slim Dark Bottom Strip */
+.footer-bottom-strip {
+  background: #021220;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 10px 0;
+  font-size: 0.775rem;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.footer-bottom-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.footer-bottom-inner span {
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.footer-bottom-inner strong {
+  color: var(--pccoe-gold-bright);
+}
+
+.footer-bottom-inner a {
+  color: #ffffff;
+  font-weight: 700;
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+.footer-bottom-inner a:hover {
+  color: var(--pccoe-gold-bright);
+  text-decoration: underline;
+}
+
+.team-badge-link {
+  color: var(--pccoe-gold-bright) !important;
+  font-weight: 700;
+}
+
+/* Responsive Breakpoints */
+@media (max-width: 992px) {
+  .footer-columns-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .footer-columns-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  .footer-bottom-inner {
+    flex-direction: column;
+    text-align: center;
+  }
+}

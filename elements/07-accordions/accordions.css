@@ -1,0 +1,215 @@
+/* ==========================================================================
+   PCCOE Computer Engineering - Element 07: Collapsible Accordions & Outcomes
+   Modular CSS for PEOs, POs, FAQs, and Curriculum Accordions
+   ========================================================================== */
+
+:root {
+  --pccoe-navy-darkest: #073860;
+  --pccoe-navy: #035a91;
+  --pccoe-navy-royal: #0277bd;
+  --pccoe-navy-mid: #0284c7;
+  --pccoe-navy-subtle: #e0f2fe;
+  --pccoe-navy-wash: #f0f8ff;
+  
+  --pccoe-gold-primary: #f59e0b;
+  --pccoe-gold-bright: #fbbf24;
+  --pccoe-gold-dark: #b45309;
+  --pccoe-gold-soft: #fef3c7;
+  
+  --bg-surface: #ffffff;
+  --text-main: #0f172a;
+  --text-secondary: #334155;
+  --text-muted: #64748b;
+  --border-light: #e2e8f0;
+  
+  --shadow-xs: 0 1px 2px rgba(3, 90, 145, 0.05);
+  --shadow-sm: 0 2px 6px -1px rgba(3, 90, 145, 0.08);
+  --shadow-md: 0 8px 20px -3px rgba(3, 90, 145, 0.11);
+  
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-full: 9999px;
+  
+  --transition-fast: 0.15s ease;
+  --transition-normal: 0.25s ease;
+  
+  --font-sans: 'Plus Jakarta Sans', 'Inter', sans-serif;
+  --font-display: 'Outfit', 'Plus Jakarta Sans', sans-serif;
+}
+
+.accordion-wrapper {
+  font-family: var(--font-sans);
+  max-width: 1380px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Accordion Control Toolbar */
+.accordion-toolbar {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-bottom: 14px;
+}
+
+.accordion-tool-btn {
+  font-size: 0.775rem;
+  font-weight: 700;
+  padding: 6px 14px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border-light);
+  background: #ffffff;
+  color: var(--pccoe-navy);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.accordion-tool-btn:hover {
+  background: var(--pccoe-navy-subtle);
+  border-color: var(--pccoe-navy-mid);
+}
+
+/* Collapsible Card */
+.collapsible-card {
+  background: var(--bg-surface);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-light);
+  box-shadow: var(--shadow-xs);
+  margin-bottom: 14px;
+  overflow: hidden;
+  transition: all var(--transition-normal);
+}
+
+.collapsible-card:hover {
+  border-color: var(--pccoe-navy-mid);
+  box-shadow: var(--shadow-sm);
+}
+
+.collapsible-header {
+  padding: 16px 20px;
+  background: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  user-select: none;
+  transition: background var(--transition-fast);
+}
+
+.collapsible-header:hover {
+  background: var(--pccoe-navy-wash);
+}
+
+.collapsible-card.open .collapsible-header {
+  background: linear-gradient(90deg, #ffffff 0%, var(--pccoe-navy-wash) 100%);
+  border-bottom: 1px solid var(--border-light);
+}
+
+.collapsible-title-wrap {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.collapsible-icon-badge {
+  width: 36px;
+  height: 36px;
+  border-radius: var(--radius-sm);
+  background: var(--pccoe-navy-subtle);
+  color: var(--pccoe-navy-mid);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  flex-shrink: 0;
+}
+
+.collapsible-card.open .collapsible-icon-badge {
+  background: var(--pccoe-navy);
+  color: var(--pccoe-gold-bright);
+}
+
+.collapsible-title {
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: var(--pccoe-navy);
+  margin: 0;
+}
+
+.collapsible-meta-tag {
+  font-size: 0.72rem;
+  font-weight: 800;
+  color: var(--pccoe-gold-dark);
+  background: var(--pccoe-gold-soft);
+  padding: 3px 8px;
+  border-radius: var(--radius-full);
+}
+
+.collapsible-chevron {
+  font-size: 0.85rem;
+  color: var(--pccoe-navy-mid);
+  transition: transform 0.3s ease;
+}
+
+.collapsible-card.open .collapsible-chevron {
+  transform: rotate(180deg);
+  color: var(--pccoe-gold-dark);
+}
+
+/* Collapsible Content Body */
+.collapsible-body {
+  padding: 0 20px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.35s cubic-bezier(0, 1, 0, 1), padding 0.35s ease;
+  background: #ffffff;
+}
+
+.collapsible-card.open .collapsible-body {
+  padding: 20px;
+  max-height: 1200px;
+  transition: max-height 0.5s ease-in-out, padding 0.3s ease;
+}
+
+/* Outcome Grid within Accordion */
+.outcome-items-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.outcome-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  padding: 12px 16px;
+  border-radius: var(--radius-sm);
+  background: var(--pccoe-navy-wash);
+  border-left: 3px solid var(--pccoe-navy-mid);
+}
+
+.outcome-code-tag {
+  font-family: var(--font-display);
+  font-size: 0.8rem;
+  font-weight: 800;
+  color: var(--pccoe-navy);
+  background: #ffffff;
+  border: 1px solid var(--border-light);
+  padding: 4px 8px;
+  border-radius: 4px;
+  flex-shrink: 0;
+}
+
+.outcome-desc-text {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+.outcome-desc-text strong {
+  color: var(--pccoe-navy);
+}

@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PCCOE Computer Dept - Master Elements & Component Catalog</title>
+  
+  <!-- Typography & Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <style>
+    :root {
+      --pccoe-navy-darkest: #073860;
+      --pccoe-navy: #035a91;
+      --pccoe-navy-royal: #0277bd;
+      --pccoe-navy-mid: #0284c7;
+      --pccoe-navy-subtle: #e0f2fe;
+      --pccoe-navy-wash: #f0f8ff;
+      --pccoe-gold-primary: #f59e0b;
+      --pccoe-gold-bright: #fbbf24;
+      --pccoe-gold-dark: #b45309;
+      --pccoe-gold-soft: #fef3c7;
+      --bg-page: #f8fafc;
+      --bg-surface: #ffffff;
+      --text-main: #0f172a;
+      --text-secondary: #334155;
+      --text-muted: #64748b;
+      --border-light: #e2e8f0;
+      --font-sans: 'Plus Jakarta Sans', sans-serif;
+      --font-display: 'Outfit', sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: var(--font-sans);
+      background-color: var(--bg-page);
+      color: var(--text-main);
+      line-height: 1.6;
+    }
+
+    /* Top Strip Header */
+    .catalog-header {
+      background: linear-gradient(135deg, var(--pccoe-navy-darkest) 0%, var(--pccoe-navy) 65%, var(--pccoe-navy-mid) 100%);
+      color: #ffffff;
+      padding: 30px 0;
+      border-bottom: 3px solid var(--pccoe-gold-primary);
+      box-shadow: 0 4px 20px rgba(7, 56, 96, 0.25);
+    }
+
+    .container {
+      max-width: 1380px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    .header-flex {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    .header-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(245, 158, 11, 0.2);
+      border: 1px solid var(--pccoe-gold-primary);
+      color: var(--pccoe-gold-bright);
+      font-size: 0.75rem;
+      font-weight: 800;
+      padding: 4px 12px;
+      border-radius: 9999px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 8px;
+    }
+
+    .catalog-title {
+      font-family: var(--font-display);
+      font-size: 2rem;
+      font-weight: 800;
+      line-height: 1.2;
+    }
+
+    .catalog-subtitle {
+      font-size: 0.95rem;
+      color: #cbd5e1;
+      max-width: 800px;
+      margin-top: 4px;
+    }
+
+    .header-actions {
+      display: flex;
+      gap: 12px;
+    }
+
+    .header-action-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--pccoe-gold-primary);
+      color: var(--pccoe-navy-darkest);
+      font-weight: 800;
+      font-size: 0.85rem;
+      padding: 10px 18px;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: all 0.2s ease;
+    }
+
+    .header-action-btn:hover {
+      background: var(--pccoe-gold-bright);
+      transform: translateY(-2px);
+    }
+
+    /* Grid of Elements */
+    .elements-section {
+      padding: 40px 0 60px;
+    }
+
+    .section-intro-bar {
+      margin-bottom: 28px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+      border-bottom: 2px solid var(--border-light);
+      padding-bottom: 14px;
+    }
+
+    .section-intro-bar h2 {
+      font-family: var(--font-display);
+      font-size: 1.45rem;
+      font-weight: 800;
+      color: var(--pccoe-navy);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .elements-catalog-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(390px, 1fr));
+      gap: 1.75rem;
+    }
+
+    .element-entry-card {
+      background: #ffffff;
+      border-radius: 12px;
+      border: 1px solid var(--border-light);
+      box-shadow: 0 2px 8px rgba(3, 90, 145, 0.06);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      transition: all 0.25s ease;
+    }
+
+    .element-entry-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 24px rgba(3, 90, 145, 0.12);
+      border-color: var(--pccoe-navy-mid);
+    }
+
+    .entry-card-header {
+      padding: 18px 20px;
+      background: linear-gradient(90deg, #ffffff 0%, var(--pccoe-navy-wash) 100%);
+      border-bottom: 1px solid var(--border-light);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .entry-num-badge {
+      font-family: var(--font-display);
+      font-size: 0.75rem;
+      font-weight: 800;
+      color: var(--pccoe-navy);
+      background: var(--pccoe-navy-subtle);
+      border: 1px solid rgba(3, 90, 145, 0.2);
+      padding: 3px 8px;
+      border-radius: 6px;
+    }
+
+    .entry-status-badge {
+      font-size: 0.72rem;
+      font-weight: 800;
+      color: #166534;
+      background: #dcfce7;
+      padding: 3px 10px;
+      border-radius: 9999px;
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    .entry-card-body {
+      padding: 22px 20px;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .entry-title {
+      font-family: var(--font-display);
+      font-size: 1.25rem;
+      font-weight: 800;
+      color: var(--pccoe-navy);
+      margin-bottom: 8px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .entry-title i {
+      color: var(--pccoe-gold-primary);
+    }
+
+    .entry-desc {
+      font-size: 0.865rem;
+      color: var(--text-secondary);
+      line-height: 1.55;
+      margin-bottom: 18px;
+      flex: 1;
+    }
+
+    .entry-files-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      margin-bottom: 20px;
+      background: #f8fafc;
+      padding: 12px 14px;
+      border-radius: 8px;
+      border: 1px solid var(--border-light);
+    }
+
+    .entry-file-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 0.785rem;
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+    }
+
+    .entry-file-item i {
+      margin-right: 6px;
+      color: var(--pccoe-navy-mid);
+    }
+
+    .entry-file-type {
+      font-size: 0.68rem;
+      font-weight: 700;
+      color: var(--text-muted);
+      text-transform: uppercase;
+    }
+
+    .entry-card-footer {
+      padding: 16px 20px;
+      background: #ffffff;
+      border-top: 1px solid var(--border-light);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+    }
+
+    .entry-open-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: linear-gradient(135deg, var(--pccoe-navy) 0%, var(--pccoe-navy-mid) 100%);
+      color: #ffffff;
+      font-size: 0.825rem;
+      font-weight: 700;
+      padding: 8px 16px;
+      border-radius: 6px;
+      text-decoration: none;
+      transition: all 0.2s ease;
+    }
+
+    .entry-open-btn:hover {
+      background: var(--pccoe-gold-primary);
+      color: var(--pccoe-navy-darkest);
+      transform: translateY(-1px);
+    }
+
+    .entry-inspect-link {
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--pccoe-navy-mid);
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    .entry-inspect-link:hover {
+      color: var(--pccoe-gold-dark);
+      text-decoration: underline;
+    }
+
+    /* Live Preview Modal Overlay */
+    .preview-modal-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(7, 56, 96, 0.8);
+      backdrop-filter: blur(6px);
+      z-index: 2000;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    .preview-modal-overlay.active {
+      display: flex;
+    }
+
+    .preview-modal-box {
+      background: #ffffff;
+      width: 95%;
+      height: 90vh;
+      border-radius: 12px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+      border: 2px solid var(--pccoe-gold-primary);
+    }
+
+    .preview-modal-topbar {
+      background: var(--pccoe-navy-darkest);
+      color: #ffffff;
+      padding: 12px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .preview-modal-title {
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: 1.1rem;
+      color: var(--pccoe-gold-bright);
+    }
+
+    .preview-modal-close {
+      background: none;
+      border: none;
+      color: #ffffff;
+      font-size: 1.3rem;
+      cursor: pointer;
+    }
+
+    .preview-modal-iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Catalog Header -->
+  <header class="catalog-header">
+    <div class="container header-flex">
+      <div>
+        <div class="header-badge"><i class="fa-solid fa-shapes"></i> Department Frontend Architecture</div>
+        <h1 class="catalog-title">PCCOE Computer Dept — Elements & Components Directory</h1>
+        <p class="catalog-subtitle">
+          Modular, atomic element catalog ready for inspection and committee approval before integration into the live website. Each component includes isolated styling and semantic HTML.
+        </p>
+      </div>
+      <div class="header-actions">
+        <a href="../index.html" class="header-action-btn"><i class="fa-solid fa-house"></i> View Full Site</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Elements Section -->
+  <main class="elements-section">
+    <div class="container">
+      
+      <div class="section-intro-bar">
+        <h2><i class="fa-solid fa-layer-group"></i> Component Inventory for Finalization</h2>
+        <span style="font-size: 0.85rem; color: var(--text-muted);">7 Distinct Element Suites Built</span>
+      </div>
+
+      <div class="elements-catalog-grid">
+
+        <!-- ELEMENT 01 -->
+        <article class="element-entry-card">
+          <div class="entry-card-header">
+            <span class="entry-num-badge">ELEMENT 01</span>
+            <span class="entry-status-badge"><i class="fa-solid fa-check"></i> Ready for Approval</span>
+          </div>
+          <div class="entry-card-body">
+            <h3 class="entry-title"><i class="fa-solid fa-compass"></i> Header & Navbar</h3>
+            <p class="entry-desc">
+              Three-tier institutional header featuring the 32px top utility strip (contact, social channels, accessibility font buttons), authentic brand header with accreditation ribbon, and sticky glassmorphic navigation bar with mega dropdowns.
+            </p>
+            <ul class="entry-files-list">
+              <li class="entry-file-item">
+                <span><i class="fa-brands fa-html5"></i> 01-header-navbar/header-navbar.html</span>
+                <span class="entry-file-type">HTML</span>
+              </li>
+              <li class="entry-file-item">
+                <span><i class="fa-brands fa-css3-alt"></i> 01-header-navbar/header-navbar.css</span>
+                <span class="entry-file-type">CSS</span>
+              </li>
+            </ul>
+          </div>
+          <div class="entry-card-footer">
+            <a href="01-header-navbar/header-navbar.html" class="entry-open-btn" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i> Open Standalone</a>
+            <button class="entry-inspect-link open-modal-trigger" data-src="01-header-navbar/header-navbar.html" data-title="Element 01: Master Header & Navbar"><i class="fa-solid fa-eye"></i> Quick View</button>
+          </div>
+        </article>
+
+        <!-- ELEMENT 02 -->
+        <article class="element-entry-card">
+          <div class="entry-card-header">
+            <span class="entry-num-badge">ELEMENT 02</span>
+            <span class="entry-status-badge"><i class="fa-solid fa-check"></i> Ready for Approval</span>
+          </div>
+          <div class="entry-card-body">
+            <h3 class="entry-title"><i class="fa-solid fa-shoe-prints"></i> Master Footer</h3>
+            <p class="entry-desc">
+              Four-column institutional footer containing live HitWebCounter visitor counter, complete campus postal address & query extensions, department quick navigation, SPPU/AICTE governance links, interactive Google Map embed, and copyright strip.
+            </p>
+            <ul class="entry-files-list">
+              <li class="entry-file-item">
+                <span><i class="fa-brands fa-html5"></i> 02-footer/footer.html</span>
+                <span class="entry-file-type">HTML</span>
+              </li>
+              <li class="entry-file-item">
+                <span><i class="fa-brands fa-css3-alt"></i> 02-footer/footer.css</span>
+                <span class="entry-file-type">CSS</span>
+              </li>
+            </ul>
+          </div>
+          <div class="entry-card-footer">
+            <a href="02-footer/footer.html" class="entry-open-btn" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i> Open Standalone</a>
+            <button class="entry-inspect-link open-modal-trigger" data-src="02-footer/footer.html" data-title="Element 02: Master Institutional Footer"><i class="fa-solid fa-eye"></i> Quick View</button>
+          </div>
+        </article>
+
+        <!-- ELEMENT 03 -->
+        <article class="element-entry-card">
+          <div class="entry-card-header">
+            <span class="entry-num-badge">ELEMENT 03</span>
+            <span class="entry-status-badge"><i class="fa-solid fa-check"></i> Ready for Approval</span>
+          </div>
+          <div class="entry-card-body">
+            <h3 class="entry-title"><i class="fa-solid fa-id-card"></i> Image Card Elements</h3>
+            <p class="entry-desc">
+              Complete suite of 5 distinct image card variations: Spotlight Feature Cards (image hover zoom & CTA), Academic Program Cards (B.Tech, M.Tech, PhD), Faculty Profile Cards with gold frames, High-Tech Lab Cards with specs, and Notice Date Cards.
+            </p>
+            <ul class="entry-files-list">
+              <li class="entry-file-item">
+                <span><i class="fa-brands fa-html5"></i> 03-image-cards/image-cards.html</span>
+                <span class="entry-file-type">HTML</span>
+              </li>
+              <li class="entry-file-item">
+                <span><i class="fa-brands fa-css3-alt"></i> 03-image-cards/image-cards.css</span>
+                <span class="entry-file-type">CSS</span>
+              </li>
+            </ul>
+          </div>
+          <div class="entry-card-footer">
+            <a href="03-image-cards/image-cards.html" class="entry-open-btn" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i> Open Standalone</a>
+            <button class="entry-inspect-link open-modal-trigger" data-src="03-image-cards/image-cards.html" data-title="Element 03: Image Card Elements Suite"><i class="fa-solid fa-eye"></i> Quick View</button>
+          </div>
+        </article>
+
+        <!-- ELEMENT 04 -->
+        <article class="element-entry-card">
+          <div class="entry-card-header">
+            <span class="entry-num-badge">ELEMENT 04</span>
+            <span class="entry-status-badge"><i class="fa-solid fa-check"></i> Ready for Approval</span>
+          </div>
+          <div class="entry-card-body">
+            <h3 class="entry-title"><i class="fa-solid fa-sliders"></i> Sliders & Carousels</h3>
+            <p class="entry-desc">
+              Interactive dynamic sliders including Edge-to-Edge full width hero banner slider with captions and arrow navigation, infinite continuous marquee carousel for corporate hiring partners, and student placement testimonial carousel.
+            </p>
+            <ul class="entry-files-list">
+              <li class="entry-file-item">
+                <span><i class="fa-brands fa-html5"></i> 04-sliders/sliders.html</span>
+                <span class="entry-file-type">HTML</span>
+              </li>
+              <li class="entry-file-item">
+                <span><i class="fa-brands fa-css3-alt"></i> 04-sliders/sliders.css</span>
+                <span class="entry-file-type">CSS</span>
+              </li>
+              <li class="entry-file-item">
+                <span><i class="fa-brands fa-js"></i> 04-sliders/sliders.js</span>
+                <span class="entry-file-type">JS</span>
+              </li>
+            </ul>
+          </div>
+          <div class="entry-card-footer">
+            <a href="04-sliders/sliders.html" class="entry-open-btn" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i> Open Standalone</a>
+            <button class="entry-inspect-link open-modal-trigger" data-src="04-sliders/sliders.html" data-title="Element 04: Sliders & Carousels Suite"><i class="fa-solid fa-eye"></i> Quick View</button>
+          </div>
+        </article>
+
+        <!-- ELEMENT 05 -->
+        <article class="element-entry-card">
+          <div class="entry-card-header">
+            <span class="entry-num-badge">ELEMENT 05</span>
+            <span class="entry-status-badge"><i class="fa-solid fa-check"></i> Ready for Approval</span>
+          </div>
+          <div class="entry-card-body">
+            <h3 class="entry-title"><i class="fa-solid fa-chart-pie"></i> Stats & Metrics Counters</h3>
+            <p class="entry-desc">
+              Four-column metric showcase cards with animated number counters, colored accent left borders (Navy, Gold, Warm, Sky), and stylized icon containers for PhDs, Dream CTC, Publications, and Placements.
+            </p>
+            <ul class="entry-files-list">
+              <li class="entry-file-item">
+                <span><i class="fa-brands fa-html5"></i> 05-stats-counters/stats-counters.html</span>
+                <span class="entry-file-type">HTML</span>
+              </li>
+              <li class="entry-file-item">
+                <span><i class="fa-brands fa-css3-alt"></i> 05-stats-counters/stats-counters.css</span>
+                <span class="entry-file-type">CSS</span>
+              </li>
+            </ul>
+          </div>
+          <div class="entry-card-footer">
+            <a href="05-stats-counters/stats-counters.html" class="entry-open-btn" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i> Open Standalone</a>
+            <button class="entry-inspect-link open-modal-trigger" data-src="05-stats-counters/stats-counters.html" data-title="Element 05: Stats & Metrics Counters"><i class="fa-solid fa-eye"></i> Quick View</button>
+          </div>
+        </article>
+
+        <!-- ELEMENT 06 -->
+        <article class="element-entry-card">
+          <div class="entry-card-header">
+            <span class="entry-num-badge">ELEMENT 06</span>
+            <span class="entry-status-badge"><i class="fa-solid fa-check"></i> Ready for Approval</span>
+          </div>
+          <div class="entry-card-body">
+            <h3 class="entry-title"><i class="fa-solid fa-bullhorn"></i> Announcements Ticker</h3>
+            <p class="entry-desc">
+              High-visibility announcements strip with "LATEST UPDATES" golden badge, seamless horizontal marquee animation, categorized notice badges, and automatic pause on mouse hover.
+            </p>
+            <ul class="entry-files-list">
+              <li class="entry-file-item">
+                <span><i class="fa-brands fa-html5"></i> 06-announcements-ticker/ticker.html</span>
+                <span class="entry-file-type">HTML</span>
+              </li>
+              <li class="entry-file-item">
+                <span><i class="fa-brands fa-css3-alt"></i> 06-announcements-ticker/ticker.css</span>
+                <span class="entry-file-type">CSS</span>
+              </li>
+            </ul>
+          </div>
+          <div class="entry-card-footer">
+            <a href="06-announcements-ticker/ticker.html" class="entry-open-btn" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i> Open Standalone</a>
+            <button class="entry-inspect-link open-modal-trigger" data-src="06-announcements-ticker/ticker.html" data-title="Element 06: Announcements & Spotlight Ticker"><i class="fa-solid fa-eye"></i> Quick View</button>
+          </div>
+        </article>
+
+        <!-- ELEMENT 07 -->
+        <article class="element-entry-card">
+          <div class="entry-card-header">
+            <span class="entry-num-badge">ELEMENT 07</span>
+            <span class="entry-status-badge"><i class="fa-solid fa-check"></i> Ready for Approval</span>
+          </div>
+          <div class="entry-card-body">
+            <h3 class="entry-title"><i class="fa-solid fa-bars-staggered"></i> Collapsible Accordions</h3>
+            <p class="entry-desc">
+              Interactive accordion panels with smooth height transitions, rotating chevron indicators, outcome code badges (PEO, PO, PSO, FAQ), and master Expand All / Collapse All toolbar controls.
+            </p>
+            <ul class="entry-files-list">
+              <li class="entry-file-item">
+                <span><i class="fa-brands fa-html5"></i> 07-accordions/accordions.html</span>
+                <span class="entry-file-type">HTML</span>
+              </li>
+              <li class="entry-file-item">
+                <span><i class="fa-brands fa-css3-alt"></i> 07-accordions/accordions.css</span>
+                <span class="entry-file-type">CSS</span>
+              </li>
+            </ul>
+          </div>
+          <div class="entry-card-footer">
+            <a href="07-accordions/accordions.html" class="entry-open-btn" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i> Open Standalone</a>
+            <button class="entry-inspect-link open-modal-trigger" data-src="07-accordions/accordions.html" data-title="Element 07: Collapsible Accordions & Panels"><i class="fa-solid fa-eye"></i> Quick View</button>
+          </div>
+        </article>
+
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Interactive Quick View Modal -->
+  <div class="preview-modal-overlay" id="previewModal">
+    <div class="preview-modal-box">
+      <div class="preview-modal-topbar">
+        <span class="preview-modal-title" id="modalTitle">Component Preview</span>
+        <button class="preview-modal-close" id="closeModalBtn" aria-label="Close Preview">&times;</button>
+      </div>
+      <iframe class="preview-modal-iframe" id="modalIframe" src="about:blank"></iframe>
+    </div>
+  </div>
+
+  <script>
+    const modal = document.getElementById('previewModal');
+    const iframe = document.getElementById('modalIframe');
+    const modalTitle = document.getElementById('modalTitle');
+    const closeBtn = document.getElementById('closeModalBtn');
+
+    document.querySelectorAll('.open-modal-trigger').forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        e.preventDefault();
+        const src = btn.getAttribute('data-src');
+        const title = btn.getAttribute('data-title');
+        modalTitle.textContent = title;
+        iframe.src = src;
+        modal.classList.add('active');
+      });
+    });
+
+    closeBtn.addEventListener('click', () => {
+      modal.classList.remove('active');
+      iframe.src = 'about:blank';
+    });
+
+    modal.addEventListener('click', (e) => {
+      if (e.target === modal) {
+        modal.classList.remove('active');
+        iframe.src = 'about:blank';
+      }
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Element 01: Master Header & Navbar | PCCOE Computer Dept</title>
+  
+  <!-- Typography & Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <!-- Dedicated Modular CSS -->
+  <link rel="stylesheet" href="header-navbar.css">
+  
+  <style>
+    body {
+      background-color: #f1f5f9;
+      margin: 0;
+      padding: 0;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+    }
+    .preview-banner {
+      background: #0f172a;
+      color: #94a3b8;
+      padding: 10px 20px;
+      font-size: 0.8rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+    .preview-tag {
+      background: #f59e0b;
+      color: #073860;
+      font-weight: 800;
+      padding: 2px 8px;
+      border-radius: 4px;
+      font-size: 0.7rem;
+      text-transform: uppercase;
+    }
+    .dummy-content {
+      max-width: 1200px;
+      margin: 40px auto;
+      padding: 30px;
+      background: #ffffff;
+      border-radius: 12px;
+      border: 1px solid #e2e8f0;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    }
+    .dummy-content h2 {
+      font-family: 'Outfit', sans-serif;
+      color: #035a91;
+      margin-bottom: 12px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Component Identifier Banner -->
+  <div class="preview-banner">
+    <div><span class="preview-tag">ELEMENT #01</span> <strong>Master Institutional Header & Sticky Glassmorphic Navigation</strong></div>
+    <div style="font-size: 0.75rem;"><i class="fa-solid fa-code"></i> Standalone Element Template (Ready for Review & Approval)</div>
+  </div>
+
+  <!-- ==========================================================================
+       START OF COMPONENT: Master Header & Navigation Element
+       ========================================================================== -->
+  <div class="elem-header-wrap">
+    
+    <!-- 1. Top Utility Strip (Ultra-Slim 32px Bar) -->
+    <header class="top-strip" role="region" aria-label="Top Contact and Admission Strip">
+      <div class="elem-container">
+        <div class="top-strip-inner">
+
+          <!-- Left Utility Links -->
+          <div class="top-contact-info">
+            <span class="top-contact-item">
+              <i class="fa-solid fa-phone-volume"></i>
+              <a href="tel:+918087174347">+91 8087174347</a>
+            </span>
+            <span class="strip-divider">|</span>
+            <span class="top-contact-item">
+              <i class="fa-solid fa-envelope"></i>
+              <a href="mailto:pccoeadmin@gmail.com">pccoeadmin@gmail.com</a>
+            </span>
+
+            <!-- Social Media Quick Channels -->
+            <div class="top-social-group">
+              <a href="https://www.facebook.com/PCCOENigdiPune" class="top-social-link" target="_blank"
+                rel="noopener noreferrer" aria-label="PCCOE Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+              <a href="https://www.linkedin.com/school/pimpri-chinchwad-college-of-engineering" class="top-social-link"
+                target="_blank" rel="noopener noreferrer" aria-label="PCCOE LinkedIn"><i
+                  class="fa-brands fa-linkedin-in"></i></a>
+              <a href="https://twitter.com/pccoe_pune" class="top-social-link" target="_blank"
+                rel="noopener noreferrer" aria-label="PCCOE Twitter / X"><i class="fa-brands fa-x-twitter"></i></a>
+              <a href="https://www.instagram.com/pccoepune" class="top-social-link" target="_blank"
+                rel="noopener noreferrer" aria-label="PCCOE Instagram"><i class="fa-brands fa-instagram"></i></a>
+              <a href="https://www.youtube.com/channel/UCnITeM_iA_20kd_kEvp87Tw" class="top-social-link"
+                target="_blank" rel="noopener noreferrer" aria-label="PCCOE YouTube"><i
+                  class="fa-brands fa-youtube"></i></a>
+            </div>
+          </div>
+
+          <!-- Right Utility Quick Links -->
+          <div class="top-links">
+            <a class="top-enquiry-link" href="https://www.pccoepune.com/admissions.php" target="_blank"
+              rel="noopener noreferrer">
+              <i class="fa-solid fa-bolt"></i> Admission Enquiry
+            </a>
+            <span class="strip-divider">|</span>
+            <a class="top-nav-link" href="https://www.pccoepune.com/nirf.php" target="_blank"
+              rel="noopener noreferrer">NIRF</a>
+            <span class="strip-divider">|</span>
+            <a class="top-nav-link" href="https://www.aicte-india.org/feedback/index.php" target="_blank"
+              rel="noopener noreferrer">AICTE</a>
+            <span class="strip-divider">|</span>
+            <a class="top-nav-link" href="https://computer.pccoepune.com/nba-docs" target="_blank"
+              rel="noopener noreferrer">NBA Portal</a>
+
+            <!-- Accessibility Switchers -->
+            <div class="access-tools" title="Accessibility Adjustments">
+              <button class="access-btn" id="fontDecrease" title="Decrease Font Size"
+                aria-label="Decrease Font Size">A-</button>
+              <button class="access-btn" id="fontReset" title="Normal Font Size" aria-label="Normal Font Size">A</button>
+              <button class="access-btn" id="fontIncrease" title="Increase Font Size"
+                aria-label="Increase Font Size">A+</button>
+              <button class="access-btn" id="contrastToggle" title="Toggle High Contrast"
+                aria-label="Toggle High Contrast"><i class="fa-solid fa-circle-half-stroke"></i></button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </header>
+
+    <!-- 2. Institutional Brand Header -->
+    <section class="brand-header" role="banner">
+      <div class="elem-container">
+        <div class="brand-header-grid">
+
+          <!-- PCCOE Main Emblem -->
+          <div class="brand-logo-left">
+            <a href="../../index.html" class="logo-link" title="PCCOE Pune Computer Dept">
+              <img src="https://computer.pccoepune.com/assets/images/PCCoE-LOGO/pccoe-logo.webp" alt="PCCoE Logo"
+                class="main-logo-img">
+            </a>
+          </div>
+
+          <!-- Center Identity Text & Accreditation -->
+          <div class="brand-text-center">
+            <div class="trust-title">PIMPRI CHINCHWAD EDUCATION TRUST'S (PCET)</div>
+            <h1 class="college-name">PIMPRI CHINCHWAD COLLEGE OF ENGINEERING</h1>
+            <h2 class="dept-title-text">DEPARTMENT OF COMPUTER ENGINEERING</h2>
+
+            <!-- Accreditation Ribbon -->
+            <div class="accreditation-ribbon">
+              <span class="accreditation-item">
+                <i class="fa-solid fa-award"></i>
+                <strong>NBA</strong> Tier-1 Accredited
+              </span>
+              <span class="accreditation-sep">•</span>
+              <span class="accreditation-item">
+                <i class="fa-solid fa-star"></i>
+                <strong>NAAC 'A++'</strong> Grade (CGPA 3.55)
+              </span>
+              <span class="accreditation-sep">•</span>
+              <span class="accreditation-item">
+                <i class="fa-solid fa-building-columns"></i>
+                An <strong>Autonomous</strong> Institute
+              </span>
+              <span class="accreditation-sep">•</span>
+              <span class="accreditation-item">
+                <i class="fa-solid fa-check-double"></i>
+                <strong>AICTE</strong> Approved
+              </span>
+              <span class="accreditation-sep">•</span>
+              <span class="accreditation-item">
+                <i class="fa-solid fa-university"></i>
+                Affiliated to <strong>SPPU, Pune</strong>
+              </span>
+            </div>
+          </div>
+
+          <!-- PCET Trust Logo -->
+          <div class="brand-logo-right">
+            <a href="http://pcet.org.in/" class="logo-link" title="PCET Trust Portal" target="_blank"
+              rel="noopener noreferrer">
+              <img src="https://computer.pccoepune.com/assets/images/PCCoE-LOGO/pcet-trust-logo.webp"
+                alt="PCET Trust Logo" class="trust-logo-img">
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. Primary Navigation Bar -->
+    <nav class="site-navigation" role="navigation" aria-label="Main Navigation">
+      <div class="elem-container nav-container">
+
+        <!-- Mobile Menu Hamburger -->
+        <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle Mobile Menu">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+
+        <!-- Navigation Links -->
+        <div class="nav-links-wrapper" id="navLinksWrapper">
+          <ul class="nav-list">
+
+            <!-- HOME -->
+            <li class="nav-item active">
+              <a href="../../index.html" class="nav-link-btn" aria-current="page">
+                <i class="fa-solid fa-house-chimney"></i> HOME
+              </a>
+            </li>
+
+            <!-- ABOUT US -->
+            <li class="nav-item">
+              <a href="#" class="nav-link-btn" role="button" aria-haspopup="true" aria-expanded="false">
+                About us <i class="fa-solid fa-chevron-down dropdown-chevron"></i>
+              </a>
+              <ul class="nav-dropdown">
+                <li><a class="dropdown-item-link" href="../../about.html"><i class="fa-solid fa-angle-right"></i> About Department</a></li>
+                <li><a class="dropdown-item-link" href="../../hod-desk.html"><i class="fa-solid fa-angle-right"></i> HOD Desk</a></li>
+                <li><a class="dropdown-item-link" href="../../bos.html"><i class="fa-solid fa-angle-right"></i> Board Of Studies (BOS)</a></li>
+                <li><a class="dropdown-item-link" href="../../dab.html"><i class="fa-solid fa-angle-right"></i> Department Advisory Board (DAB)</a></li>
+              </ul>
+            </li>
+
+            <!-- PEOPLE -->
+            <li class="nav-item">
+              <a href="#" class="nav-link-btn" role="button" aria-haspopup="true" aria-expanded="false">
+                People <i class="fa-solid fa-chevron-down dropdown-chevron"></i>
+              </a>
+              <ul class="nav-dropdown">
+                <li><a class="dropdown-item-link" href="#"><i class="fa-solid fa-angle-right"></i> Faculty Profile</a></li>
+                <li><a class="dropdown-item-link" href="#"><i class="fa-solid fa-angle-right"></i> Professor of Practice</a></li>
+                <li><a class="dropdown-item-link" href="#"><i class="fa-solid fa-angle-right"></i> Admin Staff Profile</a></li>
+                <li><a class="dropdown-item-link" href="#"><i class="fa-solid fa-angle-right"></i> Staff Satisfaction Index</a></li>
+              </ul>
+            </li>
+
+            <!-- ACADEMICS -->
+            <li class="nav-item">
+              <a href="#" class="nav-link-btn" role="button" aria-haspopup="true" aria-expanded="false">
+                Academics <i class="fa-solid fa-chevron-down dropdown-chevron"></i>
+              </a>
+              <ul class="nav-dropdown">
+                <li><a class="dropdown-item-link" href="#"><i class="fa-solid fa-angle-right"></i> Academic Coordinator Desk</a></li>
+                <li><a class="dropdown-item-link" href="#"><i class="fa-solid fa-angle-right"></i> B.Tech Computer Engineering</a></li>
+                <li><a class="dropdown-item-link" href="#"><i class="fa-solid fa-angle-right"></i> M.Tech Computer Engineering</a></li>
+                <li><a class="dropdown-item-link" href="#"><i class="fa-solid fa-angle-right"></i> PhD Program</a></li>
+                <li><a class="dropdown-item-link" href="#"><i class="fa-solid fa-angle-right"></i> Co-Teaching</a></li>
+                <li><a class="dropdown-item-link" href="#"><i class="fa-solid fa-angle-right"></i> Infrastructure</a></li>
+              </ul>
+            </li>
+
+            <!-- RESEARCH -->
+            <li class="nav-item">
+              <a href="#" class="nav-link-btn" role="button" aria-haspopup="true" aria-expanded="false">
+                Research <i class="fa-solid fa-chevron-down dropdown-chevron"></i>
+              </a>
+              <ul class="nav-dropdown">
+                <li><a class="dropdown-item-link" href="#"><i class="fa-solid fa-angle-right"></i> Research Coordinator Desk</a></li>
+                <li><a class="dropdown-item-link" href="#"><i class="fa-solid fa-angle-right"></i> Publications</a></li>
+                <li><a class="dropdown-item-link" href="#"><i class="fa-solid fa-angle-right"></i> Intellectual Property Rights (IPR)</a></li>
+                <li><a class="dropdown-item-link" href="#"><i class="fa-solid fa-angle-right"></i> Research Funding</a></li>
+                <li><a class="dropdown-item-link" href="#"><i class="fa-solid fa-angle-right"></i> Consultancy Projects</a></li>
+              </ul>
+            </li>
+
+            <!-- INDUSTRY INTERACTION -->
+            <li class="nav-item">
+              <a href="#" class="nav-link-btn" role="button" aria-haspopup="true" aria-expanded="false">
+                Industry Interaction <i class="fa-solid fa-chevron-down dropdown-chevron"></i>
+              </a>
+              <ul class="nav-dropdown">
+                <li><a class="dropdown-item-link" href="#"><i class="fa-solid fa-angle-right"></i> Placements 2026</a></li>
+                <li><a class="dropdown-item-link" href="#"><i class="fa-solid fa-angle-right"></i> Internships</a></li>
+                <li><a class="dropdown-item-link" href="#"><i class="fa-solid fa-angle-right"></i> MoUs & Associations</a></li>
+                <li><a class="dropdown-item-link" href="#"><i class="fa-solid fa-angle-right"></i> Industrial Visits</a></li>
+              </ul>
+            </li>
+
+          </ul>
+        </div>
+
+        <!-- Action Buttons -->
+        <div class="nav-actions">
+          <button class="nav-search-btn" title="Search Department Portal" aria-label="Search Portal">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </button>
+          <a href="https://www.pccoepune.com/admissions.php" class="nav-cta-apply" target="_blank" rel="noopener noreferrer">
+            Apply Now
+          </a>
+        </div>
+
+      </div>
+    </nav>
+
+  </div>
+  <!-- ==========================================================================
+       END OF COMPONENT: Master Header & Navigation Element
+       ========================================================================== -->
+
+  <!-- Live Demonstration Context -->
+  <div class="dummy-content">
+    <h2>Page Body Simulation Area</h2>
+    <p style="color: #64748b; font-size: 0.95rem; line-height: 1.6;">
+      This standalone page renders <strong>Element 01 (Header & Navbar)</strong> in isolation. The navigation features sticky positioning, hover chevrons, accessible dropdown menus, institution brand marks, and accreditation highlights.
+    </p>
+  </div>
+
+  <script>
+    // Mobile menu toggle interaction
+    const toggleBtn = document.getElementById('mobileMenuToggle');
+    const navLinks = document.getElementById('navLinksWrapper');
+    if (toggleBtn && navLinks) {
+      toggleBtn.addEventListener('click', () => {
+        navLinks.classList.toggle('open');
+      });
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,174 @@
+/* ==========================================================================
+   PCCOE Computer Engineering - Element 05: Stats & Metrics Counters
+   Modular CSS for Animated Department Metrics
+   ========================================================================== */
+
+:root {
+  --pccoe-navy-darkest: #073860;
+  --pccoe-navy: #035a91;
+  --pccoe-navy-royal: #0277bd;
+  --pccoe-navy-mid: #0284c7;
+  --pccoe-navy-subtle: #e0f2fe;
+  --pccoe-navy-wash: #f0f8ff;
+  
+  --pccoe-gold-primary: #f59e0b;
+  --pccoe-gold-bright: #fbbf24;
+  --pccoe-gold-warm: #ea580c;
+  --pccoe-gold-dark: #b45309;
+  --pccoe-gold-soft: #fef3c7;
+  
+  --bg-surface: #ffffff;
+  --text-main: #0f172a;
+  --text-secondary: #334155;
+  --text-muted: #64748b;
+  --border-light: #e2e8f0;
+  
+  --shadow-xs: 0 1px 2px rgba(3, 90, 145, 0.05);
+  --shadow-sm: 0 2px 6px -1px rgba(3, 90, 145, 0.08);
+  --shadow-md: 0 8px 20px -3px rgba(3, 90, 145, 0.11);
+  --shadow-lg: 0 20px 32px -4px rgba(3, 90, 145, 0.14);
+  
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  
+  --transition-fast: 0.15s ease;
+  --transition-normal: 0.25s ease;
+  
+  --font-sans: 'Plus Jakarta Sans', 'Inter', sans-serif;
+  --font-display: 'Outfit', 'Plus Jakarta Sans', sans-serif;
+}
+
+.metrics-wrap {
+  font-family: var(--font-sans);
+  max-width: 1380px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.metrics-section {
+  margin-bottom: 30px;
+}
+
+.metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.25rem;
+}
+
+.metric-card {
+  background: var(--bg-surface);
+  border-radius: var(--radius-md);
+  padding: 1.5rem;
+  box-shadow: var(--shadow-xs);
+  border: 1px solid var(--border-light);
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  position: relative;
+  overflow: hidden;
+  transition: all var(--transition-normal);
+}
+
+.metric-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 5px;
+  height: 100%;
+  background: var(--pccoe-navy);
+}
+
+/* Accent Color Variations */
+.metric-card.accent-gold::before {
+  background: var(--pccoe-gold-primary);
+}
+
+.metric-card.accent-warm::before {
+  background: var(--pccoe-gold-warm);
+}
+
+.metric-card.accent-sky::before {
+  background: var(--pccoe-navy-mid);
+}
+
+.metric-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--pccoe-gold-primary);
+}
+
+.metric-icon-box {
+  width: 54px;
+  height: 54px;
+  border-radius: var(--radius-md);
+  background: var(--pccoe-navy-subtle);
+  color: var(--pccoe-navy-mid);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.45rem;
+  flex-shrink: 0;
+  transition: all var(--transition-fast);
+}
+
+.metric-card.accent-gold .metric-icon-box {
+  background: var(--pccoe-gold-soft);
+  color: var(--pccoe-gold-dark);
+}
+
+.metric-card.accent-warm .metric-icon-box {
+  background: #fee2e2;
+  color: #dc2626;
+}
+
+.metric-card.accent-sky .metric-icon-box {
+  background: #e0f2fe;
+  color: var(--pccoe-navy-mid);
+}
+
+.metric-card:hover .metric-icon-box {
+  transform: scale(1.08);
+}
+
+.metric-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.metric-number-wrap {
+  display: flex;
+  align-items: baseline;
+  gap: 4px;
+}
+
+.metric-number {
+  font-family: var(--font-display);
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--pccoe-navy);
+  line-height: 1.1;
+}
+
+.metric-suffix {
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: var(--pccoe-gold-dark);
+}
+
+.metric-label {
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--text-muted);
+  margin-top: 2px;
+}
+
+.metric-subtext {
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+  margin-top: 4px;
+}

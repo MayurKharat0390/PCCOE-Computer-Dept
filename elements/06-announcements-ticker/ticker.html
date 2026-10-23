@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Element 06: Announcements & Spotlight Ticker | PCCOE Computer Dept</title>
+  
+  <!-- Typography & Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <!-- Dedicated Modular CSS -->
+  <link rel="stylesheet" href="ticker.css">
+  
+  <style>
+    body {
+      background-color: #f8fafc;
+      margin: 0;
+      padding: 0;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      padding-bottom: 60px;
+    }
+    .preview-banner {
+      background: #0f172a;
+      color: #94a3b8;
+      padding: 10px 20px;
+      font-size: 0.8rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+      margin-bottom: 30px;
+    }
+    .preview-tag {
+      background: #f59e0b;
+      color: #073860;
+      font-weight: 800;
+      padding: 2px 8px;
+      border-radius: 4px;
+      font-size: 0.7rem;
+      text-transform: uppercase;
+    }
+    .preview-intro {
+      max-width: 1380px;
+      margin: 0 auto 30px;
+      padding: 24px;
+      background: #ffffff;
+      border-radius: 12px;
+      border: 1px solid #e2e8f0;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+    }
+    .preview-intro h1 {
+      font-family: 'Outfit', sans-serif;
+      color: #035a91;
+      font-size: 1.8rem;
+      font-weight: 800;
+      margin-bottom: 6px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Component Identifier Banner -->
+  <div class="preview-banner">
+    <div><span class="preview-tag">ELEMENT #06</span> <strong>Live Announcements & Department Spotlight Marquee Ticker</strong></div>
+    <div style="font-size: 0.75rem;"><i class="fa-solid fa-bullhorn"></i> Continuous Animated Stream with Pause-on-Hover (Ready for Review)</div>
+  </div>
+
+  <div class="preview-intro">
+    <h1>Element 06: Announcements & Spotlight Ticker</h1>
+    <p style="color: #64748b; font-size: 0.95rem; line-height: 1.6;">
+      This element is placed immediately below the primary navigation or hero banner to highlight live notifications, circulars, exam dates, and achievement headlines. Hovering over the ticker pauses the animation.
+    </p>
+  </div>
+
+  <div class="ticker-component-wrap">
+    
+    <!-- ======================================================================
+         START OF COMPONENT: Announcements Ticker
+         ====================================================================== -->
+    <div class="spotlight-wrapper" role="region" aria-label="Department Latest Updates Ticker">
+      
+      <!-- Fixed Left Label Badge -->
+      <div class="spotlight-badge">
+        <i class="fa-solid fa-bolt"></i> Latest Updates
+      </div>
+
+      <!-- Animated Ticker Track -->
+      <div class="spotlight-ticker-viewport">
+        <div class="spotlight-marquee">
+          
+          <span class="ticker-item">
+            <span class="ticker-tag urgent">IMPORTANT</span>
+            <a href="#">B.Tech Autumn 2026 In-Semester Examination Timetable & Seating Plan Released</a>
+          </span>
+
+          <span class="ticker-item">
+            <span class="ticker-tag">CONFERENCE</span>
+            <a href="#">International Conference on Intelligent Systems & Autonomous Computing (ICISAC 2026) Call for Papers</a>
+          </span>
+
+          <span class="ticker-item">
+            <span class="ticker-tag urgent">PLACEMENTS</span>
+            <a href="#">Congratulations to 14 Computer Students Selected at Microsoft & Veritas with Dream CTC</a>
+          </span>
+
+          <span class="ticker-item">
+            <span class="ticker-tag">ADMISSIONS</span>
+            <a href="#">Ph.D. Research Admissions 2026 - Eligible Candidate Interview List Available Now</a>
+          </span>
+
+          <!-- Duplicate Set for Smooth Continuous Loop -->
+          <span class="ticker-item">
+            <span class="ticker-tag urgent">IMPORTANT</span>
+            <a href="#">B.Tech Autumn 2026 In-Semester Examination Timetable & Seating Plan Released</a>
+          </span>
+
+          <span class="ticker-item">
+            <span class="ticker-tag">CONFERENCE</span>
+            <a href="#">International Conference on Intelligent Systems & Autonomous Computing (ICISAC 2026) Call for Papers</a>
+          </span>
+
+        </div>
+      </div>
+
+    </div>
+    <!-- ======================================================================
+         END OF COMPONENT: Announcements Ticker
+         ====================================================================== -->
+
+  </div>
+
+</body>
+</html>

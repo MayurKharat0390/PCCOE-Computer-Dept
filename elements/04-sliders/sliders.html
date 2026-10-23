@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Element 04: Sliders & Marquee Suite | PCCOE Computer Dept</title>
+  
+  <!-- Typography & Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <!-- Dedicated Modular CSS -->
+  <link rel="stylesheet" href="sliders.css">
+  
+  <style>
+    body {
+      background-color: #f8fafc;
+      margin: 0;
+      padding: 0;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      padding-bottom: 60px;
+    }
+    .preview-banner {
+      background: #0f172a;
+      color: #94a3b8;
+      padding: 10px 20px;
+      font-size: 0.8rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+      margin-bottom: 24px;
+    }
+    .preview-tag {
+      background: #f59e0b;
+      color: #073860;
+      font-weight: 800;
+      padding: 2px 8px;
+      border-radius: 4px;
+      font-size: 0.7rem;
+      text-transform: uppercase;
+    }
+    .preview-intro {
+      max-width: 1380px;
+      margin: 0 auto 24px;
+      padding: 24px;
+      background: #ffffff;
+      border-radius: 12px;
+      border: 1px solid #e2e8f0;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+    }
+    .preview-intro h1 {
+      font-family: 'Outfit', sans-serif;
+      color: #035a91;
+      font-size: 1.8rem;
+      font-weight: 800;
+      margin-bottom: 6px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Component Identifier Banner -->
+  <div class="preview-banner">
+    <div><span class="preview-tag">ELEMENT #04</span> <strong>Dynamic Sliders & Interactive Carousels Suite</strong></div>
+    <div style="font-size: 0.75rem;"><i class="fa-solid fa-sliders"></i> Edge-to-Edge Hero Slider + Recruiters Infinite Marquee + Testimonials (Ready for Review)</div>
+  </div>
+
+  <div class="preview-intro">
+    <h1>Element 04: Sliders & Dynamic Carousels</h1>
+    <p style="color: #64748b; font-size: 0.95rem; line-height: 1.6;">
+      This modular element suite houses all animated sliding elements: 
+      <strong>1. Edge-to-Edge Full-Width Hero Slider</strong> (with smooth fade, navigation arrows, indicator pills, and captions), 
+      <strong>2. Corporate Recruiters Continuous Marquee Track</strong> (smooth infinite loop with pause-on-hover), and 
+      <strong>3. Student & Alumni Placement Testimonial Carousel</strong>.
+    </p>
+  </div>
+
+  <div class="sliders-showcase-wrap">
+
+    <!-- ======================================================================
+         SLIDER 1: BROAD INSTITUTIONAL HERO SLIDER (Edge-to-Edge)
+         ====================================================================== -->
+    <div class="sliders-container">
+      <h3 class="slider-section-heading"><i class="fa-solid fa-panorama"></i> 1. Full-Width Edge-to-Edge Hero Slider</h3>
+    </div>
+
+    <section class="broad-hero-section">
+      <div class="broad-slider-container">
+        <div class="hero-slider" aria-label="Department Hero Slideshow">
+
+          <!-- Slide 1 -->
+          <div class="slide-item active">
+            <img src="https://computer.pccoepune.com/assets/images/slider/1.webp" alt="PCCOE Computer Department Campus" class="broad-slide-img">
+            <div class="slide-caption-overlay">
+              <span class="slide-caption-tag"><i class="fa-solid fa-award"></i> Autonomous Center of Excellence</span>
+              <h2 class="slide-caption-title">Empowering Next-Gen Software Engineers & AI Innovators</h2>
+              <p class="slide-caption-desc">NBA Tier-1 Accredited, NAAC 'A++' Grade institute affiliated to SPPU Pune with proven leadership in autonomous engineering.</p>
+            </div>
+          </div>
+
+          <!-- Slide 2 -->
+          <div class="slide-item">
+            <img src="https://computer.pccoepune.com/assets/images/slider/2.webp" alt="High-Tech Research Facilities" class="broad-slide-img">
+            <div class="slide-caption-overlay">
+              <span class="slide-caption-tag"><i class="fa-solid fa-microchip"></i> Cutting-Edge Infrastructure</span>
+              <h2 class="slide-caption-title">High-Performance NVIDIA GPU Computing & Research Labs</h2>
+              <p class="slide-caption-desc">Dedicated research clusters in Artificial Intelligence, Cyber Security, Cloud Architecture, and IoT Innovation.</p>
+            </div>
+          </div>
+
+          <!-- Slide 3 -->
+          <div class="slide-item">
+            <img src="https://computer.pccoepune.com/assets/images/slider/3.webp" alt="Industry Placements & Conclaves" class="broad-slide-img">
+            <div class="slide-caption-overlay">
+              <span class="slide-caption-tag"><i class="fa-solid fa-briefcase"></i> Industry Placements 2026</span>
+              <h2 class="slide-caption-title">Over 90% Placements Across Global Fortune 500 Leaders</h2>
+              <p class="slide-caption-desc">Strong MoUs, sponsored internships, and corporate co-teaching with premier industry giants.</p>
+            </div>
+          </div>
+
+          <!-- Slider Controls -->
+          <button class="slider-arrow-btn prev" aria-label="Previous Slide"><i class="fa-solid fa-chevron-left"></i></button>
+          <button class="slider-arrow-btn next" aria-label="Next Slide"><i class="fa-solid fa-chevron-right"></i></button>
+
+          <!-- Dot Indicators Container (Populated dynamically) -->
+          <div class="broad-slider-dots"></div>
+
+        </div>
+      </div>
+    </section>
+
+    <div class="sliders-container">
+
+      <!-- ======================================================================
+           SLIDER 2: CORPORATE RECRUITERS INFINITE MARQUEE SLIDER
+           ====================================================================== -->
+      <h3 class="slider-section-heading"><i class="fa-solid fa-handshake"></i> 2. Corporate Recruiters Infinite Marquee Carousel</h3>
+
+      <div class="marquee-slider-section">
+        <div class="marquee-header">
+          <h4 class="marquee-title"><i class="fa-solid fa-building-flag" style="color: var(--pccoe-gold-primary);"></i> Top Corporate Hiring Partners</h4>
+          <span class="marquee-stat-pill">600+ Marquee Offers</span>
+        </div>
+
+        <div class="marquee-track-container">
+          <div class="marquee-track">
+            
+            <!-- First Set -->
+            <div class="recruiter-logo-box"><span class="recruiter-name-text">MICROSOFT</span></div>
+            <div class="recruiter-logo-box"><span class="recruiter-name-text">VERITAS</span></div>
+            <div class="recruiter-logo-box"><span class="recruiter-name-text">BMC SOFTWARE</span></div>
+            <div class="recruiter-logo-box"><span class="recruiter-name-text">TCS DIGITAL</span></div>
+            <div class="recruiter-logo-box"><span class="recruiter-name-text">INFOSYS</span></div>
+            <div class="recruiter-logo-box"><span class="recruiter-name-text">CAPGEMINI</span></div>
+            <div class="recruiter-logo-box"><span class="recruiter-name-text">BARCLAYS</span></div>
+            <div class="recruiter-logo-box"><span class="recruiter-name-text">PERSISTENT</span></div>
+            <div class="recruiter-logo-box"><span class="recruiter-name-text">COGNIZANT</span></div>
+
+            <!-- Duplicate Set for Seamless Infinite Loop -->
+            <div class="recruiter-logo-box"><span class="recruiter-name-text">MICROSOFT</span></div>
+            <div class="recruiter-logo-box"><span class="recruiter-name-text">VERITAS</span></div>
+            <div class="recruiter-logo-box"><span class="recruiter-name-text">BMC SOFTWARE</span></div>
+            <div class="recruiter-logo-box"><span class="recruiter-name-text">TCS DIGITAL</span></div>
+            <div class="recruiter-logo-box"><span class="recruiter-name-text">INFOSYS</span></div>
+            <div class="recruiter-logo-box"><span class="recruiter-name-text">CAPGEMINI</span></div>
+            <div class="recruiter-logo-box"><span class="recruiter-name-text">BARCLAYS</span></div>
+            <div class="recruiter-logo-box"><span class="recruiter-name-text">PERSISTENT</span></div>
+            <div class="recruiter-logo-box"><span class="recruiter-name-text">COGNIZANT</span></div>
+
+          </div>
+        </div>
+      </div>
+
+      <!-- ======================================================================
+           SLIDER 3: STUDENT & ALUMNI TESTIMONIALS CAROUSEL
+           ====================================================================== -->
+      <h3 class="slider-section-heading"><i class="fa-solid fa-comments"></i> 3. Student Voices & Alumni Testimonials Carousel</h3>
+
+      <div class="testimonials-section">
+        <div class="testimonials-wrapper">
+          <div class="testimonial-track-container">
+            <div class="testimonial-track">
+              
+              <!-- Slide Page 1 (3 Cards) -->
+              <div class="testimonial-slide-page">
+                
+                <div class="testimonial-modern-card">
+                  <div class="testi-avatar-frame">
+                    <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=300&auto=format&fit=crop&q=80" alt="Ananya Joshi" class="testi-avatar-img">
+                  </div>
+                  <h5 class="testi-name">Ananya Joshi</h5>
+                  <div class="testi-role">Software Engineer @ Microsoft (CTC 44 LPA)</div>
+                  <p class="testi-quote">"The hands-on hackathons and faculty mentorship in AI gave me the solid technical foundation required to ace Microsoft's campus hiring drives."</p>
+                  <div class="testi-stars">★★★★★</div>
+                </div>
+
+                <div class="testimonial-modern-card">
+                  <div class="testi-avatar-frame">
+                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&auto=format&fit=crop&q=80" alt="Rohan Deshmukh" class="testi-avatar-img">
+                  </div>
+                  <h5 class="testi-name">Rohan Deshmukh</h5>
+                  <div class="testi-role">Cloud Engineer @ Veritas (CTC 22 LPA)</div>
+                  <p class="testi-quote">"Autonomous curriculum updates every year allowed us to study contemporary technologies like Kubernetes and Distributed Systems ahead of time."</p>
+                  <div class="testi-stars">★★★★★</div>
+                </div>
+
+                <div class="testimonial-modern-card">
+                  <div class="testi-avatar-frame">
+                    <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=300&auto=format&fit=crop&q=80" alt="Sneha Kulkarni" class="testi-avatar-img">
+                  </div>
+                  <h5 class="testi-name">Sneha Kulkarni</h5>
+                  <div class="testi-role">Systems Architect @ BMC Software</div>
+                  <p class="testi-quote">"The SIG research culture and capstone project sponsorships gave me practical experience that directly mirrored real-world software engineering."</p>
+                  <div class="testi-stars">★★★★★</div>
+                </div>
+
+              </div>
+
+              <!-- Slide Page 2 (3 Cards) -->
+              <div class="testimonial-slide-page">
+                
+                <div class="testimonial-modern-card">
+                  <div class="testi-avatar-frame">
+                    <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=300&auto=format&fit=crop&q=80" alt="Aditya Shinde" class="testi-avatar-img">
+                  </div>
+                  <h5 class="testi-name">Aditya Shinde</h5>
+                  <div class="testi-role">AI Researcher @ Persistent Systems</div>
+                  <p class="testi-quote">"Publishing research papers at IEEE conferences with faculty guidance during my 3rd year was the defining turning point of my career."</p>
+                  <div class="testi-stars">★★★★★</div>
+                </div>
+
+                <div class="testimonial-modern-card">
+                  <div class="testi-avatar-frame">
+                    <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?w=300&auto=format&fit=crop&q=80" alt="Pooja Nair" class="testi-avatar-img">
+                  </div>
+                  <h5 class="testi-name">Pooja Nair</h5>
+                  <div class="testi-role">Security Analyst @ Barclays (CTC 18 LPA)</div>
+                  <p class="testi-quote">"The cyber security center and autonomous labs provided an authentic enterprise-grade sandbox environment for hands-on learning."</p>
+                  <div class="testi-stars">★★★★★</div>
+                </div>
+
+                <div class="testimonial-modern-card">
+                  <div class="testi-avatar-frame">
+                    <img src="https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?w=300&auto=format&fit=crop&q=80" alt="Vikram Malhotra" class="testi-avatar-img">
+                  </div>
+                  <h5 class="testi-name">Vikram Malhotra</h5>
+                  <div class="testi-role">Founder @ TechStart Innovation Labs</div>
+                  <p class="testi-quote">"The incubation and patent cell at PCCOE gave us seed funding and mentorship that helped our student startup launch successfully."</p>
+                  <div class="testi-stars">★★★★★</div>
+                </div>
+
+              </div>
+
+            </div>
+          </div>
+
+          <!-- Controls -->
+          <div class="testi-controls">
+            <button class="testi-nav-btn prev" aria-label="Previous Testimonials"><i class="fa-solid fa-chevron-left"></i></button>
+            <button class="testi-bullet active" aria-label="Page 1"></button>
+            <button class="testi-bullet" aria-label="Page 2"></button>
+            <button class="testi-nav-btn next" aria-label="Next Testimonials"><i class="fa-solid fa-chevron-right"></i></button>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- Dedicated Controller Script -->
+  <script src="sliders.js"></script>
+</body>
+</html>

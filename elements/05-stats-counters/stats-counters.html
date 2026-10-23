@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Element 05: Stats & Metrics Counters | PCCOE Computer Dept</title>
+  
+  <!-- Typography & Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <!-- Dedicated Modular CSS -->
+  <link rel="stylesheet" href="stats-counters.css">
+  
+  <style>
+    body {
+      background-color: #f8fafc;
+      margin: 0;
+      padding: 0;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      padding-bottom: 60px;
+    }
+    .preview-banner {
+      background: #0f172a;
+      color: #94a3b8;
+      padding: 10px 20px;
+      font-size: 0.8rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+      margin-bottom: 30px;
+    }
+    .preview-tag {
+      background: #f59e0b;
+      color: #073860;
+      font-weight: 800;
+      padding: 2px 8px;
+      border-radius: 4px;
+      font-size: 0.7rem;
+      text-transform: uppercase;
+    }
+    .preview-intro {
+      max-width: 1380px;
+      margin: 0 auto 30px;
+      padding: 24px;
+      background: #ffffff;
+      border-radius: 12px;
+      border: 1px solid #e2e8f0;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+    }
+    .preview-intro h1 {
+      font-family: 'Outfit', sans-serif;
+      color: #035a91;
+      font-size: 1.8rem;
+      font-weight: 800;
+      margin-bottom: 6px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Component Identifier Banner -->
+  <div class="preview-banner">
+    <div><span class="preview-tag">ELEMENT #05</span> <strong>Department Performance & Key Metrics Counters</strong></div>
+    <div style="font-size: 0.75rem;"><i class="fa-solid fa-chart-simple"></i> Key Numerical Milestones & Statistics (Ready for Review)</div>
+  </div>
+
+  <div class="preview-intro">
+    <h1>Element 05: Stats & Metrics Counters</h1>
+    <p style="color: #64748b; font-size: 0.95rem; line-height: 1.6;">
+      This component renders high-visibility statistics and impact metrics with accent border indicators, icon badges, and animated counting numbers. Perfect for placement records, faculty credentials, research outputs, and grants.
+    </p>
+  </div>
+
+  <div class="metrics-wrap">
+    
+    <div class="metrics-section">
+      <div class="metrics-grid">
+        
+        <!-- Metric 1 -->
+        <article class="metric-card">
+          <div class="metric-icon-box">
+            <i class="fa-solid fa-graduation-cap"></i>
+          </div>
+          <div class="metric-info">
+            <div class="metric-number-wrap">
+              <span class="metric-number" data-target="28">28</span>
+              <span class="metric-suffix">+</span>
+            </div>
+            <div class="metric-label">Ph.D. Faculty Members</div>
+            <div class="metric-subtext">Research Supervisors & Postdocs</div>
+          </div>
+        </article>
+
+        <!-- Metric 2 -->
+        <article class="metric-card accent-gold">
+          <div class="metric-icon-box">
+            <i class="fa-solid fa-trophy"></i>
+          </div>
+          <div class="metric-info">
+            <div class="metric-number-wrap">
+              <span class="metric-number" data-target="61">61</span>
+              <span class="metric-suffix">LPA</span>
+            </div>
+            <div class="metric-label">Highest Dream CTC</div>
+            <div class="metric-subtext">Uber, Microsoft & Adobe Offers</div>
+          </div>
+        </article>
+
+        <!-- Metric 3 -->
+        <article class="metric-card accent-warm">
+          <div class="metric-icon-box">
+            <i class="fa-solid fa-book-bookmark"></i>
+          </div>
+          <div class="metric-info">
+            <div class="metric-number-wrap">
+              <span class="metric-number" data-target="850">850</span>
+              <span class="metric-suffix">+</span>
+            </div>
+            <div class="metric-label">Research Publications</div>
+            <div class="metric-subtext">Scopus, SCI & IEEE Indexed</div>
+          </div>
+        </article>
+
+        <!-- Metric 4 -->
+        <article class="metric-card accent-sky">
+          <div class="metric-icon-box">
+            <i class="fa-solid fa-chart-line"></i>
+          </div>
+          <div class="metric-info">
+            <div class="metric-number-wrap">
+              <span class="metric-number" data-target="92">92</span>
+              <span class="metric-suffix">%</span>
+            </div>
+            <div class="metric-label">Placement Percentage</div>
+            <div class="metric-subtext">Consistent Track Record</div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+
+  </div>
+
+  <script>
+    // Smooth number counting animation
+    const counters = document.querySelectorAll('.metric-number');
+    counters.forEach(counter => {
+      const target = +counter.getAttribute('data-target');
+      let count = 0;
+      const speed = target > 200 ? 10 : 30;
+      const increment = Math.ceil(target / 40);
+
+      const updateCount = () => {
+        count += increment;
+        if (count < target) {
+          counter.innerText = count;
+          setTimeout(updateCount, speed);
+        } else {
+          counter.innerText = target;
+        }
+      };
+      updateCount();
+    });
+  </script>
+</body>
+</html>
