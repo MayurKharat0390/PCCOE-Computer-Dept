@@ -4027,5 +4027,150 @@ main.homepage-content-wrapper {
   }
 }
 
+/* ==========================================================================
+   Bootstrap 5.3.3 Design System Bridge & Theme Harmony
+   ========================================================================== */
+:root {
+  --bs-primary: #035a91;
+  --bs-primary-rgb: 3, 90, 145;
+  --bs-secondary: #073860;
+  --bs-secondary-rgb: 7, 56, 96;
+  --bs-info: #0284c7;
+  --bs-info-rgb: 2, 132, 199;
+  --bs-warning: #f59e0b;
+  --bs-warning-rgb: 245, 158, 11;
+  --bs-body-bg: #f8fafc;
+  --bs-body-color: #0f172a;
+  --bs-body-font-family: var(--font-sans);
+  --bs-link-color: #035a91;
+  --bs-link-hover-color: #f59e0b;
+  --bs-border-color: #e2e8f0;
+}
 
+/* Link reset & transitions */
+a {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: none;
+}
 
+/* Bootstrap Container harmonized with PCCOE max-width */
+.container {
+  max-width: 1380px;
+}
+
+/* Card Enhancements */
+.card {
+  border-color: var(--border-light);
+  border-radius: var(--radius-md);
+  background-color: #ffffff;
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.card-header {
+  font-family: var(--font-display);
+  letter-spacing: 0.03em;
+  border-bottom: 1px solid var(--border-light);
+}
+
+.card-header.bg-info {
+  background: linear-gradient(90deg, var(--pccoe-navy-darkest) 0%, var(--pccoe-navy) 100%) !important;
+  color: #ffffff !important;
+  border-bottom: 2px solid var(--pccoe-gold-primary);
+}
+
+/* List Group Enhancements (Sidebar People & Department Menu) */
+.list-group-item {
+  color: var(--text-secondary);
+  font-size: 0.875rem;
+  font-weight: 500;
+  padding: 0.85rem 1.15rem;
+  border-color: var(--border-light);
+  transition: all var(--transition-fast);
+}
+
+.list-group-item:hover:not(.active) {
+  background-color: var(--pccoe-navy-wash);
+  color: var(--pccoe-navy);
+  padding-left: 1.35rem;
+}
+
+.list-group-item.active {
+  z-index: 2;
+  color: #ffffff !important;
+  background-color: var(--pccoe-navy) !important;
+  border-color: var(--pccoe-navy) !important;
+  font-weight: 700;
+  box-shadow: 0 4px 12px rgba(3, 90, 145, 0.2);
+}
+
+.list-group-item.active .badge {
+  background-color: var(--pccoe-gold-primary) !important;
+  color: #000000 !important;
+}
+
+/* Form Controls (Search Input) */
+.form-control {
+  border-color: var(--border-light);
+  border-radius: var(--radius-md);
+  padding: 0.75rem 1rem;
+  font-size: 0.925rem;
+  color: var(--text-main);
+  transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.form-control:focus {
+  border-color: var(--pccoe-navy);
+  box-shadow: 0 0 0 0.25rem rgba(3, 90, 145, 0.15);
+}
+
+/* Button Customizations */
+.btn-primary {
+  background-color: var(--pccoe-navy);
+  border-color: var(--pccoe-navy);
+  color: #ffffff;
+  font-weight: 600;
+  border-radius: var(--radius-md);
+  transition: all var(--transition-fast);
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+  background-color: var(--pccoe-navy-darkest);
+  border-color: var(--pccoe-navy-darkest);
+  color: #ffffff;
+  transform: translateY(-1px);
+}
+
+.btn-outline-primary {
+  color: var(--pccoe-navy);
+  border-color: var(--pccoe-navy);
+  font-weight: 600;
+  border-radius: var(--radius-md);
+}
+
+.btn-outline-primary:hover {
+  background-color: var(--pccoe-navy);
+  border-color: var(--pccoe-navy);
+  color: #ffffff;
+}
+
+/* Table Harmonization */
+.table {
+  --bs-table-bg: transparent;
+  --bs-table-hover-bg: rgba(3, 90, 145, 0.04);
+  font-size: 0.9rem;
+}
+
+.table th {
+  font-family: var(--font-display);
+  font-weight: 700;
+  color: var(--pccoe-navy-darkest);
+}
+
+/* Ratio helper for video embeds */
+.ratio {
+  overflow: hidden;
+  border-radius: var(--radius-md);
+}

@@ -37,6 +37,10 @@
     integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
 
+  <!-- Bootstrap 5.3.3 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
   <!-- Core Design System Stylesheet -->
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
@@ -326,259 +330,278 @@
   </section>
 
   <!-- ==========================================================================
-       5. MAIN CONTENT WITH SIDEBAR (.internal-page-grid)
+       5. MAIN CONTENT WITH SIDEBAR (Bootstrap 5 Grid System)
        ========================================================================== -->
-  <main class="container internal-page-grid" id="main-content" style="padding-top: 1.5rem; padding-bottom: 4rem;">
+  <main class="container py-4" id="main-content">
+    <div class="row g-4">
 
-    <!-- Left Sidebar: People Navigation & PCCOE Virtual Tour Video -->
-    <aside class="internal-sidebar" aria-label="People Navigation">
-      <div class="sidebar-heading">
-        <i class="fa-solid fa-users"></i> People
-      </div>
-      <ul class="sidebar-menu">
-        <li class="active"><a href="faculty.html"><i class="fa-solid fa-chevron-right"></i> Faculty Profile</a></li>
-        <li><a href="https://computer.pccoepune.com/professor-of-practice"><i class="fa-solid fa-chevron-right"></i> Professor of Practice</a></li>
-        <li><a href="https://computer.pccoepune.com/admin-staff-profile"><i class="fa-solid fa-chevron-right"></i> Admin Staff Profile</a></li>
-        <li><a href="https://computer.pccoepune.com/staff-sat-index"><i class="fa-solid fa-chevron-right"></i> Staff Satisfaction Index</a></li>
-      </ul>
+      <!-- Left Sidebar: People Navigation & PCCOE Virtual Tour Video (col-lg-3 col-md-4) -->
+      <aside class="col-lg-3 col-md-4" aria-label="People Directory Navigation">
+        <div class="sticky-lg-top" style="top: 85px; z-index: 10;">
 
-      <!-- PCCOE Virtual Tour Video Section (from user reference) -->
-      <div class="sidebar-info-card" style="margin-top: 18px; padding: 16px; background: #ffffff; border-top: 2px solid var(--border-light);">
-        <h4 style="font-family: var(--font-display); font-size: 0.925rem; font-weight: 800; color: var(--pccoe-navy-darkest); margin-bottom: 10px; display: flex; align-items: center; gap: 8px;">
-          <i class="fa-solid fa-video" style="color: var(--pccoe-gold-primary);"></i> Video Section
-        </h4>
-        <a href="https://youtu.be/FKXRu9yoPh4?si=AE0EdyGJeF9-SLi-" target="_blank" rel="noopener noreferrer" style="text-decoration: none; display: block;">
-          <div style="border-radius: 8px; overflow: hidden; border: 1px solid var(--border-light); background: #f8fafc; transition: transform 0.2s;" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform='translateY(0)'">
-            <iframe src="https://www.youtube.com/embed/FKXRu9yoPh4?si=JL3mWANu4Jf4kWym"
-              title="PCCOE Virtual Tour" loading="lazy" frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              style="width: 100%; height: 150px; border: 0; display: block;" allowfullscreen></iframe>
-            <div style="padding: 10px 12px; font-size: 0.825rem; font-weight: 700; color: var(--pccoe-navy); display: flex; align-items: center; justify-content: space-between;">
-              <span><i class="fa-brands fa-youtube" style="color: #ef4444; margin-right: 6px;"></i> PCCOE Virtual Tour</span>
-              <i class="fa-solid fa-arrow-up-right-from-square" style="font-size: 0.75rem; color: var(--pccoe-gold-dark);"></i>
+          <!-- People Navigation Card -->
+          <div class="card shadow-sm border-0 mb-4 overflow-hidden">
+            <h6 class="card-header bg-info text-white text-uppercase py-3 px-3 m-0 d-flex align-items-center gap-2">
+              <i class="fa-solid fa-users"></i> <b>People</b>
+            </h6>
+            <div class="list-group list-group-flush">
+              <a href="faculty.html" class="list-group-item list-group-item-action active d-flex justify-content-between align-items-center">
+                <span><i class="fa-solid fa-chalkboard-user me-2 text-warning"></i> Faculty Profile</span>
+                <span class="badge bg-warning text-dark rounded-pill">53</span>
+              </a>
+              <a href="https://computer.pccoepune.com/professor-of-practice" target="_blank" rel="noopener noreferrer"
+                class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">
+                <span><i class="fa-solid fa-user-tie me-2"></i> Professor of Practice</span>
+                <i class="fa-solid fa-arrow-up-right-from-square text-muted small"></i>
+              </a>
+              <a href="https://computer.pccoepune.com/admin-staff-profile" target="_blank" rel="noopener noreferrer"
+                class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">
+                <span><i class="fa-solid fa-id-badge me-2"></i> Admin Staff Profile</span>
+                <i class="fa-solid fa-arrow-up-right-from-square text-muted small"></i>
+              </a>
+              <a href="https://computer.pccoepune.com/staff-sat-index" target="_blank" rel="noopener noreferrer"
+                class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">
+                <span><i class="fa-solid fa-chart-line me-2"></i> Staff Satisfaction Index</span>
+                <i class="fa-solid fa-arrow-up-right-from-square text-muted small"></i>
+              </a>
             </div>
           </div>
-        </a>
-      </div>
-    </aside>
 
-    <!-- Right Content Area -->
-    <div class="internal-content-area">
-
-      <!-- Impact Metrics Strip -->
-      <section class="faculty-impact-strip" aria-label="Department Faculty Metrics" style="margin-bottom: 1.5rem;">
-        <div class="faculty-metric-pill">
-          <div class="faculty-metric-icon"><i class="fa-solid fa-chalkboard-user"></i></div>
-          <div class="faculty-metric-content">
-            <h3>50+</h3>
-            <p>Faculty Members</p>
-          </div>
-        </div>
-        <div class="faculty-metric-pill">
-          <div class="faculty-metric-icon"><i class="fa-solid fa-graduation-cap"></i></div>
-          <div class="faculty-metric-content">
-            <h3>22+</h3>
-            <p>Ph.D. Doctorates</p>
-          </div>
-        </div>
-        <div class="faculty-metric-pill">
-          <div class="faculty-metric-icon"><i class="fa-solid fa-book-journal-whills"></i></div>
-          <div class="faculty-metric-content">
-            <h3>500+</h3>
-            <p>Publications</p>
-          </div>
-        </div>
-        <div class="faculty-metric-pill">
-          <div class="faculty-metric-icon"><i class="fa-solid fa-user-clock"></i></div>
-          <div class="faculty-metric-content">
-            <h3>14+ Yrs</h3>
-            <p>Avg. Experience</p>
-          </div>
-        </div>
-      </section>
-
-      <!-- Toolbar: Search Bar, Category Filters & View Toggle -->
-      <section class="faculty-toolbar-card" aria-label="Faculty Search & Filters" style="margin-bottom: 1.5rem;">
-        
-        <!-- Search & View Mode Row -->
-        <div class="faculty-search-row">
-          <div class="faculty-search-box">
-            <i class="fa-solid fa-magnifying-glass"></i>
-            <input type="text" id="myinput" class="faculty-search-input"
-              placeholder="Search Faculty by Name, Area of Interest, or Role..."
-              autocomplete="off">
-            <button id="clearFacultySearch" class="faculty-search-clear" title="Clear search" aria-label="Clear search">
-              <i class="fa-solid fa-xmark"></i>
-            </button>
+          <!-- PCCOE Virtual Tour Video Card -->
+          <div class="card shadow-sm border-0 mb-4 overflow-hidden">
+            <h6 class="card-header bg-info text-white text-uppercase py-3 px-3 m-0 d-flex align-items-center gap-2">
+              <i class="fa-brands fa-youtube text-danger"></i> <b>Video Section</b>
+            </h6>
+            <div class="card-body p-3">
+              <div class="ratio ratio-16x9 rounded overflow-hidden shadow-sm mb-3">
+                <iframe src="https://www.youtube.com/embed/FKXRu9yoPh4?si=JL3mWANu4Jf4kWym"
+                  title="PCCOE Virtual Tour"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+              </div>
+              <h6 class="fw-bold m-0" style="color: var(--pccoe-navy-darkest);"><i class="fa-solid fa-compass me-1 text-primary"></i> PCCOE Virtual Tour</h6>
+              <p class="text-muted small mt-1 mb-3">Explore state-of-the-art computing labs, research facilities, and campus life.</p>
+              <a href="https://youtu.be/FKXRu9yoPh4?si=AE0EdyGJeF9-SLi-" target="_blank" rel="noopener noreferrer"
+                class="btn btn-outline-primary btn-sm w-100 d-inline-flex align-items-center justify-content-center gap-2">
+                <i class="fa-brands fa-youtube text-danger"></i> Watch on YouTube
+              </a>
+            </div>
           </div>
 
-          <!-- View Mode Switcher -->
-          <div class="view-mode-group" role="group" aria-label="View Switcher">
-            <button class="view-mode-btn active" id="btnAccordionView" title="Accordion View">
-              <i class="fa-solid fa-bars-staggered"></i> Accordion
-            </button>
-            <button class="view-mode-btn" id="btnGridView" title="Grid View">
-              <i class="fa-solid fa-grip"></i> Grid
-            </button>
-            <button class="view-mode-btn" id="btnTableView" title="Table View">
-              <i class="fa-solid fa-table-list"></i> Table
-            </button>
-          </div>
         </div>
+      </aside>
 
-        <!-- Filter Categories -->
-        <div class="faculty-filter-groups">
-          <div class="filter-group-row">
-            <span class="filter-group-label"><i class="fa-solid fa-id-badge"></i> Category:</span>
-            <div class="filter-pill-wrap" id="categoryFilterWrap">
-              <button class="filter-pill active" data-category="all">
-                All Faculty <span class="pill-count">53</span>
-              </button>
-              <button class="filter-pill" data-category="leadership">
-                Professors & Leadership <span class="pill-count">4</span>
-              </button>
-              <button class="filter-pill" data-category="associate">
-                Associate Professors <span class="pill-count">6</span>
-              </button>
-              <button class="filter-pill" data-category="assistant">
-                Assistant Professors <span class="pill-count">40</span>
-              </button>
-              <button class="filter-pill" data-category="ta">
-                Teaching Assistants <span class="pill-count">3</span>
-              </button>
+      <!-- Right Main Content Area (col-lg-9 col-md-8) -->
+      <div class="col-lg-9 col-md-8">
+
+        <!-- Impact Metrics Row -->
+        <div class="row row-cols-2 row-cols-md-4 g-3 mb-4">
+          <div class="col">
+            <div class="card shadow-sm border-0 h-100 p-3 text-center d-flex flex-column align-items-center justify-content-center"
+              style="background: linear-gradient(135deg, #f0f8ff 0%, #ffffff 100%); border-left: 4px solid var(--pccoe-navy) !important;">
+              <i class="fa-solid fa-chalkboard-user fs-3 text-primary mb-2"></i>
+              <h3 class="fw-bold mb-0" style="color: var(--pccoe-navy);">50+</h3>
+              <span class="text-muted small text-uppercase fw-semibold">Faculty Mentors</span>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card shadow-sm border-0 h-100 p-3 text-center d-flex flex-column align-items-center justify-content-center"
+              style="background: linear-gradient(135deg, #fef3c7 0%, #ffffff 100%); border-left: 4px solid var(--pccoe-gold-primary) !important;">
+              <i class="fa-solid fa-graduation-cap fs-3 mb-2" style="color: var(--pccoe-gold-dark);"></i>
+              <h3 class="fw-bold mb-0" style="color: var(--pccoe-gold-dark);">22+</h3>
+              <span class="text-muted small text-uppercase fw-semibold">Ph.D. Doctorates</span>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card shadow-sm border-0 h-100 p-3 text-center d-flex flex-column align-items-center justify-content-center"
+              style="background: linear-gradient(135deg, #e0f2fe 0%, #ffffff 100%); border-left: 4px solid var(--pccoe-navy-royal) !important;">
+              <i class="fa-solid fa-book-journal-whills fs-3 text-info mb-2"></i>
+              <h3 class="fw-bold mb-0" style="color: var(--pccoe-navy-royal);">500+</h3>
+              <span class="text-muted small text-uppercase fw-semibold">Scopus / WoS Papers</span>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card shadow-sm border-0 h-100 p-3 text-center d-flex flex-column align-items-center justify-content-center"
+              style="background: linear-gradient(135deg, #f1f5f9 0%, #ffffff 100%); border-left: 4px solid #64748b !important;">
+              <i class="fa-solid fa-clock-rotate-left fs-3 text-secondary mb-2"></i>
+              <h3 class="fw-bold mb-0 text-secondary">14+ Yrs</h3>
+              <span class="text-muted small text-uppercase fw-semibold">Avg. Experience</span>
             </div>
           </div>
         </div>
-      </section>
 
-      <!-- Results Count & Reset Bar -->
-      <div class="faculty-results-bar">
-        <div class="faculty-count-text">
-          Showing <strong id="visibleCount">53</strong> of <strong id="totalCount">53</strong> Profiles
+        <!-- Faculty Profile Main Card -->
+        <div class="card shadow-sm border-0 mb-4 overflow-hidden">
+          <h6 class="card-header bg-info text-white text-uppercase py-3 px-4 m-0 d-flex align-items-center justify-content-between">
+            <span><b>FACULTY PROFILE</b></span>
+            <span class="badge bg-warning text-dark px-3 py-2 rounded-pill fw-bold">
+              Showing <span id="visibleCount">53</span> of <span id="totalCount">53</span>
+            </span>
+          </h6>
+          <div class="card-body p-4">
+
+            <!-- Search Input (legacy id="myinput") -->
+            <div class="input-group mb-3 shadow-sm">
+              <span class="input-group-text bg-white border-end-0 text-muted">
+                <i class="fa-solid fa-magnifying-glass"></i>
+              </span>
+              <input type="text" class="form-control border-start-0 ps-0" id="myinput"
+                placeholder="Search Faculty by Name, Area of Interest, or Role...">
+              <button class="btn btn-outline-secondary border-start-0" type="button" id="clearFacultySearch" style="display: none;">
+                <i class="fa-solid fa-xmark"></i>
+              </button>
+            </div>
+
+            <!-- Category Filter Pills & View Switcher Bar -->
+            <div class="d-flex flex-wrap align-items-center justify-content-between gap-3 mb-4 pb-3 border-bottom">
+              <div class="d-flex flex-wrap align-items-center gap-2" id="categoryFilterWrap">
+                <button class="filter-pill active" data-category="all">
+                  All Faculty <span class="pill-count">53</span>
+                </button>
+                <button class="filter-pill" data-category="leadership">
+                  Professors & Leadership <span class="pill-count">4</span>
+                </button>
+                <button class="filter-pill" data-category="associate">
+                  Associate Professors <span class="pill-count">6</span>
+                </button>
+                <button class="filter-pill" data-category="assistant">
+                  Assistant Professors <span class="pill-count">40</span>
+                </button>
+                <button class="filter-pill" data-category="ta">
+                  Teaching Assistants <span class="pill-count">3</span>
+                </button>
+              </div>
+
+              <!-- View Switcher & Actions -->
+              <div class="d-flex align-items-center gap-2">
+                <div class="btn-group btn-group-sm" role="group" aria-label="View Switcher">
+                  <button type="button" class="btn btn-outline-primary active" id="btnAccordionView" title="Accordion View">
+                    <i class="fa-solid fa-bars-staggered"></i> Accordion
+                  </button>
+                  <button type="button" class="btn btn-outline-primary" id="btnGridView" title="Grid View">
+                    <i class="fa-solid fa-grip"></i> Grid
+                  </button>
+                  <button type="button" class="btn btn-outline-primary" id="btnTableView" title="Table View">
+                    <i class="fa-solid fa-table-list"></i> Table
+                  </button>
+                </div>
+                <button class="btn btn-link btn-sm text-decoration-none p-0 ms-2 text-primary fw-semibold" id="expandAllBtn">
+                  <i class="fa-solid fa-angles-down"></i> Expand
+                </button>
+                <button class="btn btn-link btn-sm text-decoration-none p-0 text-primary fw-semibold" id="collapseAllBtn">
+                  <i class="fa-solid fa-angles-up"></i> Collapse
+                </button>
+                <button class="btn btn-link btn-sm text-decoration-none p-0 text-danger fw-semibold" id="resetFiltersBtn" style="display: none;">
+                  <i class="fa-solid fa-rotate-left"></i> Reset
+                </button>
+              </div>
+            </div>
+
+            <!-- Empty State / Not Found -->
+            <h3 class="text-danger my-5 text-center" id="para" style="display: none;">
+              <i class="fa-solid fa-circle-exclamation me-2"></i> Faculty Member Not Found
+            </h3>
+
+            <!-- 1. ACCORDION VIEW CONTAINER -->
+            <div class="faculty-accordion-container" id="accordionExample" style="min-height: 50vh;"></div>
+
+            <!-- 2. GRID VIEW CONTAINER -->
+            <div class="faculty-cards-grid" id="facultyCardsGrid" style="display: none;"></div>
+
+            <!-- 3. TABLE VIEW CONTAINER -->
+            <div class="table-responsive faculty-table-wrap" id="facultyTableWrap" style="display: none;">
+              <table class="table table-hover align-middle mb-0" id="facultyDataTable">
+                <thead class="table-light">
+                  <tr>
+                    <th class="text-center" style="width: 50px;">#</th>
+                    <th>Faculty Member</th>
+                    <th>Designation</th>
+                    <th>Qualifications</th>
+                    <th>Experience</th>
+                    <th>Area of Interest</th>
+                    <th class="text-center">Profiles</th>
+                  </tr>
+                </thead>
+                <tbody id="facultyTableBody"></tbody>
+              </table>
+            </div>
+
+          </div>
         </div>
-        <div style="display: flex; gap: 10px; align-items: center;">
-          <button class="reset-filters-btn" id="expandAllBtn" style="color: var(--pccoe-navy);">
-            <i class="fa-solid fa-angles-down"></i> Expand All
-          </button>
-          <button class="reset-filters-btn" id="collapseAllBtn" style="color: var(--pccoe-navy); margin-left: 6px;">
-            <i class="fa-solid fa-angles-up"></i> Collapse All
-          </button>
-          <button class="reset-filters-btn" id="resetFiltersBtn" style="display: none; margin-left: 6px;">
-            <i class="fa-solid fa-rotate-left"></i> Reset
-          </button>
-        </div>
-      </div>
 
-      <!-- Empty State / Not Found (matching legacy id="para") -->
-      <div class="faculty-empty-state" id="para" style="display: none;">
-        <i class="fa-solid fa-user-slash"></i>
-        <h3>Faculty Member Not Found</h3>
-        <p>No faculty member or teaching assistant matches your search criteria.</p>
-        <button class="faculty-btn-bio" id="emptyStateResetBtn" style="display: inline-flex; width: auto; margin: 0 auto;">
-          <i class="fa-solid fa-rotate-left"></i> Clear Search Filter
-        </button>
       </div>
-
-      <!-- 1. ACCORDION VIEW CONTAINER (Default view matching original user reference) -->
-      <div class="faculty-accordion-container" id="accordionExample">
-        <!-- Dynamically injected via JavaScript from pccoeFacultyData -->
-      </div>
-
-      <!-- 2. GRID VIEW CONTAINER (Alternate card view) -->
-      <div class="faculty-cards-grid" id="facultyCardsGrid" style="display: none;">
-        <!-- Dynamically injected via JavaScript from pccoeFacultyData -->
-      </div>
-
-      <!-- 3. TABLE VIEW CONTAINER (Alternate directory table) -->
-      <div class="faculty-table-wrap" id="facultyTableWrap" style="display: none;">
-        <table class="faculty-table" id="facultyDataTable">
-          <thead>
-            <tr>
-              <th style="width: 50px; text-align: center;">#</th>
-              <th>Faculty Member</th>
-              <th>Designation</th>
-              <th>Qualifications</th>
-              <th>Experience</th>
-              <th>Area of Interest</th>
-              <th style="text-align: center;">Profiles</th>
-            </tr>
-          </thead>
-          <tbody id="facultyTableBody">
-            <!-- Dynamically injected via JavaScript from pccoeFacultyData -->
-          </tbody>
-        </table>
-      </div>
-
     </div>
   </main>
 
   <!-- ==========================================================================
-       6. MASTER COMPACT FOOTER (4-Column Layout + Live Visitor Counter)
+       6. MASTER COMPACT FOOTER (Bootstrap 5 4-Column Grid + Live Counter)
        ========================================================================== -->
   <footer class="site-master-footer" role="contentinfo">
     <div class="footer-main-body">
-      <div class="container footer-columns-grid">
+      <div class="container">
+        <div class="row g-4 footer-columns-grid">
 
-        <!-- Column 1: Live Counter & Contact Info -->
-        <div class="footer-col footer-col-contact">
-          <div class="footer-counter-wrap">
-            <img
-              src="https://hitwebcounter.com/counter/counter.php?page=7871008&style=0025&nbdigits=6&type=ip&initCount=129720"
-              alt="Visitor Counter" class="footer-counter-img">
+          <!-- Column 1: Live Counter & Contact Info -->
+          <div class="col-lg-3 col-md-6 footer-col footer-col-contact">
+            <div class="footer-counter-wrap">
+              <img
+                src="https://hitwebcounter.com/counter/counter.php?page=7871008&style=0025&nbdigits=6&type=ip&initCount=129720"
+                alt="Visitor Counter" class="footer-counter-img">
+            </div>
+            <ul class="footer-contact-list">
+              <li class="footer-contact-item">
+                <i class="fa-solid fa-location-dot"></i>
+                <span>Near Akurdi Railway Station Road, Sector No. 26, Pradhikaran, Nigdi, Pimpri, Maharashtra 411044</span>
+              </li>
+              <li class="footer-contact-item">
+                <i class="fa-solid fa-envelope"></i>
+                <a href="mailto:computer_quries@pccoepune.org">computer_quries@pccoepune.org</a>
+              </li>
+              <li class="footer-contact-item">
+                <i class="fa-solid fa-phone"></i>
+                <a href="tel:02027653168">020-27653168-2151</a>
+              </li>
+            </ul>
           </div>
-          <ul class="footer-contact-list">
-            <li class="footer-contact-item">
-              <i class="fa-solid fa-location-dot"></i>
-              <span>Near Akurdi Railway Station Road, Sector No. 26, Pradhikaran, Nigdi, Pimpri, Maharashtra 411044</span>
-            </li>
-            <li class="footer-contact-item">
-              <i class="fa-solid fa-envelope"></i>
-              <a href="mailto:computer_quries@pccoepune.org">computer_quries@pccoepune.org</a>
-            </li>
-            <li class="footer-contact-item">
-              <i class="fa-solid fa-phone"></i>
-              <a href="tel:02027653168">020-27653168-2151</a>
-            </li>
-          </ul>
-        </div>
 
-        <!-- Column 2: Department Navigation -->
-        <div class="footer-col">
-          <ul class="footer-nav-menu">
-            <li><a href="./">Home</a></li>
-            <li><a href="about.html">About Department</a></li>
-            <li><a href="hod-desk.html">HOD Desk</a></li>
-            <li><a href="faculty.html">Faculty Directory</a></li>
-            <li><a href="bos.html">Board of Studies (BOS)</a></li>
-            <li><a href="dab.html">Department Advisory Board (DAB)</a></li>
-            <li><a href="http://pcet.org.in/" target="_blank" rel="noopener noreferrer">About PCET</a></li>
-            <li><a href="https://computer.pccoepune.com/contact" target="_blank" rel="noopener noreferrer">Contact us</a></li>
-          </ul>
-        </div>
-
-        <!-- Column 3: Important Regulatory Links -->
-        <div class="footer-col">
-          <ul class="footer-nav-menu">
-            <li><a href="#" class="footer-menu-heading">Important Links</a></li>
-            <li><a href="http://www.unipune.ac.in/" target="_blank" rel="noopener noreferrer">Savitribai Phule Pune University</a></li>
-            <li><a href="https://www.aicte-india.org/" target="_blank" rel="noopener noreferrer">All India Council for Technical Education</a></li>
-            <li><a href="https://computer.pccoepune.com/nba-docs" target="_blank" rel="noopener noreferrer">NBA Documents</a></li>
-          </ul>
-        </div>
-
-        <!-- Column 4: Location Map -->
-        <div class="footer-col footer-col-map">
-          <div class="footer-location-title">
-            <i class="fa-solid fa-location-dot"></i> LOCATION
+          <!-- Column 2: Department Navigation -->
+          <div class="col-lg-3 col-md-6 footer-col">
+            <ul class="footer-nav-menu">
+              <li><a href="./">Home</a></li>
+              <li><a href="about.html">About Department</a></li>
+              <li><a href="hod-desk.html">HOD Desk</a></li>
+              <li><a href="faculty.html">Faculty Directory</a></li>
+              <li><a href="bos.html">Board of Studies (BOS)</a></li>
+              <li><a href="dab.html">Department Advisory Board (DAB)</a></li>
+              <li><a href="http://pcet.org.in/" target="_blank" rel="noopener noreferrer">About PCET</a></li>
+              <li><a href="https://computer.pccoepune.com/contact" target="_blank" rel="noopener noreferrer">Contact us</a></li>
+            </ul>
           </div>
-          <div class="footer-map-container">
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7560.546565048871!2d73.75211259357907!3d18.651728800000008!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2b9e76c8fa205%3A0x1b210131915734fd!2sPCCOE%20-%20Pimpri%20Chinchwad%20College%20Of%20Engineering%20%7C%20Autonomous%20Engineering%20College%20in%20Pune!5e0!3m2!1sen!2sus!4v1673342758968!5m2!1sen!2sus"
-              title="PCCOE Akurdi Campus Map Location" loading="lazy"
-              referrerpolicy="no-referrer-when-downgrade"></iframe>
-          </div>
-        </div>
 
+          <!-- Column 3: Important Regulatory Links -->
+          <div class="col-lg-3 col-md-6 footer-col">
+            <ul class="footer-nav-menu">
+              <li><a href="#" class="footer-menu-heading">Important Links</a></li>
+              <li><a href="http://www.unipune.ac.in/" target="_blank" rel="noopener noreferrer">Savitribai Phule Pune University</a></li>
+              <li><a href="https://www.aicte-india.org/" target="_blank" rel="noopener noreferrer">All India Council for Technical Education</a></li>
+              <li><a href="https://computer.pccoepune.com/nba-docs" target="_blank" rel="noopener noreferrer">NBA Documents</a></li>
+            </ul>
+          </div>
+
+          <!-- Column 4: Location Map -->
+          <div class="col-lg-3 col-md-6 footer-col footer-col-map">
+            <div class="footer-location-title">
+              <i class="fa-solid fa-location-dot"></i> LOCATION
+            </div>
+            <div class="footer-map-container">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7560.546565048871!2d73.75211259357907!3d18.651728800000008!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2b9e76c8fa205%3A0x1b210131915734fd!2sPCCOE%20-%20Pimpri%20Chinchwad%20College%20Of%20Engineering%20%7C%20Autonomous%20Engineering%20College%20in%20Pune!5e0!3m2!1sen!2sus!4v1673342758968!5m2!1sen!2sus"
+                title="PCCOE Akurdi Campus Map Location" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+          </div>
+
+        </div>
       </div>
     </div>
 
@@ -619,7 +642,11 @@
     </div>
   </div>
 
-  <!-- JavaScript Dependencies -->
+  <!-- Bootstrap 5.3.3 Bundle JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+  <!-- Custom Portal Scripts -->
   <script src="assets/js/main.js"></script>
   <!-- Authentic PCCOE Faculty Dataset -->
   <script src="assets/js/faculty-data.js"></script>
@@ -775,10 +802,13 @@
         gridContainer.innerHTML = '';
 
         list.forEach(f => {
+          const col = document.createElement('div');
+          col.className = 'col';
+          col.dataset.id = f.id;
+          col.dataset.category = f.category;
+
           const card = document.createElement('article');
-          card.className = 'faculty-card';
-          card.dataset.id = f.id;
-          card.dataset.category = f.category;
+          card.className = 'faculty-card h-100 shadow-sm';
 
           const isLeadership = f.category === 'leadership';
           const isTA = f.category === 'ta';
@@ -821,7 +851,8 @@
               ${scopusBtn}
             </div>
           `;
-          gridContainer.appendChild(card);
+          col.appendChild(card);
+          gridContainer.appendChild(col);
         });
       }
 

@@ -67,6 +67,7 @@ npx serve .
 ---
 
 ## 🛠️ Tech Stack
+- **Framework**: Bootstrap 5.3.3 (CDN - Grid System, Responsive Layouts, Cards, Tables, Form Controls)
 - **HTML5**: Semantic tags, ARIA attributes, SEO meta tags.
 - **CSS3**: Custom design tokens (CSS Variables), Flexbox, CSS Grid, media queries for all viewports.
 - **Vanilla JavaScript**: Lightweight, dependency-free interactive logic (slider, ticker, modal dialogs, mobile drawer, smooth scroll).
