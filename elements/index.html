@@ -11,8 +11,16 @@
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
+  <!-- Bootstrap 5.3.3 Modern Framework -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
   <style>
     :root {
+      --bs-primary: #035a91;
+      --bs-secondary: #073860;
+      --bs-info: #0284c7;
+      --bs-warning: #f59e0b;
+      --bs-body-font-family: var(--font-sans);
       --pccoe-navy-darkest: #073860;
       --pccoe-navy: #035a91;
       --pccoe-navy-royal: #0277bd;
@@ -153,6 +161,10 @@
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(390px, 1fr));
       gap: 1.75rem;
+    }
+
+    .elements-catalog-grid.row {
+      display: flex !important;
     }
 
     .element-entry-card {
@@ -377,10 +389,10 @@
   <header class="catalog-header">
     <div class="container header-flex">
       <div>
-        <div class="header-badge"><i class="fa-solid fa-shapes"></i> Department Frontend Architecture</div>
+        <div class="header-badge"><i class="fa-solid fa-shapes"></i> Department Frontend Architecture • Bootstrap 5.3.3 Integrated</div>
         <h1 class="catalog-title">PCCOE Computer Dept — Elements & Components Directory</h1>
         <p class="catalog-subtitle">
-          Modular, atomic element catalog ready for inspection and committee approval before integration into the live website. Each component includes isolated styling and semantic HTML.
+          Modular, atomic element catalog ready for inspection and committee approval before integration into the live website. Each component includes isolated styling, Bootstrap 5 classes, and semantic HTML.
         </p>
       </div>
       <div class="header-actions">
@@ -398,207 +410,221 @@
         <span style="font-size: 0.85rem; color: var(--text-muted);">7 Distinct Element Suites Built</span>
       </div>
 
-      <div class="elements-catalog-grid">
+      <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4 elements-catalog-grid">
 
         <!-- ELEMENT 01 -->
-        <article class="element-entry-card">
-          <div class="entry-card-header">
-            <span class="entry-num-badge">ELEMENT 01</span>
-            <span class="entry-status-badge"><i class="fa-solid fa-check"></i> Ready for Approval</span>
-          </div>
-          <div class="entry-card-body">
-            <h3 class="entry-title"><i class="fa-solid fa-compass"></i> Header & Navbar</h3>
-            <p class="entry-desc">
-              Three-tier institutional header featuring the 32px top utility strip (contact, social channels, accessibility font buttons), authentic brand header with accreditation ribbon, and sticky glassmorphic navigation bar with mega dropdowns.
-            </p>
-            <ul class="entry-files-list">
-              <li class="entry-file-item">
-                <span><i class="fa-brands fa-html5"></i> 01-header-navbar/header-navbar.html</span>
-                <span class="entry-file-type">HTML</span>
-              </li>
-              <li class="entry-file-item">
-                <span><i class="fa-brands fa-css3-alt"></i> 01-header-navbar/header-navbar.css</span>
-                <span class="entry-file-type">CSS</span>
-              </li>
-            </ul>
-          </div>
-          <div class="entry-card-footer">
-            <a href="01-header-navbar/header-navbar.html" class="entry-open-btn" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i> Open Standalone</a>
-            <button class="entry-inspect-link open-modal-trigger" data-src="01-header-navbar/header-navbar.html" data-title="Element 01: Master Header & Navbar"><i class="fa-solid fa-eye"></i> Quick View</button>
-          </div>
-        </article>
+        <div class="col">
+          <article class="element-entry-card card h-100 shadow-sm border-0">
+            <div class="entry-card-header card-header border-bottom">
+              <span class="entry-num-badge">ELEMENT 01</span>
+              <span class="entry-status-badge"><i class="fa-solid fa-check"></i> Ready for Approval</span>
+            </div>
+            <div class="entry-card-body card-body d-flex flex-column">
+              <h3 class="entry-title"><i class="fa-solid fa-compass"></i> Header & Navbar</h3>
+              <p class="entry-desc">
+                Three-tier institutional header featuring the 32px top utility strip (contact, social channels, accessibility font buttons), authentic brand header with accreditation ribbon, and sticky glassmorphic navigation bar with mega dropdowns.
+              </p>
+              <ul class="entry-files-list mt-auto">
+                <li class="entry-file-item">
+                  <span><i class="fa-brands fa-html5"></i> 01-header-navbar/header-navbar.html</span>
+                  <span class="entry-file-type">HTML</span>
+                </li>
+                <li class="entry-file-item">
+                  <span><i class="fa-brands fa-css3-alt"></i> 01-header-navbar/header-navbar.css</span>
+                  <span class="entry-file-type">CSS</span>
+                </li>
+              </ul>
+            </div>
+            <div class="entry-card-footer card-footer mt-auto bg-white border-top">
+              <a href="01-header-navbar/header-navbar.html" class="entry-open-btn" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i> Open Standalone</a>
+              <button class="entry-inspect-link open-modal-trigger" data-src="01-header-navbar/header-navbar.html" data-title="Element 01: Master Header & Navbar"><i class="fa-solid fa-eye"></i> Quick View</button>
+            </div>
+          </article>
+        </div>
 
         <!-- ELEMENT 02 -->
-        <article class="element-entry-card">
-          <div class="entry-card-header">
-            <span class="entry-num-badge">ELEMENT 02</span>
-            <span class="entry-status-badge"><i class="fa-solid fa-check"></i> Ready for Approval</span>
-          </div>
-          <div class="entry-card-body">
-            <h3 class="entry-title"><i class="fa-solid fa-shoe-prints"></i> Master Footer</h3>
-            <p class="entry-desc">
-              Four-column institutional footer containing live HitWebCounter visitor counter, complete campus postal address & query extensions, department quick navigation, SPPU/AICTE governance links, interactive Google Map embed, and copyright strip.
-            </p>
-            <ul class="entry-files-list">
-              <li class="entry-file-item">
-                <span><i class="fa-brands fa-html5"></i> 02-footer/footer.html</span>
-                <span class="entry-file-type">HTML</span>
-              </li>
-              <li class="entry-file-item">
-                <span><i class="fa-brands fa-css3-alt"></i> 02-footer/footer.css</span>
-                <span class="entry-file-type">CSS</span>
-              </li>
-            </ul>
-          </div>
-          <div class="entry-card-footer">
-            <a href="02-footer/footer.html" class="entry-open-btn" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i> Open Standalone</a>
-            <button class="entry-inspect-link open-modal-trigger" data-src="02-footer/footer.html" data-title="Element 02: Master Institutional Footer"><i class="fa-solid fa-eye"></i> Quick View</button>
-          </div>
-        </article>
+        <div class="col">
+          <article class="element-entry-card card h-100 shadow-sm border-0">
+            <div class="entry-card-header card-header border-bottom">
+              <span class="entry-num-badge">ELEMENT 02</span>
+              <span class="entry-status-badge"><i class="fa-solid fa-check"></i> Ready for Approval</span>
+            </div>
+            <div class="entry-card-body card-body d-flex flex-column">
+              <h3 class="entry-title"><i class="fa-solid fa-shoe-prints"></i> Master Footer</h3>
+              <p class="entry-desc">
+                Four-column institutional footer containing live HitWebCounter visitor counter, complete campus postal address & query extensions, department quick navigation, SPPU/AICTE governance links, interactive Google Map embed, and copyright strip.
+              </p>
+              <ul class="entry-files-list mt-auto">
+                <li class="entry-file-item">
+                  <span><i class="fa-brands fa-html5"></i> 02-footer/footer.html</span>
+                  <span class="entry-file-type">HTML</span>
+                </li>
+                <li class="entry-file-item">
+                  <span><i class="fa-brands fa-css3-alt"></i> 02-footer/footer.css</span>
+                  <span class="entry-file-type">CSS</span>
+                </li>
+              </ul>
+            </div>
+            <div class="entry-card-footer card-footer mt-auto bg-white border-top">
+              <a href="02-footer/footer.html" class="entry-open-btn" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i> Open Standalone</a>
+              <button class="entry-inspect-link open-modal-trigger" data-src="02-footer/footer.html" data-title="Element 02: Master Institutional Footer"><i class="fa-solid fa-eye"></i> Quick View</button>
+            </div>
+          </article>
+        </div>
 
         <!-- ELEMENT 03 -->
-        <article class="element-entry-card">
-          <div class="entry-card-header">
-            <span class="entry-num-badge">ELEMENT 03</span>
-            <span class="entry-status-badge"><i class="fa-solid fa-check"></i> Ready for Approval</span>
-          </div>
-          <div class="entry-card-body">
-            <h3 class="entry-title"><i class="fa-solid fa-id-card"></i> Image Card Elements</h3>
-            <p class="entry-desc">
-              Complete suite of 5 distinct image card variations: Spotlight Feature Cards (image hover zoom & CTA), Academic Program Cards (B.Tech, M.Tech, PhD), Faculty Profile Cards with gold frames, High-Tech Lab Cards with specs, and Notice Date Cards.
-            </p>
-            <ul class="entry-files-list">
-              <li class="entry-file-item">
-                <span><i class="fa-brands fa-html5"></i> 03-image-cards/image-cards.html</span>
-                <span class="entry-file-type">HTML</span>
-              </li>
-              <li class="entry-file-item">
-                <span><i class="fa-brands fa-css3-alt"></i> 03-image-cards/image-cards.css</span>
-                <span class="entry-file-type">CSS</span>
-              </li>
-            </ul>
-          </div>
-          <div class="entry-card-footer">
-            <a href="03-image-cards/image-cards.html" class="entry-open-btn" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i> Open Standalone</a>
-            <button class="entry-inspect-link open-modal-trigger" data-src="03-image-cards/image-cards.html" data-title="Element 03: Image Card Elements Suite"><i class="fa-solid fa-eye"></i> Quick View</button>
-          </div>
-        </article>
+        <div class="col">
+          <article class="element-entry-card card h-100 shadow-sm border-0">
+            <div class="entry-card-header card-header border-bottom">
+              <span class="entry-num-badge">ELEMENT 03</span>
+              <span class="entry-status-badge"><i class="fa-solid fa-check"></i> Ready for Approval</span>
+            </div>
+            <div class="entry-card-body card-body d-flex flex-column">
+              <h3 class="entry-title"><i class="fa-solid fa-id-card"></i> Image Card Elements</h3>
+              <p class="entry-desc">
+                Complete suite of 5 distinct image card variations: Spotlight Feature Cards (image hover zoom & CTA), Academic Program Cards (B.Tech, M.Tech, PhD), Faculty Profile Cards with gold frames, High-Tech Lab Cards with specs, and Notice Date Cards.
+              </p>
+              <ul class="entry-files-list mt-auto">
+                <li class="entry-file-item">
+                  <span><i class="fa-brands fa-html5"></i> 03-image-cards/image-cards.html</span>
+                  <span class="entry-file-type">HTML</span>
+                </li>
+                <li class="entry-file-item">
+                  <span><i class="fa-brands fa-css3-alt"></i> 03-image-cards/image-cards.css</span>
+                  <span class="entry-file-type">CSS</span>
+                </li>
+              </ul>
+            </div>
+            <div class="entry-card-footer card-footer mt-auto bg-white border-top">
+              <a href="03-image-cards/image-cards.html" class="entry-open-btn" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i> Open Standalone</a>
+              <button class="entry-inspect-link open-modal-trigger" data-src="03-image-cards/image-cards.html" data-title="Element 03: Image Card Elements Suite"><i class="fa-solid fa-eye"></i> Quick View</button>
+            </div>
+          </article>
+        </div>
 
         <!-- ELEMENT 04 -->
-        <article class="element-entry-card">
-          <div class="entry-card-header">
-            <span class="entry-num-badge">ELEMENT 04</span>
-            <span class="entry-status-badge"><i class="fa-solid fa-check"></i> Ready for Approval</span>
-          </div>
-          <div class="entry-card-body">
-            <h3 class="entry-title"><i class="fa-solid fa-sliders"></i> Sliders & Carousels</h3>
-            <p class="entry-desc">
-              Interactive dynamic sliders including Edge-to-Edge full width hero banner slider with captions and arrow navigation, infinite continuous marquee carousel for corporate hiring partners, and student placement testimonial carousel.
-            </p>
-            <ul class="entry-files-list">
-              <li class="entry-file-item">
-                <span><i class="fa-brands fa-html5"></i> 04-sliders/sliders.html</span>
-                <span class="entry-file-type">HTML</span>
-              </li>
-              <li class="entry-file-item">
-                <span><i class="fa-brands fa-css3-alt"></i> 04-sliders/sliders.css</span>
-                <span class="entry-file-type">CSS</span>
-              </li>
-              <li class="entry-file-item">
-                <span><i class="fa-brands fa-js"></i> 04-sliders/sliders.js</span>
-                <span class="entry-file-type">JS</span>
-              </li>
-            </ul>
-          </div>
-          <div class="entry-card-footer">
-            <a href="04-sliders/sliders.html" class="entry-open-btn" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i> Open Standalone</a>
-            <button class="entry-inspect-link open-modal-trigger" data-src="04-sliders/sliders.html" data-title="Element 04: Sliders & Carousels Suite"><i class="fa-solid fa-eye"></i> Quick View</button>
-          </div>
-        </article>
+        <div class="col">
+          <article class="element-entry-card card h-100 shadow-sm border-0">
+            <div class="entry-card-header card-header border-bottom">
+              <span class="entry-num-badge">ELEMENT 04</span>
+              <span class="entry-status-badge"><i class="fa-solid fa-check"></i> Ready for Approval</span>
+            </div>
+            <div class="entry-card-body card-body d-flex flex-column">
+              <h3 class="entry-title"><i class="fa-solid fa-sliders"></i> Sliders & Carousels</h3>
+              <p class="entry-desc">
+                Interactive dynamic sliders including Edge-to-Edge full width hero banner slider with captions and arrow navigation, infinite continuous marquee carousel for corporate hiring partners, and student placement testimonial carousel.
+              </p>
+              <ul class="entry-files-list mt-auto">
+                <li class="entry-file-item">
+                  <span><i class="fa-brands fa-html5"></i> 04-sliders/sliders.html</span>
+                  <span class="entry-file-type">HTML</span>
+                </li>
+                <li class="entry-file-item">
+                  <span><i class="fa-brands fa-css3-alt"></i> 04-sliders/sliders.css</span>
+                  <span class="entry-file-type">CSS</span>
+                </li>
+                <li class="entry-file-item">
+                  <span><i class="fa-brands fa-js"></i> 04-sliders/sliders.js</span>
+                  <span class="entry-file-type">JS</span>
+                </li>
+              </ul>
+            </div>
+            <div class="entry-card-footer card-footer mt-auto bg-white border-top">
+              <a href="04-sliders/sliders.html" class="entry-open-btn" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i> Open Standalone</a>
+              <button class="entry-inspect-link open-modal-trigger" data-src="04-sliders/sliders.html" data-title="Element 04: Sliders & Carousels Suite"><i class="fa-solid fa-eye"></i> Quick View</button>
+            </div>
+          </article>
+        </div>
 
         <!-- ELEMENT 05 -->
-        <article class="element-entry-card">
-          <div class="entry-card-header">
-            <span class="entry-num-badge">ELEMENT 05</span>
-            <span class="entry-status-badge"><i class="fa-solid fa-check"></i> Ready for Approval</span>
-          </div>
-          <div class="entry-card-body">
-            <h3 class="entry-title"><i class="fa-solid fa-chart-pie"></i> Stats & Metrics Counters</h3>
-            <p class="entry-desc">
-              Four-column metric showcase cards with animated number counters, colored accent left borders (Navy, Gold, Warm, Sky), and stylized icon containers for PhDs, Dream CTC, Publications, and Placements.
-            </p>
-            <ul class="entry-files-list">
-              <li class="entry-file-item">
-                <span><i class="fa-brands fa-html5"></i> 05-stats-counters/stats-counters.html</span>
-                <span class="entry-file-type">HTML</span>
-              </li>
-              <li class="entry-file-item">
-                <span><i class="fa-brands fa-css3-alt"></i> 05-stats-counters/stats-counters.css</span>
-                <span class="entry-file-type">CSS</span>
-              </li>
-            </ul>
-          </div>
-          <div class="entry-card-footer">
-            <a href="05-stats-counters/stats-counters.html" class="entry-open-btn" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i> Open Standalone</a>
-            <button class="entry-inspect-link open-modal-trigger" data-src="05-stats-counters/stats-counters.html" data-title="Element 05: Stats & Metrics Counters"><i class="fa-solid fa-eye"></i> Quick View</button>
-          </div>
-        </article>
+        <div class="col">
+          <article class="element-entry-card card h-100 shadow-sm border-0">
+            <div class="entry-card-header card-header border-bottom">
+              <span class="entry-num-badge">ELEMENT 05</span>
+              <span class="entry-status-badge"><i class="fa-solid fa-check"></i> Ready for Approval</span>
+            </div>
+            <div class="entry-card-body card-body d-flex flex-column">
+              <h3 class="entry-title"><i class="fa-solid fa-chart-pie"></i> Stats & Metrics Counters</h3>
+              <p class="entry-desc">
+                Four-column metric showcase cards with animated number counters, colored accent left borders (Navy, Gold, Warm, Sky), and stylized icon containers for PhDs, Dream CTC, Publications, and Placements.
+              </p>
+              <ul class="entry-files-list mt-auto">
+                <li class="entry-file-item">
+                  <span><i class="fa-brands fa-html5"></i> 05-stats-counters/stats-counters.html</span>
+                  <span class="entry-file-type">HTML</span>
+                </li>
+                <li class="entry-file-item">
+                  <span><i class="fa-brands fa-css3-alt"></i> 05-stats-counters/stats-counters.css</span>
+                  <span class="entry-file-type">CSS</span>
+                </li>
+              </ul>
+            </div>
+            <div class="entry-card-footer card-footer mt-auto bg-white border-top">
+              <a href="05-stats-counters/stats-counters.html" class="entry-open-btn" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i> Open Standalone</a>
+              <button class="entry-inspect-link open-modal-trigger" data-src="05-stats-counters/stats-counters.html" data-title="Element 05: Stats & Metrics Counters"><i class="fa-solid fa-eye"></i> Quick View</button>
+            </div>
+          </article>
+        </div>
 
         <!-- ELEMENT 06 -->
-        <article class="element-entry-card">
-          <div class="entry-card-header">
-            <span class="entry-num-badge">ELEMENT 06</span>
-            <span class="entry-status-badge"><i class="fa-solid fa-check"></i> Ready for Approval</span>
-          </div>
-          <div class="entry-card-body">
-            <h3 class="entry-title"><i class="fa-solid fa-bullhorn"></i> Announcements Ticker</h3>
-            <p class="entry-desc">
-              High-visibility announcements strip with "LATEST UPDATES" golden badge, seamless horizontal marquee animation, categorized notice badges, and automatic pause on mouse hover.
-            </p>
-            <ul class="entry-files-list">
-              <li class="entry-file-item">
-                <span><i class="fa-brands fa-html5"></i> 06-announcements-ticker/ticker.html</span>
-                <span class="entry-file-type">HTML</span>
-              </li>
-              <li class="entry-file-item">
-                <span><i class="fa-brands fa-css3-alt"></i> 06-announcements-ticker/ticker.css</span>
-                <span class="entry-file-type">CSS</span>
-              </li>
-            </ul>
-          </div>
-          <div class="entry-card-footer">
-            <a href="06-announcements-ticker/ticker.html" class="entry-open-btn" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i> Open Standalone</a>
-            <button class="entry-inspect-link open-modal-trigger" data-src="06-announcements-ticker/ticker.html" data-title="Element 06: Announcements & Spotlight Ticker"><i class="fa-solid fa-eye"></i> Quick View</button>
-          </div>
-        </article>
+        <div class="col">
+          <article class="element-entry-card card h-100 shadow-sm border-0">
+            <div class="entry-card-header card-header border-bottom">
+              <span class="entry-num-badge">ELEMENT 06</span>
+              <span class="entry-status-badge"><i class="fa-solid fa-check"></i> Ready for Approval</span>
+            </div>
+            <div class="entry-card-body card-body d-flex flex-column">
+              <h3 class="entry-title"><i class="fa-solid fa-bullhorn"></i> Announcements Ticker</h3>
+              <p class="entry-desc">
+                High-visibility announcements strip with "LATEST UPDATES" golden badge, seamless horizontal marquee animation, categorized notice badges, and automatic pause on mouse hover.
+              </p>
+              <ul class="entry-files-list mt-auto">
+                <li class="entry-file-item">
+                  <span><i class="fa-brands fa-html5"></i> 06-announcements-ticker/ticker.html</span>
+                  <span class="entry-file-type">HTML</span>
+                </li>
+                <li class="entry-file-item">
+                  <span><i class="fa-brands fa-css3-alt"></i> 06-announcements-ticker/ticker.css</span>
+                  <span class="entry-file-type">CSS</span>
+                </li>
+              </ul>
+            </div>
+            <div class="entry-card-footer card-footer mt-auto bg-white border-top">
+              <a href="06-announcements-ticker/ticker.html" class="entry-open-btn" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i> Open Standalone</a>
+              <button class="entry-inspect-link open-modal-trigger" data-src="06-announcements-ticker/ticker.html" data-title="Element 06: Announcements & Spotlight Ticker"><i class="fa-solid fa-eye"></i> Quick View</button>
+            </div>
+          </article>
+        </div>
 
         <!-- ELEMENT 07 -->
-        <article class="element-entry-card">
-          <div class="entry-card-header">
-            <span class="entry-num-badge">ELEMENT 07</span>
-            <span class="entry-status-badge"><i class="fa-solid fa-check"></i> Ready for Approval</span>
-          </div>
-          <div class="entry-card-body">
-            <h3 class="entry-title"><i class="fa-solid fa-bars-staggered"></i> Collapsible Accordions</h3>
-            <p class="entry-desc">
-              Interactive accordion panels with smooth height transitions, rotating chevron indicators, outcome code badges (PEO, PO, PSO, FAQ), and master Expand All / Collapse All toolbar controls.
-            </p>
-            <ul class="entry-files-list">
-              <li class="entry-file-item">
-                <span><i class="fa-brands fa-html5"></i> 07-accordions/accordions.html</span>
-                <span class="entry-file-type">HTML</span>
-              </li>
-              <li class="entry-file-item">
-                <span><i class="fa-brands fa-css3-alt"></i> 07-accordions/accordions.css</span>
-                <span class="entry-file-type">CSS</span>
-              </li>
-            </ul>
-          </div>
-          <div class="entry-card-footer">
-            <a href="07-accordions/accordions.html" class="entry-open-btn" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i> Open Standalone</a>
-            <button class="entry-inspect-link open-modal-trigger" data-src="07-accordions/accordions.html" data-title="Element 07: Collapsible Accordions & Panels"><i class="fa-solid fa-eye"></i> Quick View</button>
-          </div>
-        </article>
+        <div class="col">
+          <article class="element-entry-card card h-100 shadow-sm border-0">
+            <div class="entry-card-header card-header border-bottom">
+              <span class="entry-num-badge">ELEMENT 07</span>
+              <span class="entry-status-badge"><i class="fa-solid fa-check"></i> Ready for Approval</span>
+            </div>
+            <div class="entry-card-body card-body d-flex flex-column">
+              <h3 class="entry-title"><i class="fa-solid fa-bars-staggered"></i> Collapsible Accordions</h3>
+              <p class="entry-desc">
+                Interactive accordion panels with smooth height transitions, rotating chevron indicators, outcome code badges (PEO, PO, PSO, FAQ), and master Expand All / Collapse All toolbar controls.
+              </p>
+              <ul class="entry-files-list mt-auto">
+                <li class="entry-file-item">
+                  <span><i class="fa-brands fa-html5"></i> 07-accordions/accordions.html</span>
+                  <span class="entry-file-type">HTML</span>
+                </li>
+                <li class="entry-file-item">
+                  <span><i class="fa-brands fa-css3-alt"></i> 07-accordions/accordions.css</span>
+                  <span class="entry-file-type">CSS</span>
+                </li>
+              </ul>
+            </div>
+            <div class="entry-card-footer card-footer mt-auto bg-white border-top">
+              <a href="07-accordions/accordions.html" class="entry-open-btn" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i> Open Standalone</a>
+              <button class="entry-inspect-link open-modal-trigger" data-src="07-accordions/accordions.html" data-title="Element 07: Collapsible Accordions & Panels"><i class="fa-solid fa-eye"></i> Quick View</button>
+            </div>
+          </article>
+        </div>
 
       </div>
 
@@ -645,5 +671,8 @@
       }
     });
   </script>
+
+  <!-- Bootstrap 5.3.3 JS Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 </html>

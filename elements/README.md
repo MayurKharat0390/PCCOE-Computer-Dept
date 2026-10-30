@@ -84,6 +84,16 @@ elements/
 
 ---
 
+### Framework Integration (Bootstrap 5.3.3)
+
+All components inside this directory are fully integrated and compatible with **Bootstrap 5.3.3**:
+- **Grid Layouts**: Components utilize standard Bootstrap `container`, `row`, `col-*`, `row-cols-*`, and `g-*` gutter classes.
+- **Card Architecture**: Card variants implement standard Bootstrap `.card`, `.card-header`, `.card-body`, and `.card-footer` structures.
+- **Design Tokens**: Bootstrap's root CSS custom properties (`--bs-primary`, `--bs-secondary`, `--bs-info`, `--bs-warning`) are harmonized directly with PCCOE's primary institutional palette (`#035a91`, `#073860`, `#f59e0b`).
+- **CDN Links**: Standalone HTML templates include the official Bootstrap 5.3.3 CSS stylesheet and JS bundle.
+
+---
+
 ### How to Review & Approve
 
 1. Open [`elements/index.html`](file:///d:/PROJECTS/DM%20dept/Comp%20dept/Mayur%20Kharat/elements/index.html) in any web browser.

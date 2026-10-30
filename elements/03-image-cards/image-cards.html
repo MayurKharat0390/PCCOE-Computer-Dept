@@ -11,6 +11,9 @@
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   
+  <!-- Bootstrap 5.3.3 Modern Framework -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
   <!-- Dedicated Modular CSS -->
   <link rel="stylesheet" href="image-cards.css">
   
@@ -64,64 +67,70 @@
 
   <!-- Component Identifier Banner -->
   <div class="preview-banner">
-    <div><span class="preview-tag">ELEMENT #03</span> <strong>Academic & Institutional Image Card Elements Suite</strong></div>
+    <div><span class="preview-tag">ELEMENT #03</span> <strong>Academic & Institutional Image Card Elements Suite (Bootstrap 5.3.3 Integrated)</strong></div>
     <div style="font-size: 0.75rem;"><i class="fa-solid fa-layer-group"></i> 5 Distinct Card Variations (Ready for Approval)</div>
   </div>
 
-  <div class="demo-hero-intro">
+  <div class="demo-hero-intro container">
     <h1>Element 03: Image Card Elements Architecture</h1>
     <p style="color: #64748b; font-size: 0.95rem; line-height: 1.6;">
       This element module features 5 high-impact, responsive card designs tailored for departmental portals: 
-      <strong>1. Spotlight Feature Cards</strong>, <strong>2. Academic Program Cards</strong>, <strong>3. Faculty Profile Cards</strong>, <strong>4. High-Tech Infrastructure/Lab Cards</strong>, and <strong>5. Date-Badge Notice Cards</strong>.
+      <strong>1. Spotlight Feature Cards</strong>, <strong>2. Academic Program Cards</strong>, <strong>3. Faculty Profile Cards</strong>, <strong>4. High-Tech Infrastructure/Lab Cards</strong>, and <strong>5. Date-Badge Notice Cards</strong> — refactored with Bootstrap 5.3.3 grid (`row`, `col`, `card`).
     </p>
   </div>
 
-  <div class="cards-showcase-container">
+  <div class="cards-showcase-container container">
 
     <!-- ======================================================================
          VARIATION 1: SPOTLIGHT / GLANCE IMAGE CARDS
          ====================================================================== -->
     <h3 class="cards-section-title"><i class="fa-solid fa-star"></i> Variation 1: Department Spotlight Cards</h3>
-    <div class="glance-grid">
+    <div class="row row-cols-1 row-cols-md-3 g-4 glance-grid">
       
       <!-- Card 1 -->
-      <article class="glance-card">
-        <div class="glance-media-box">
-          <span class="glance-badge-tag"><i class="fa-solid fa-crown"></i> Leadership</span>
-          <img src="https://computer.pccoepune.com/assets/images/faculty/Sonali_Patil.webp" alt="Dr. Sonali D. Patil" class="glance-img">
-        </div>
-        <div class="glance-content">
-          <h4 class="glance-title">Head of Department Desk</h4>
-          <p class="glance-text">Leadership vision by Dr. Sonali D. Patil focused on high-impact research, global autonomous curriculum, and holistic student growth.</p>
-          <a href="../../hod-desk.html" class="glance-btn">Read HOD Message <i class="fa-solid fa-arrow-right"></i></a>
-        </div>
-      </article>
+      <div class="col">
+        <article class="glance-card card h-100 shadow-sm border-0">
+          <div class="glance-media-box">
+            <span class="glance-badge-tag"><i class="fa-solid fa-crown"></i> Leadership</span>
+            <img src="https://computer.pccoepune.com/assets/images/faculty/Sonali_Patil.webp" alt="Dr. Sonali D. Patil" class="glance-img">
+          </div>
+          <div class="glance-content card-body d-flex flex-column">
+            <h4 class="glance-title">Head of Department Desk</h4>
+            <p class="glance-text">Leadership vision by Dr. Sonali D. Patil focused on high-impact research, global autonomous curriculum, and holistic student growth.</p>
+            <a href="../../hod-desk.html" class="glance-btn mt-auto">Read HOD Message <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </article>
+      </div>
 
       <!-- Card 2 -->
-      <article class="glance-card">
-        <div class="glance-media-box">
-          <span class="glance-badge-tag"><i class="fa-solid fa-briefcase"></i> Placements</span>
-          <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?w=600&auto=format&fit=crop&q=80" alt="Placements Highlights" class="glance-img">
-        </div>
-        <div class="glance-content">
-          <h4 class="glance-title">Industry Placements 2026</h4>
-          <p class="glance-text">Exceptional track record with 90%+ campus placements across Fortune 500 tech leaders, Dream CTC offers, and global internships.</p>
-          <a href="#" class="glance-btn">Explore Placements <i class="fa-solid fa-arrow-right"></i></a>
-        </div>
-      </article>
+      <div class="col">
+        <article class="glance-card card h-100 shadow-sm border-0">
+          <div class="glance-media-box">
+            <span class="glance-badge-tag"><i class="fa-solid fa-briefcase"></i> Placements</span>
+            <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?w=600&auto=format&fit=crop&q=80" alt="Placements Highlights" class="glance-img">
+          </div>
+          <div class="glance-content card-body d-flex flex-column">
+            <h4 class="glance-title">Industry Placements 2026</h4>
+            <p class="glance-text">Exceptional track record with 90%+ campus placements across Fortune 500 tech leaders, Dream CTC offers, and global internships.</p>
+            <a href="#" class="glance-btn mt-auto">Explore Placements <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </article>
+      </div>
 
       <!-- Card 3 -->
-      <article class="glance-card">
-        <div class="glance-media-box">
-          <span class="glance-badge-tag"><i class="fa-solid fa-microchip"></i> Computing</span>
-          <img src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?w=600&auto=format&fit=crop&q=80" alt="Advanced Computing Labs" class="glance-img">
-        </div>
-        <div class="glance-content">
-          <h4 class="glance-title">AI & High-Performance Labs</h4>
-          <p class="glance-text">State-of-the-art NVIDIA GPU computing clusters, IoT and Cloud infrastructure dedicated to student innovation and patent development.</p>
-          <a href="#" class="glance-btn">View Infrastructure <i class="fa-solid fa-arrow-right"></i></a>
-        </div>
-      </article>
+      <div class="col">
+        <article class="glance-card card h-100 shadow-sm border-0">
+          <div class="glance-media-box">
+            <span class="glance-badge-tag"><i class="fa-solid fa-microchip"></i> Computing</span>
+            <img src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?w=600&auto=format&fit=crop&q=80" alt="Advanced Computing Labs" class="glance-img">
+          </div>
+          <div class="glance-content card-body d-flex flex-column">
+            <h4 class="glance-title">AI & High-Performance Labs</h4>
+            <p class="glance-text">State-of-the-art NVIDIA GPU computing clusters, IoT and Cloud infrastructure dedicated to student innovation and patent development.</p>
+            <a href="#" class="glance-btn mt-auto">View Infrastructure <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </article>
+      </div>
 
     </div>
 
@@ -129,55 +138,61 @@
          VARIATION 2: ACADEMIC PROGRAM CARDS
          ====================================================================== -->
     <h3 class="cards-section-title"><i class="fa-solid fa-graduation-cap"></i> Variation 2: Academic Program Cards</h3>
-    <div class="programs-grid">
+    <div class="row row-cols-1 row-cols-md-3 g-4 programs-grid">
       
       <!-- B.Tech Card -->
-      <article class="program-card">
-        <span class="program-badge"><i class="fa-solid fa-award"></i> NBA Tier-1 Accredited</span>
-        <h4 class="program-title">B.Tech Computer Engineering</h4>
-        <div class="program-meta">
-          <span><i class="fa-regular fa-clock"></i> 4 Years (8 Semesters)</span>
-          <span><i class="fa-solid fa-users"></i> Intake: 240 + 60</span>
-        </div>
-        <ul class="program-features">
-          <li><i class="fa-solid fa-circle-check"></i> Autonomous Industry 4.0 Curriculum</li>
-          <li><i class="fa-solid fa-circle-check"></i> Honors & Minors in AI/ML, Cyber Security, Cloud</li>
-          <li><i class="fa-solid fa-circle-check"></i> Capstone Industry-Sponsored Live Projects</li>
-        </ul>
-        <a href="#" class="program-footer-link">View Full Syllabus & Structure <i class="fa-solid fa-chevron-right"></i></a>
-      </article>
+      <div class="col">
+        <article class="program-card card h-100 shadow-sm border-0">
+          <span class="program-badge"><i class="fa-solid fa-award"></i> NBA Tier-1 Accredited</span>
+          <h4 class="program-title">B.Tech Computer Engineering</h4>
+          <div class="program-meta">
+            <span><i class="fa-regular fa-clock"></i> 4 Years (8 Semesters)</span>
+            <span><i class="fa-solid fa-users"></i> Intake: 240 + 60</span>
+          </div>
+          <ul class="program-features">
+            <li><i class="fa-solid fa-circle-check"></i> Autonomous Industry 4.0 Curriculum</li>
+            <li><i class="fa-solid fa-circle-check"></i> Honors & Minors in AI/ML, Cyber Security, Cloud</li>
+            <li><i class="fa-solid fa-circle-check"></i> Capstone Industry-Sponsored Live Projects</li>
+          </ul>
+          <a href="#" class="program-footer-link mt-auto">View Full Syllabus & Structure <i class="fa-solid fa-chevron-right"></i></a>
+        </article>
+      </div>
 
       <!-- M.Tech Card -->
-      <article class="program-card">
-        <span class="program-badge"><i class="fa-solid fa-microchip"></i> Postgraduate Excellence</span>
-        <h4 class="program-title">M.Tech Computer Engineering</h4>
-        <div class="program-meta">
-          <span><i class="fa-regular fa-clock"></i> 2 Years (4 Semesters)</span>
-          <span><i class="fa-solid fa-users"></i> Intake: 18</span>
-        </div>
-        <ul class="program-features">
-          <li><i class="fa-solid fa-circle-check"></i> Research Focus on Deep Learning & Big Data Analytics</li>
-          <li><i class="fa-solid fa-circle-check"></i> Paid Industry Internship Semesters with Stipend</li>
-          <li><i class="fa-solid fa-circle-check"></i> Scopus & IEEE Indexed Thesis Publication Support</li>
-        </ul>
-        <a href="#" class="program-footer-link">View Research Curriculum <i class="fa-solid fa-chevron-right"></i></a>
-      </article>
+      <div class="col">
+        <article class="program-card card h-100 shadow-sm border-0">
+          <span class="program-badge"><i class="fa-solid fa-microchip"></i> Postgraduate Excellence</span>
+          <h4 class="program-title">M.Tech Computer Engineering</h4>
+          <div class="program-meta">
+            <span><i class="fa-regular fa-clock"></i> 2 Years (4 Semesters)</span>
+            <span><i class="fa-solid fa-users"></i> Intake: 18</span>
+          </div>
+          <ul class="program-features">
+            <li><i class="fa-solid fa-circle-check"></i> Research Focus on Deep Learning & Big Data Analytics</li>
+            <li><i class="fa-solid fa-circle-check"></i> Paid Industry Internship Semesters with Stipend</li>
+            <li><i class="fa-solid fa-circle-check"></i> Scopus & IEEE Indexed Thesis Publication Support</li>
+          </ul>
+          <a href="#" class="program-footer-link mt-auto">View Research Curriculum <i class="fa-solid fa-chevron-right"></i></a>
+        </article>
+      </div>
 
       <!-- PhD Card -->
-      <article class="program-card">
-        <span class="program-badge"><i class="fa-solid fa-building-columns"></i> SPPU Recognized</span>
-        <h4 class="program-title">Ph.D. Research Center</h4>
-        <div class="program-meta">
-          <span><i class="fa-regular fa-clock"></i> Doctoral Program</span>
-          <span><i class="fa-solid fa-users"></i> Recognized Guides</span>
-        </div>
-        <ul class="program-features">
-          <li><i class="fa-solid fa-circle-check"></i> Advanced SIGs in NLP, Computer Vision & Cryptography</li>
-          <li><i class="fa-solid fa-circle-check"></i> Government & Industry Sponsored Funding Opportunities</li>
-          <li><i class="fa-solid fa-circle-check"></i> Access to Institutional High Performance Computing (HPC)</li>
-        </ul>
-        <a href="#" class="program-footer-link">Ph.D. Admission Guidelines <i class="fa-solid fa-chevron-right"></i></a>
-      </article>
+      <div class="col">
+        <article class="program-card card h-100 shadow-sm border-0">
+          <span class="program-badge"><i class="fa-solid fa-building-columns"></i> SPPU Recognized</span>
+          <h4 class="program-title">Ph.D. Research Center</h4>
+          <div class="program-meta">
+            <span><i class="fa-regular fa-clock"></i> Doctoral Program</span>
+            <span><i class="fa-solid fa-users"></i> Recognized Guides</span>
+          </div>
+          <ul class="program-features">
+            <li><i class="fa-solid fa-circle-check"></i> Advanced SIGs in NLP, Computer Vision & Cryptography</li>
+            <li><i class="fa-solid fa-circle-check"></i> Government & Industry Sponsored Funding Opportunities</li>
+            <li><i class="fa-solid fa-circle-check"></i> Access to Institutional High Performance Computing (HPC)</li>
+          </ul>
+          <a href="#" class="program-footer-link mt-auto">Ph.D. Admission Guidelines <i class="fa-solid fa-chevron-right"></i></a>
+        </article>
+      </div>
 
     </div>
 
@@ -185,59 +200,65 @@
          VARIATION 3: FACULTY & LEADERSHIP PROFILE CARDS
          ====================================================================== -->
     <h3 class="cards-section-title"><i class="fa-solid fa-chalkboard-user"></i> Variation 3: Faculty Profile Cards</h3>
-    <div class="faculty-grid">
+    <div class="row row-cols-1 row-cols-md-3 g-4 faculty-grid">
       
-      <article class="faculty-card">
-        <div class="faculty-avatar-wrap">
-          <img src="https://computer.pccoepune.com/assets/images/faculty/Sonali_Patil.webp" alt="Dr. Sonali D. Patil" class="faculty-avatar-img">
-        </div>
-        <h4 class="faculty-name">Dr. Sonali D. Patil</h4>
-        <div class="faculty-designation">Professor & Head of Department</div>
-        <div class="faculty-degree">Ph.D. (Computer Engg), M.E., B.E.</div>
-        <div class="faculty-tags">
-          <span class="faculty-tag">Data Science</span>
-          <span class="faculty-tag">AI/ML</span>
-          <span class="faculty-tag">Distributed Systems</span>
-        </div>
-        <div class="faculty-actions">
-          <a href="../../hod-desk.html" class="faculty-btn primary"><i class="fa-solid fa-user"></i> Profile</a>
-          <a href="mailto:sonali.patil@pccoepune.org" class="faculty-btn outline"><i class="fa-solid fa-envelope"></i> Email</a>
-        </div>
-      </article>
+      <div class="col">
+        <article class="faculty-card card h-100 shadow-sm border-0">
+          <div class="faculty-avatar-wrap">
+            <img src="https://computer.pccoepune.com/assets/images/faculty/Sonali_Patil.webp" alt="Dr. Sonali D. Patil" class="faculty-avatar-img">
+          </div>
+          <h4 class="faculty-name">Dr. Sonali D. Patil</h4>
+          <div class="faculty-designation">Professor & Head of Department</div>
+          <div class="faculty-degree">Ph.D. (Computer Engg), M.E., B.E.</div>
+          <div class="faculty-tags">
+            <span class="faculty-tag">Data Science</span>
+            <span class="faculty-tag">AI/ML</span>
+            <span class="faculty-tag">Distributed Systems</span>
+          </div>
+          <div class="faculty-actions mt-auto">
+            <a href="../../hod-desk.html" class="faculty-btn primary"><i class="fa-solid fa-user"></i> Profile</a>
+            <a href="mailto:sonali.patil@pccoepune.org" class="faculty-btn outline"><i class="fa-solid fa-envelope"></i> Email</a>
+          </div>
+        </article>
+      </div>
 
-      <article class="faculty-card">
-        <div class="faculty-avatar-wrap">
-          <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&auto=format&fit=crop&q=80" alt="Dr. K. Rajeswari" class="faculty-avatar-img">
-        </div>
-        <h4 class="faculty-name">Dr. K. Rajeswari</h4>
-        <div class="faculty-designation">Professor & Dean Academic</div>
-        <div class="faculty-degree">Ph.D. (Computer Science), M.Tech</div>
-        <div class="faculty-tags">
-          <span class="faculty-tag">Cloud Computing</span>
-          <span class="faculty-tag">Big Data</span>
-        </div>
-        <div class="faculty-actions">
-          <a href="#" class="faculty-btn primary"><i class="fa-solid fa-user"></i> Profile</a>
-          <a href="mailto:academic@pccoepune.org" class="faculty-btn outline"><i class="fa-solid fa-envelope"></i> Email</a>
-        </div>
-      </article>
+      <div class="col">
+        <article class="faculty-card card h-100 shadow-sm border-0">
+          <div class="faculty-avatar-wrap">
+            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&auto=format&fit=crop&q=80" alt="Dr. K. Rajeswari" class="faculty-avatar-img">
+          </div>
+          <h4 class="faculty-name">Dr. K. Rajeswari</h4>
+          <div class="faculty-designation">Professor & Dean Academic</div>
+          <div class="faculty-degree">Ph.D. (Computer Science), M.Tech</div>
+          <div class="faculty-tags">
+            <span class="faculty-tag">Cloud Computing</span>
+            <span class="faculty-tag">Big Data</span>
+          </div>
+          <div class="faculty-actions mt-auto">
+            <a href="#" class="faculty-btn primary"><i class="fa-solid fa-user"></i> Profile</a>
+            <a href="mailto:academic@pccoepune.org" class="faculty-btn outline"><i class="fa-solid fa-envelope"></i> Email</a>
+          </div>
+        </article>
+      </div>
 
-      <article class="faculty-card">
-        <div class="faculty-avatar-wrap">
-          <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=300&auto=format&fit=crop&q=80" alt="Prof. S. R. Shinde" class="faculty-avatar-img">
-        </div>
-        <h4 class="faculty-name">Dr. S. R. Shinde</h4>
-        <div class="faculty-designation">Associate Professor & Research Chair</div>
-        <div class="faculty-degree">Ph.D. (Information Technology)</div>
-        <div class="faculty-tags">
-          <span class="faculty-tag">Cyber Security</span>
-          <span class="faculty-tag">Blockchain</span>
-        </div>
-        <div class="faculty-actions">
-          <a href="#" class="faculty-btn primary"><i class="fa-solid fa-user"></i> Profile</a>
-          <a href="mailto:research@pccoepune.org" class="faculty-btn outline"><i class="fa-solid fa-envelope"></i> Email</a>
-        </div>
-      </article>
+      <div class="col">
+        <article class="faculty-card card h-100 shadow-sm border-0">
+          <div class="faculty-avatar-wrap">
+            <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=300&auto=format&fit=crop&q=80" alt="Prof. S. R. Shinde" class="faculty-avatar-img">
+          </div>
+          <h4 class="faculty-name">Dr. S. R. Shinde</h4>
+          <div class="faculty-designation">Associate Professor & Research Chair</div>
+          <div class="faculty-degree">Ph.D. (Information Technology)</div>
+          <div class="faculty-tags">
+            <span class="faculty-tag">Cyber Security</span>
+            <span class="faculty-tag">Blockchain</span>
+          </div>
+          <div class="faculty-actions mt-auto">
+            <a href="#" class="faculty-btn primary"><i class="fa-solid fa-user"></i> Profile</a>
+            <a href="mailto:research@pccoepune.org" class="faculty-btn outline"><i class="fa-solid fa-envelope"></i> Email</a>
+          </div>
+        </article>
+      </div>
 
     </div>
 
@@ -245,39 +266,43 @@
          VARIATION 4: INFRASTRUCTURE & LAB CARDS
          ====================================================================== -->
     <h3 class="cards-section-title"><i class="fa-solid fa-server"></i> Variation 4: High-Tech Lab Showcase Cards</h3>
-    <div class="glance-grid">
+    <div class="row row-cols-1 row-cols-md-2 g-4 glance-grid">
       
-      <article class="lab-card">
-        <div class="lab-media">
-          <span class="lab-badge">Lab 402</span>
-          <img src="https://images.unsplash.com/photo-1562774053-701939374585?w=600&auto=format&fit=crop&q=80" alt="AI Research Center" class="lab-img">
-        </div>
-        <div class="lab-body">
-          <h4 class="lab-title">Advanced AI & Deep Learning Center</h4>
-          <div class="lab-specs">
-            <div class="lab-spec-item"><i class="fa-solid fa-microchip"></i> 4x NVIDIA RTX A6000 Workstations</div>
-            <div class="lab-spec-item"><i class="fa-solid fa-desktop"></i> 40 High-Performance Intel Core i9 Nodes</div>
-            <div class="lab-spec-item"><i class="fa-solid fa-wifi"></i> 1 Gbps Dedicated Low-Latency LAN</div>
+      <div class="col">
+        <article class="lab-card card h-100 shadow-sm border-0">
+          <div class="lab-media">
+            <span class="lab-badge">Lab 402</span>
+            <img src="https://images.unsplash.com/photo-1562774053-701939374585?w=600&auto=format&fit=crop&q=80" alt="AI Research Center" class="lab-img">
           </div>
-          <a href="#" class="program-footer-link" style="margin-top: auto;">Explore Lab Facilities <i class="fa-solid fa-arrow-right"></i></a>
-        </div>
-      </article>
+          <div class="lab-body card-body d-flex flex-column">
+            <h4 class="lab-title">Advanced AI & Deep Learning Center</h4>
+            <div class="lab-specs">
+              <div class="lab-spec-item"><i class="fa-solid fa-microchip"></i> 4x NVIDIA RTX A6000 Workstations</div>
+              <div class="lab-spec-item"><i class="fa-solid fa-desktop"></i> 40 High-Performance Intel Core i9 Nodes</div>
+              <div class="lab-spec-item"><i class="fa-solid fa-wifi"></i> 1 Gbps Dedicated Low-Latency LAN</div>
+            </div>
+            <a href="#" class="program-footer-link mt-auto">Explore Lab Facilities <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </article>
+      </div>
 
-      <article class="lab-card">
-        <div class="lab-media">
-          <span class="lab-badge">Lab 405</span>
-          <img src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=600&auto=format&fit=crop&q=80" alt="Cyber Security Lab" class="lab-img">
-        </div>
-        <div class="lab-body">
-          <h4 class="lab-title">Cyber Security & Forensics Lab</h4>
-          <div class="lab-specs">
-            <div class="lab-spec-item"><i class="fa-solid fa-shield-halved"></i> Isolated Sandbox Network Environment</div>
-            <div class="lab-spec-item"><i class="fa-solid fa-key"></i> Hardware Cryptographic Security Modules</div>
-            <div class="lab-spec-item"><i class="fa-solid fa-award"></i> Industry Center of Excellence Certification</div>
+      <div class="col">
+        <article class="lab-card card h-100 shadow-sm border-0">
+          <div class="lab-media">
+            <span class="lab-badge">Lab 405</span>
+            <img src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=600&auto=format&fit=crop&q=80" alt="Cyber Security Lab" class="lab-img">
           </div>
-          <a href="#" class="program-footer-link" style="margin-top: auto;">Explore Lab Facilities <i class="fa-solid fa-arrow-right"></i></a>
-        </div>
-      </article>
+          <div class="lab-body card-body d-flex flex-column">
+            <h4 class="lab-title">Cyber Security & Forensics Lab</h4>
+            <div class="lab-specs">
+              <div class="lab-spec-item"><i class="fa-solid fa-shield-halved"></i> Isolated Sandbox Network Environment</div>
+              <div class="lab-spec-item"><i class="fa-solid fa-key"></i> Hardware Cryptographic Security Modules</div>
+              <div class="lab-spec-item"><i class="fa-solid fa-award"></i> Industry Center of Excellence Certification</div>
+            </div>
+            <a href="#" class="program-footer-link mt-auto">Explore Lab Facilities <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </article>
+      </div>
 
     </div>
 
@@ -285,26 +310,26 @@
          VARIATION 5: NOTICE & NEWS CARDS
          ====================================================================== -->
     <h3 class="cards-section-title"><i class="fa-solid fa-bullhorn"></i> Variation 5: Notice & Update Cards</h3>
-    <div style="display: flex; flex-direction: column; gap: 14px;">
+    <div class="d-flex flex-column gap-3">
       
-      <article class="notice-card">
+      <article class="notice-card card shadow-sm border-0">
         <div class="notice-date-box">
           <span class="notice-day">28</span>
           <span class="notice-month">OCT</span>
         </div>
-        <div class="notice-content">
+        <div class="notice-content card-body p-0">
           <span class="notice-category-tag">Autonomous Examination</span>
           <h4 class="notice-title">In-Semester Examination Schedule for B.Tech Autumn 2026</h4>
           <p class="notice-desc">All enrolled Third and Final year Computer Engineering students are advised to download the official timetable from the examination portal.</p>
         </div>
       </article>
 
-      <article class="notice-card">
+      <article class="notice-card card shadow-sm border-0">
         <div class="notice-date-box">
           <span class="notice-day">15</span>
           <span class="notice-month">NOV</span>
         </div>
-        <div class="notice-content">
+        <div class="notice-content card-body p-0">
           <span class="notice-category-tag">Research & Hackathon</span>
           <h4 class="notice-title">Annual National Level Hackathon: "INNOVA-COMP 2026" Registrations Open</h4>
           <p class="notice-desc">Grand prizes worth INR 3.5 Lakhs. Sponsored by top corporate tech partners with immediate interview opportunities for finalists.</p>
@@ -315,5 +340,7 @@
 
   </div>
 
+  <!-- Bootstrap 5.3.3 JS Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 </html>

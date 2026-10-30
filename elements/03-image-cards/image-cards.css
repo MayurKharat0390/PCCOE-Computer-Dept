@@ -4,6 +4,11 @@
    ========================================================================== */
 
 :root {
+  --bs-primary: #035a91;
+  --bs-secondary: #073860;
+  --bs-info: #0284c7;
+  --bs-warning: #f59e0b;
+  --bs-body-font-family: var(--font-sans);
   --pccoe-navy-darkest: #073860;
   --pccoe-navy: #035a91;
   --pccoe-navy-royal: #0277bd;
@@ -39,6 +44,12 @@
   
   --font-sans: 'Plus Jakarta Sans', 'Inter', sans-serif;
   --font-display: 'Outfit', 'Plus Jakarta Sans', sans-serif;
+}
+
+.glance-grid.row,
+.programs-grid.row,
+.faculty-grid.row {
+  display: flex !important;
 }
 
 /* Scoped Container for Cards */

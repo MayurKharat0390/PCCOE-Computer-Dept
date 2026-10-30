@@ -11,6 +11,9 @@
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   
+  <!-- Bootstrap 5.3.3 Modern Framework -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
   <!-- Dedicated Modular CSS -->
   <link rel="stylesheet" href="footer.css">
   
@@ -64,7 +67,7 @@
 
   <!-- Component Identifier Banner -->
   <div class="preview-banner">
-    <div><span class="preview-tag">ELEMENT #02</span> <strong>Harmonized Master Footer with Accreditation & Campus Map</strong></div>
+    <div><span class="preview-tag">ELEMENT #02</span> <strong>Harmonized Master Footer (Bootstrap 5.3.3 Integrated)</strong></div>
     <div style="font-size: 0.75rem;"><i class="fa-solid fa-code"></i> Standalone Element Template (Ready for Review & Approval)</div>
   </div>
 
@@ -72,7 +75,7 @@
   <div class="preview-intro">
     <h2>Element 02: Master Footer Showcase</h2>
     <p style="color: #64748b; font-size: 0.95rem; line-height: 1.6;">
-      This element encompasses the 4-column academic footer, official contact information, live visitor counter, primary navigation menu, regulatory university links, interactive campus location map embed, and the dark copyright & DM team credit strip.
+      This element encompasses the 4-column academic footer, official contact information, live visitor counter, primary navigation menu, regulatory university links, interactive campus location map embed, and the dark copyright & DM team credit strip — refactored with Bootstrap 5.3.3 grid classes (`container`, `row g-4`, `col-lg-3 col-md-6`).
     </p>
   </div>
 
@@ -82,73 +85,75 @@
   <div class="elem-footer-wrap">
     <footer class="site-master-footer" role="contentinfo">
       <div class="footer-main-body">
-        <div class="elem-footer-container footer-columns-grid">
+        <div class="elem-footer-container container">
+          <div class="row g-4 footer-columns-row">
 
-          <!-- Col 1: Campus Address, Queries & Live Counter -->
-          <div class="footer-col footer-col-contact">
-            <div class="footer-counter-wrap">
-              <span class="footer-counter-label"><i class="fa-solid fa-eye"></i> Portal Visitors</span>
-              <img src="https://hitwebcounter.com/counter/counter.php?page=11425126&style=0006&nbdigits=6&type=page&initCount=14250"
-                title="Portal Live Counter" alt="Live Visitors Count" class="footer-counter-img">
+            <!-- Col 1: Campus Address, Queries & Live Counter -->
+            <div class="col-lg-3 col-md-6 footer-col footer-col-contact">
+              <div class="footer-counter-wrap">
+                <span class="footer-counter-label"><i class="fa-solid fa-eye"></i> Portal Visitors</span>
+                <img src="https://hitwebcounter.com/counter/counter.php?page=11425126&style=0006&nbdigits=6&type=page&initCount=14250"
+                  title="Portal Live Counter" alt="Live Visitors Count" class="footer-counter-img">
+              </div>
+
+              <ul class="footer-contact-list">
+                <li class="footer-contact-item">
+                  <i class="fa-solid fa-location-dot"></i>
+                  <span>Sector - 26, Pradhikaran, Nigdi, Near Akurdi Railway Station, Pune - 411044</span>
+                </li>
+                <li class="footer-contact-item">
+                  <i class="fa-solid fa-envelope"></i>
+                  <span>Queries: <a href="mailto:computer@pccoepune.org">computer@pccoepune.org</a></span>
+                </li>
+                <li class="footer-contact-item">
+                  <i class="fa-solid fa-phone"></i>
+                  <span>EPABX: <a href="tel:+912027653168">020-27653168</a> / Ext. 2101</span>
+                </li>
+              </ul>
             </div>
 
-            <ul class="footer-contact-list">
-              <li class="footer-contact-item">
-                <i class="fa-solid fa-location-dot"></i>
-                <span>Sector - 26, Pradhikaran, Nigdi, Near Akurdi Railway Station, Pune - 411044</span>
-              </li>
-              <li class="footer-contact-item">
-                <i class="fa-solid fa-envelope"></i>
-                <span>Queries: <a href="mailto:computer@pccoepune.org">computer@pccoepune.org</a></span>
-              </li>
-              <li class="footer-contact-item">
-                <i class="fa-solid fa-phone"></i>
-                <span>EPABX: <a href="tel:+912027653168">020-27653168</a> / Ext. 2101</span>
-              </li>
-            </ul>
-          </div>
-
-          <!-- Col 2: Core Department Links -->
-          <div class="footer-col">
-            <ul class="footer-nav-menu">
-              <li class="footer-menu-heading"><i class="fa-solid fa-compass"></i> Department</li>
-              <li><a href="../../about.html"><i class="fa-solid fa-angle-right"></i> About Department</a></li>
-              <li><a href="../../hod-desk.html"><i class="fa-solid fa-angle-right"></i> HOD Desk</a></li>
-              <li><a href="../../bos.html"><i class="fa-solid fa-angle-right"></i> Board of Studies</a></li>
-              <li><a href="../../dab.html"><i class="fa-solid fa-angle-right"></i> Department Advisory</a></li>
-            </ul>
-          </div>
-
-          <!-- Col 3: Academic Governance & Portals -->
-          <div class="footer-col">
-            <ul class="footer-nav-menu">
-              <li class="footer-menu-heading"><i class="fa-solid fa-landmark"></i> Governance</li>
-              <li><a href="https://www.pccoepune.com/nirf.php" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-angle-right"></i> NIRF PCCOE Portal</a></li>
-              <li><a href="https://www.aicte-india.org/feedback/index.php" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-angle-right"></i> AICTE Portal</a></li>
-              <li><a href="http://www.unipune.ac.in/" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-angle-right"></i> SPPU Pune Affiliation</a></li>
-              <li><a href="https://computer.pccoepune.com/nba-docs" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-angle-right"></i> NBA Accreditation</a></li>
-            </ul>
-          </div>
-
-          <!-- Col 4: Campus Map Embed -->
-          <div class="footer-col footer-col-map">
-            <div class="footer-location-title">
-              <i class="fa-solid fa-location-dot"></i> Campus Location
+            <!-- Col 2: Core Department Links -->
+            <div class="col-lg-3 col-md-6 footer-col">
+              <ul class="footer-nav-menu">
+                <li class="footer-menu-heading"><i class="fa-solid fa-compass"></i> Department</li>
+                <li><a href="../../about.html"><i class="fa-solid fa-angle-right"></i> About Department</a></li>
+                <li><a href="../../hod-desk.html"><i class="fa-solid fa-angle-right"></i> HOD Desk</a></li>
+                <li><a href="../../bos.html"><i class="fa-solid fa-angle-right"></i> Board of Studies</a></li>
+                <li><a href="../../dab.html"><i class="fa-solid fa-angle-right"></i> Department Advisory</a></li>
+              </ul>
             </div>
-            <div class="footer-map-container">
-              <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3780.273180373809!2d73.75906491489467!3d18.65288288733192!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2b9e76c8fa205%3A0x1b210131915734fd!2sPCCoE%20-%20Pimpri%20Chinchwad%20College%20of%20Engineering!5e0!3m2!1sen!2sin!4v1669014561234!5m2!1sen!2sin"
-                loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="PCCOE Pune Location Map">
-              </iframe>
-            </div>
-          </div>
 
+            <!-- Col 3: Academic Governance & Portals -->
+            <div class="col-lg-3 col-md-6 footer-col">
+              <ul class="footer-nav-menu">
+                <li class="footer-menu-heading"><i class="fa-solid fa-landmark"></i> Governance</li>
+                <li><a href="https://www.pccoepune.com/nirf.php" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-angle-right"></i> NIRF PCCOE Portal</a></li>
+                <li><a href="https://www.aicte-india.org/feedback/index.php" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-angle-right"></i> AICTE Portal</a></li>
+                <li><a href="http://www.unipune.ac.in/" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-angle-right"></i> SPPU Pune Affiliation</a></li>
+                <li><a href="https://computer.pccoepune.com/nba-docs" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-angle-right"></i> NBA Accreditation</a></li>
+              </ul>
+            </div>
+
+            <!-- Col 4: Campus Map Embed -->
+            <div class="col-lg-3 col-md-6 footer-col footer-col-map">
+              <div class="footer-location-title">
+                <i class="fa-solid fa-location-dot"></i> Campus Location
+              </div>
+              <div class="footer-map-container">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3780.273180373809!2d73.75906491489467!3d18.65288288733192!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2b9e76c8fa205%3A0x1b210131915734fd!2sPCCoE%20-%20Pimpri%20Chinchwad%20College%20of%20Engineering!5e0!3m2!1sen!2sin!4v1669014561234!5m2!1sen!2sin"
+                  loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="PCCOE Pune Location Map">
+                </iframe>
+              </div>
+            </div>
+
+          </div>
         </div>
       </div>
 
       <!-- Bottom Dark Copyright Strip -->
       <div class="footer-bottom-strip">
-        <div class="elem-footer-container footer-bottom-inner">
+        <div class="elem-footer-container container footer-bottom-inner d-flex flex-wrap justify-content-between align-items-center gap-2">
           <span>Copyright © 2026 <strong>PCCOE Computer Engineering</strong>. All Rights Reserved.</span>
           <span>Developed with Modern Standards by <a href="#" class="team-badge-link"><i class="fa-solid fa-code"></i> PCET Digital Marketing Team</a></span>
         </div>
@@ -159,5 +164,7 @@
        END OF COMPONENT: Master Institutional Footer Element
        ========================================================================== -->
 
+  <!-- Bootstrap 5.3.3 JS Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 </html>

@@ -11,6 +11,9 @@
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   
+  <!-- Bootstrap 5.3.3 Modern Framework -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
   <!-- Dedicated Modular CSS -->
   <link rel="stylesheet" href="accordions.css">
   
@@ -64,18 +67,18 @@
 
   <!-- Component Identifier Banner -->
   <div class="preview-banner">
-    <div><span class="preview-tag">ELEMENT #07</span> <strong>Collapsible Accordions & Curriculum Outcome Panels</strong></div>
+    <div><span class="preview-tag">ELEMENT #07</span> <strong>Collapsible Accordions & Curriculum Outcome Panels (Bootstrap 5.3.3 Integrated)</strong></div>
     <div style="font-size: 0.75rem;"><i class="fa-solid fa-bars-staggered"></i> Expand All / Collapse All Interactive Controls (Ready for Review)</div>
   </div>
 
-  <div class="preview-intro">
+  <div class="preview-intro container">
     <h1>Element 07: Collapsible Accordions & Panels</h1>
     <p style="color: #64748b; font-size: 0.95rem; line-height: 1.6;">
-      This component is utilized across curriculum outcome pages (PEOs, POs, PSOs, Syllabus modules, and Frequently Asked Questions). Features smooth CSS max-height transitions, state-toggling chevrons, and global Expand/Collapse All controls.
+      This component is utilized across curriculum outcome pages (PEOs, POs, PSOs, Syllabus modules, and Frequently Asked Questions). Features smooth CSS height transitions, state-toggling chevrons, and global Expand/Collapse All controls — harmonized with Bootstrap 5.3.3 card structures (`container`, `card`, `card-header`, `card-body`).
     </p>
   </div>
 
-  <div class="accordion-wrapper">
+  <div class="accordion-wrapper container">
     
     <!-- Controls Toolbar -->
     <div class="accordion-toolbar">
@@ -84,8 +87,8 @@
     </div>
 
     <!-- Accordion Card 1 -->
-    <div class="collapsible-card open">
-      <div class="collapsible-header" role="button" aria-expanded="true">
+    <div class="collapsible-card card shadow-sm border-0 mb-3 open">
+      <div class="collapsible-header card-header border-0" role="button" aria-expanded="true">
         <div class="collapsible-title-wrap">
           <div class="collapsible-icon-badge"><i class="fa-solid fa-bullseye"></i></div>
           <h3 class="collapsible-title">Program Educational Objectives (PEOs)</h3>
@@ -93,7 +96,7 @@
         </div>
         <i class="fa-solid fa-chevron-down collapsible-chevron"></i>
       </div>
-      <div class="collapsible-body">
+      <div class="collapsible-body card-body">
         <div class="outcome-items-list">
           <div class="outcome-row">
             <span class="outcome-code-tag">PEO-1</span>
@@ -112,8 +115,8 @@
     </div>
 
     <!-- Accordion Card 2 -->
-    <div class="collapsible-card">
-      <div class="collapsible-header" role="button" aria-expanded="false">
+    <div class="collapsible-card card shadow-sm border-0 mb-3">
+      <div class="collapsible-header card-header border-0" role="button" aria-expanded="false">
         <div class="collapsible-title-wrap">
           <div class="collapsible-icon-badge"><i class="fa-solid fa-compass-drafting"></i></div>
           <h3 class="collapsible-title">Program Specific Outcomes (PSOs)</h3>
@@ -121,7 +124,7 @@
         </div>
         <i class="fa-solid fa-chevron-down collapsible-chevron"></i>
       </div>
-      <div class="collapsible-body">
+      <div class="collapsible-body card-body">
         <div class="outcome-items-list">
           <div class="outcome-row">
             <span class="outcome-code-tag">PSO-1</span>
@@ -136,8 +139,8 @@
     </div>
 
     <!-- Accordion Card 3 -->
-    <div class="collapsible-card">
-      <div class="collapsible-header" role="button" aria-expanded="false">
+    <div class="collapsible-card card shadow-sm border-0 mb-3">
+      <div class="collapsible-header card-header border-0" role="button" aria-expanded="false">
         <div class="collapsible-title-wrap">
           <div class="collapsible-icon-badge"><i class="fa-solid fa-file-circle-question"></i></div>
           <h3 class="collapsible-title">Autonomous Examination & Credit System FAQs</h3>
@@ -145,7 +148,7 @@
         </div>
         <i class="fa-solid fa-chevron-down collapsible-chevron"></i>
       </div>
-      <div class="collapsible-body">
+      <div class="collapsible-body card-body">
         <div class="outcome-items-list">
           <div class="outcome-row">
             <span class="outcome-code-tag">FAQ 1</span>
@@ -193,5 +196,8 @@
       });
     }
   </script>
+
+  <!-- Bootstrap 5.3.3 JS Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 </html>
