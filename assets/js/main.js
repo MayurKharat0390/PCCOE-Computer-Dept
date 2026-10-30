@@ -313,15 +313,18 @@ function initSearchModal() {
   if (!modal) return;
 
   const searchableData = [
+    { title: 'Faculty Directory & Academic Mentors', cat: 'People', url: 'faculty.html', desc: 'Distinguished doctorates, professors & researchers in Computer Engineering at PCCOE.' },
+    { title: "HOD's Desk - Dr. Sonali Patil", cat: 'About Us', url: 'hod-desk.html', desc: 'Message from Head of the Department on academic excellence & research vision.' },
+    { title: 'About Department of Computer Engineering', cat: 'About Us', url: 'about.html', desc: 'Department overview, Vision, Mission, PEOs, POs, and PSOs.' },
+    { title: 'Board of Studies (BOS)', cat: 'About Us', url: 'bos.html', desc: 'Curriculum governance committee and Minutes of Meeting (MoM) records.' },
+    { title: 'Department Advisory Board (DAB)', cat: 'About Us', url: 'dab.html', desc: '16-member advisory council shaping strategic direction and industry alignment.' },
     { title: 'B.Tech in Computer Engineering', cat: 'Academics', url: 'https://computer.pccoepune.com/B-tech-comp', desc: '4-Year Undergraduate Program with intake of 240 students, NBA Tier-1 accredited.' },
     { title: 'M.Tech in Computer Engineering', cat: 'Academics', url: 'https://computer.pccoepune.com/m-tech-about', desc: '2-Year PG Program with intake of 18, specializing in AI, Data Science & Advanced Computing.' },
     { title: 'Ph.D. Research Center', cat: 'Research', url: 'https://computer.pccoepune.com/phd-Coordinators-desk', desc: 'Recognized Research Center under Savitribai Phule Pune University.' },
-    { title: "HOD's Desk - Dr. Sonali Patil", cat: 'About Us', url: 'https://computer.pccoepune.com/computer-hod', desc: 'Message from Head of the Department on academic excellence & research vision.' },
-    { title: 'Faculty Directory & Profiles', cat: 'People', url: 'https://computer.pccoepune.com/faculty-profile', desc: 'Distinguished doctorates, assistant professors & researchers.' },
     { title: 'Placements & Highest Package', cat: 'Industry', url: 'https://computer.pccoepune.com/placements', desc: 'Over 90% placement rate, ₹61 LPA top package, Tier-1 MNC recruiters.' },
     { title: 'ACM & ACM-W Student Chapters', cat: 'Student Corner', url: 'https://computer.pccoepune.com/sdw-chapters', desc: 'Best Outstanding Website & Community Service award-winning chapters.' },
     { title: 'Syllabus & Course Structure', cat: 'Student Corner', url: 'https://computer.pccoepune.com/syllabus', desc: 'Updated Autonomous SPPU Curriculum for FY, SY, TY, Final Year B.Tech.' },
-    { title: 'Admission Enquiry 2025-26', cat: 'Admissions', url: 'https://forms.zohopublic.in/dmteampcco1/form/PCETForm/formperma/tYvqjs2MVyQV3phz1vyaomCABN2zsmOV12BKDcKD3ck', desc: 'Apply online for B.Tech, M.Tech and International admissions.' },
+    { title: 'Admission Enquiry 2026-27', cat: 'Admissions', url: 'https://forms.zohopublic.in/dmteampcco1/form/PCETForm/formperma/tYvqjs2MVyQV3phz1vyaomCABN2zsmOV12BKDcKD3ck', desc: 'Apply online for B.Tech, M.Tech and International admissions.' },
     { title: 'Virtual Campus Tour', cat: 'Campus', url: 'https://youtu.be/FKXRu9yoPh4?si=AE0EdyGJeF9-SLi-', desc: 'Take a virtual 360 walk through PCCOE campus, labs, library & computing facilities.' }
   ];
 

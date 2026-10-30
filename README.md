@@ -34,6 +34,7 @@ PCCOE-Computer-Dept/
 ├── hod-desk.html                        # HOD Desk & Dr. Sonali D. Patil address
 ├── bos.html                             # Board of Studies (BOS) with search & 11 MoM PDF cards
 ├── dab.html                             # Department Advisory Board (DAB) with dynamic search
+├── faculty.html                         # Faculty Directory with filterable grid, table view & bio modals
 ├── assets/
 │   ├── css/
 │   │   └── style.css                    # Modular design system, transitions & responsive tokens

@@ -18,6 +18,7 @@ This document provides a comprehensive, page-by-page catalog of every semantic s
 4. [`hod-desk.html`](file:///d:/PROJECTS/DM%20dept/Comp%20dept/Mayur%20Kharat/hod-desk.html) — Head of Department Desk (Dr. Sonali D. Patil address, academic profile, leadership pillars, campus virtual tour).
 5. [`bos.html`](file:///d:/PROJECTS/DM%20dept/Comp%20dept/Mayur%20Kharat/bos.html) — Board of Studies (12-member executive committee, real-time search filter, 11 official MoM cards).
 6. [`dab.html`](file:///d:/PROJECTS/DM%20dept/Comp%20dept/Mayur%20Kharat/dab.html) — Department Advisory Board (16-member advisory council, real-time search filter, authentic 2-column table).
+7. [`faculty.html`](file:///d:/PROJECTS/DM%20dept/Comp%20dept/Mayur%20Kharat/faculty.html) — Faculty Directory & Profiles (45+ metrics, real-time search, designation & domain filters, grid vs table view switcher, and interactive rich bio modal dialogs).
 
 ---
 
